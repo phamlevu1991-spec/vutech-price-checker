@@ -1,0 +1,39 @@
+name: Check giá đối thủ Vutech (tự động, 0 token)
+
+on:
+  schedule:
+    # 01:01 UTC = 08:01 sáng giờ Việt Nam (UTC+7), chạy hàng ngày
+    - cron: "1 1 * * *"
+  workflow_dispatch: {}  # cho phép bấm "Run workflow" chạy thủ công để test
+
+permissions:
+  contents: write  # cần quyền ghi để commit lại docs/index.html (dashboard)
+
+jobs:
+  check-prices:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Cài Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Cài thư viện
+        run: pip install -r requirements.txt
+
+      - name: Chạy check_prices.py
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+          SHEET_ID: ${{ secrets.SHEET_ID }}
+        run: python check_prices.py
+
+      - name: Commit dashboard mới (nếu có thay đổi)
+        run: |
+          git config user.name "vutech-price-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add docs/index.html
+          git diff --quiet --cached || git commit -m "Auto: refresh dashboard giá đối thủ $(date -u +'%Y-%m-%d %H:%M UTC')"
+          git push
