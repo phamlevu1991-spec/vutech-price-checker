@@ -1,5 +1,11 @@
 # Vutech Price Checker — App theo dõi giá đối thủ (Lớp 1, 0 token)
 
+## Liên kết nhanh
+
+- **Dashboard xem giá (live):** https://phamlevu1991-spec.github.io/vutech-price-checker/
+- **Chạy tay ngay (không đợi lịch):** https://github.com/phamlevu1991-spec/vutech-price-checker/actions/workflows/check-prices.yml → nút "Run workflow"
+- **Google Sheet nguồn:** https://docs.google.com/spreadsheets/d/1nbSgLMnXfVAft1mU1MCYiAH0B1LPFPuPy5kXtFcP3YU (xem tab "Theo dõi giá đối thủ (Auto)")
+
 App độc lập, chạy tự động hàng ngày qua GitHub Actions, **không dùng Claude/AI**
 — refresh giá đối thủ cho các SKU đã có sẵn link tham khảo trong Google Sheet
 "Khởi nghiệp" / tab **Website**, tính lại lợi nhuận + xuất dashboard.
@@ -79,7 +85,7 @@ Vào **Settings → Pages** → phần Source chọn **Deploy from a branch** �
 `main`, thư mục `/docs` → Save. Sau lần chạy đầu tiên, dashboard sẽ có tại:
 
 ```
-https://<tên-github-của-anh>.github.io/vutech-price-checker/
+https://phamlevu1991-spec.github.io/vutech-price-checker/
 ```
 
 ### 6. Chạy thử lần đầu (không cần đợi lịch)
