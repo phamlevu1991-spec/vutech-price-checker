@@ -49,7 +49,7 @@ OUTPUT_TAB = "Theo dõi giá đối thủ (Auto)"
 # B=STT C=Mã sản phẩm D=Tên sản phẩm E=Ngành hàng F=Hãng G=ID hãng
 # H=Tên SP NPP I=Giá nhập J=Giá bán K=Lợi nhuận(formula) L=Biên(formula)
 # M=Link tham khảo giá N=Số ảnh O=SEO số từ P=Link sản phẩm R=Khối lượng S=Trạng thái
-SOURCE_RANGE = f"{SOURCE_TAB}!C3:M1000"
+SOURCE_RANGE = "C3:M1000"  # KHÔNG thêm tên sheet — ws.get() đã tự gắn tên sheet của chính nó
 DATA_START_ROW = 3
 
 SHIP_FEE = 35_000  # phí ship cố định cộng vào mỗi đơn, theo Bước 5 skill vutech-1-danh-gia-dinh-gia
