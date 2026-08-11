@@ -61,7 +61,7 @@ HEADERS = {
     "User-Agent": (
         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
         "(KHTML, like Gecko) Chrome/124.0 Safari/537.36 VutechPriceBot/1.0 "
-        "(+https://vutechs.com — bot theo dõi giá tham khảo, chạy 1 lần/ngày)"
+                "(+https://vutechs.com - bot theo doi gia tham khao, chay 1 lan/ngay)"
     )
 }
 
