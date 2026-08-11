@@ -12,6 +12,12 @@ Website gốc) + xuất dashboard HTML.
 KHÔNG dùng AI/LLM — chạy bằng requests + BeautifulSoup thuần, 0 token,
 tốc độ vài chục giây cho toàn bộ danh mục.
 
+Mỗi SKU có thể theo dõi NHIỀU đối thủ cùng lúc — cột M cho phép dán nhiều
+URL (cách nhau bởi dấu phẩy, xuống dòng, hoặc khoảng trắng). Script sẽ tải
+hết các URL đó, và báo cáo GIÁ THẤP NHẤT trong số các đối thủ hiện đang
+CÒN HÀNG (nếu tất cả đều hết hàng thì lấy giá thấp nhất trong số đã lấy
+được, kèm cờ cảnh báo để Vũ biết giá đó không chắc phản ánh thị trường).
+
 GIỚI HẠN QUAN TRỌNG (đọc kỹ trước khi tin tưởng 100% kết quả):
 - Chỉ refresh được SKU đã có link đối thủ sẵn trong cột M. Không tự tìm
   giá cho SKU MỚI (việc đó vẫn cần Claude + skill vutech-1-danh-gia-dinh-gia
@@ -61,7 +67,7 @@ HEADERS = {
     "User-Agent": (
         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
         "(KHTML, like Gecko) Chrome/124.0 Safari/537.36 VutechPriceBot/1.0 "
-                "(+https://vutechs.com - bot theo doi gia tham khao, chay 1 lan/ngay)"
+        "(+https://vutechs.com - bot theo doi gia tham khao, chay 1 lan/ngay)"
     )
 }
 
@@ -234,17 +240,25 @@ def to_number(val):
         return None
 
 
-def extract_url_and_label(cell_value):
-    """Cột M có 2 dạng thật đã thấy trên Sheet: URL thô kèm ghi chú trong
-    ngoặc, hoặc công thức =HYPERLINK("url","nhãn"). Đọc bằng value_render_option
-    FORMULA nên cả 2 dạng đều là string thô ở đây — bóc URL bằng regex chung."""
+def extract_urls_and_labels(cell_value):
+    """Cột M giờ có thể chứa NHIỀU link đối thủ cho cùng 1 SKU — cách nhau
+    bởi dấu phẩy, xuống dòng, hoặc khoảng trắng. Vẫn hỗ trợ cả 2 dạng cũ:
+    URL thô kèm ghi chú trong ngoặc, hoặc công thức =HYPERLINK("url","nhãn").
+    Đọc bằng value_render_option FORMULA nên mọi dạng đều là string thô ở
+    đây — bóc TẤT CẢ URL bằng regex chung, bỏ trùng lặp.
+    Trả về list [(url, domain_label), ...] — rỗng nếu ô không có URL nào."""
     if not cell_value:
-        return None, None
+        return []
     text = str(cell_value)
-    m = URL_RE.search(text)
-    url = m.group(0).rstrip(').,;"') if m else None
-    label = urlparse(url).netloc if url else None
-    return url, label
+    result = []
+    seen = set()
+    for raw in URL_RE.findall(text):
+        url = raw.rstrip(').,;"')
+        if not url or url in seen:
+            continue
+        seen.add(url)
+        result.append((url, urlparse(url).netloc))
+    return result
 
 
 # --------------------------------------------------------------------------
@@ -295,9 +309,10 @@ def write_output(sh, results):
         "Tên sản phẩm",
         "Giá nhập",
         "Giá bán Vutech hiện tại",
-        "Giá đối thủ mới nhất",
+        "Giá đối thủ thấp nhất",
         "Tồn kho đối thủ",
-        "Nguồn",
+        "Nguồn (giá thấp nhất)",
+        "Số nguồn đã so sánh",
         "Giá đề xuất theo công thức",
         "Chênh lệch (hiện tại - đề xuất)",
         "Lợi nhuận thực",
@@ -317,6 +332,7 @@ def write_output(sh, results):
                 r["gia_doi_thu"] or "",
                 r["ton_kho_doi_thu"] or "",
                 (f'=HYPERLINK("{r["url"]}";"{r["nguon"]}")' if r["url"] else (r["nguon"] or "")),
+                r["so_nguon_kiem_tra"],
                 r["gia_de_xuat"] or "",
                 r["chenh_lech"] if r["chenh_lech"] is not None else "",
                 r["loi_nhuan_thuc"] if r["loi_nhuan_thuc"] is not None else "",
@@ -349,7 +365,7 @@ def format_vnd(v):
 def generate_dashboard_html(results, output_path):
     ts = datetime.now(VN_TZ).strftime("%d/%m/%Y %H:%M")
     total = len(results)
-    with_link = [r for r in results if r["url"]]
+    with_link = [r for r in results if r["so_nguon_kiem_tra"] > 0]
     danger = [r for r in results if "🔴" in r["co_canh_bao"]]
     warn = [r for r in results if "🟡" in r["co_canh_bao"] or "🟠" in r["co_canh_bao"]]
     err = [r for r in with_link if not r["trang_thai_lay_gia"].startswith("OK")]
@@ -358,25 +374,26 @@ def generate_dashboard_html(results, output_path):
     for r in results:
         flag_class = "danger" if "🔴" in r["co_canh_bao"] else ("warn" if ("🟡" in r["co_canh_bao"] or "🟠" in r["co_canh_bao"]) else "ok")
         link_html = f'<a href="{r["url"]}" target="_blank" rel="noopener">{r["nguon"]}</a>' if r["url"] else "—"
+        nguon_count = f' <span class="muted">({r["so_nguon_kiem_tra"]} nguồn)</span>' if r["so_nguon_kiem_tra"] > 1 else ""
         rows_html.append(
             f"""<tr class="{flag_class}"
-                data-sku="{r['sku']}" data-ten="{r['ten']}"
-                data-gianhap="{r['gia_nhap'] or 0}" data-giaban="{r['gia_ban'] or 0}"
-                data-giadoithu="{r['gia_doi_thu'] or 0}" data-loinhuan="{r['loi_nhuan_thuc'] or 0}"
-                data-bien="{r['bien_thuc'] if r['bien_thuc'] is not None else 0}"
-                data-flag="{flag_class}">
-                <td>{r['sku']}</td>
-                <td>{r['ten']}</td>
-                <td class="num">{format_vnd(r['gia_nhap'])}</td>
-                <td class="num">{format_vnd(r['gia_ban'])}</td>
-                <td class="num">{format_vnd(r['gia_doi_thu'])}</td>
-                <td>{r['ton_kho_doi_thu'] or '—'}</td>
-                <td>{link_html}</td>
-                <td class="num">{format_vnd(r['gia_de_xuat'])}</td>
-                <td class="num">{format_vnd(r['loi_nhuan_thuc'])}</td>
-                <td class="num">{r['bien_thuc'] if r['bien_thuc'] is not None else '—'}%</td>
-                <td>{r['co_canh_bao'] or ''}</td>
-                <td class="muted">{r['trang_thai_lay_gia']}</td>
+              data-sku="{r['sku']}" data-ten="{r['ten']}"
+              data-gianhap="{r['gia_nhap'] or 0}" data-giaban="{r['gia_ban'] or 0}"
+              data-giadoithu="{r['gia_doi_thu'] or 0}" data-loinhuan="{r['loi_nhuan_thuc'] or 0}"
+              data-bien="{r['bien_thuc'] if r['bien_thuc'] is not None else 0}"
+              data-flag="{flag_class}">
+              <td>{r['sku']}</td>
+              <td>{r['ten']}</td>
+              <td class="num">{format_vnd(r['gia_nhap'])}</td>
+              <td class="num">{format_vnd(r['gia_ban'])}</td>
+              <td class="num">{format_vnd(r['gia_doi_thu'])}</td>
+              <td>{r['ton_kho_doi_thu'] or '—'}</td>
+              <td>{link_html}{nguon_count}</td>
+              <td class="num">{format_vnd(r['gia_de_xuat'])}</td>
+              <td class="num">{format_vnd(r['loi_nhuan_thuc'])}</td>
+              <td class="num">{r['bien_thuc'] if r['bien_thuc'] is not None else '—'}%</td>
+              <td>{r['co_canh_bao'] or ''}</td>
+              <td class="muted">{r['trang_thai_lay_gia']}</td>
             </tr>"""
         )
 
@@ -407,80 +424,81 @@ def generate_dashboard_html(results, output_path):
   th:hover {{ color:#fff; }}
   td.num {{ text-align:right; white-space:nowrap; }}
   td.muted {{ color:var(--muted); font-size:12px; }}
+  .muted {{ color:var(--muted); font-size:12px; }}
   tr.danger {{ background:rgba(255,92,108,0.07); }}
   tr.warn {{ background:rgba(245,192,74,0.06); }}
   a {{ color:var(--accent); }}
 </style>
 </head><body>
-  <h1>Vutech — Dashboard theo dõi giá đối thủ (Auto, 0 token)</h1>
-  <div class="sub">Cập nhật lúc {ts} (giờ VN) · Nguồn: Google Sheet "Khởi nghiệp" / tab Website · Script chạy tự động, không dùng AI</div>
+<h1>Vutech — Dashboard theo dõi giá đối thủ (Auto, 0 token)</h1>
+<div class="sub">Cập nhật lúc {ts} (giờ VN) · Nguồn: Google Sheet "Khởi nghiệp" / tab Website · Mỗi SKU có thể theo dõi nhiều đối thủ, dashboard hiển thị giá THẤP NHẤT trong số đối thủ còn hàng · Script chạy tự động, không dùng AI</div>
 
-  <div class="stats">
-    <div class="stat"><div class="n">{total}</div><div class="l">Tổng SKU</div></div>
-    <div class="stat"><div class="n">{len(with_link)}</div><div class="l">Có link đối thủ</div></div>
-    <div class="stat danger"><div class="n">{len(danger)}</div><div class="l">Cờ đỏ (lỗ / dưới vốn / mất cạnh tranh)</div></div>
-    <div class="stat warn"><div class="n">{len(warn)}</div><div class="l">Cờ vàng (biên mỏng / cần xác minh)</div></div>
-    <div class="stat"><div class="n">{len(err)}</div><div class="l">Lỗi lấy giá tự động</div></div>
-  </div>
+<div class="stats">
+  <div class="stat"><div class="n">{total}</div><div class="l">Tổng SKU</div></div>
+  <div class="stat"><div class="n">{len(with_link)}</div><div class="l">Có link đối thủ</div></div>
+  <div class="stat danger"><div class="n">{len(danger)}</div><div class="l">Cờ đỏ (lỗ / dưới vốn / mất cạnh tranh)</div></div>
+  <div class="stat warn"><div class="n">{len(warn)}</div><div class="l">Cờ vàng (biên mỏng / cần xác minh)</div></div>
+  <div class="stat"><div class="n">{len(err)}</div><div class="l">Lỗi lấy giá tự động</div></div>
+</div>
 
-  <div class="controls">
-    <input id="search" type="text" placeholder="Tìm SKU / tên sản phẩm..." style="min-width:260px">
-    <select id="filterFlag">
-      <option value="">Tất cả cờ</option>
-      <option value="danger">Chỉ cờ đỏ</option>
-      <option value="warn">Chỉ cờ vàng</option>
-      <option value="ok">Chỉ ổn</option>
-    </select>
-  </div>
+<div class="controls">
+  <input id="search" type="text" placeholder="Tìm SKU / tên sản phẩm..." style="min-width:260px">
+  <select id="filterFlag">
+    <option value="">Tất cả cờ</option>
+    <option value="danger">Chỉ cờ đỏ</option>
+    <option value="warn">Chỉ cờ vàng</option>
+    <option value="ok">Chỉ ổn</option>
+  </select>
+</div>
 
-  <table id="tbl">
-    <thead><tr>
-      <th data-k="sku">SKU</th><th data-k="ten">Tên sản phẩm</th>
-      <th data-k="gianhap" class="num">Giá nhập</th><th data-k="giaban" class="num">Giá bán hiện tại</th>
-      <th data-k="giadoithu" class="num">Giá đối thủ mới nhất</th><th>Tồn kho đối thủ</th><th>Nguồn</th>
-      <th class="num">Giá đề xuất</th><th data-k="loinhuan" class="num">Lợi nhuận thực</th>
-      <th data-k="bien" class="num">Biên %</th><th>Cờ cảnh báo</th><th>Trạng thái lấy giá</th>
-    </tr></thead>
-    <tbody>
-      {''.join(rows_html)}
-    </tbody>
-  </table>
+<table id="tbl">
+<thead><tr>
+  <th data-k="sku">SKU</th><th data-k="ten">Tên sản phẩm</th>
+  <th data-k="gianhap" class="num">Giá nhập</th><th data-k="giaban" class="num">Giá bán hiện tại</th>
+  <th data-k="giadoithu" class="num">Giá đối thủ thấp nhất</th><th>Tồn kho đối thủ</th><th>Nguồn</th>
+  <th class="num">Giá đề xuất</th><th data-k="loinhuan" class="num">Lợi nhuận thực</th>
+  <th data-k="bien" class="num">Biên %</th><th>Cờ cảnh báo</th><th>Trạng thái lấy giá</th>
+</tr></thead>
+<tbody>
+{''.join(rows_html)}
+</tbody>
+</table>
 
 <script>
-  const search = document.getElementById('search');
-  const filterFlag = document.getElementById('filterFlag');
-  const rows = Array.from(document.querySelectorAll('#tbl tbody tr'));
+const search = document.getElementById('search');
+const filterFlag = document.getElementById('filterFlag');
+const rows = Array.from(document.querySelectorAll('#tbl tbody tr'));
 
-  function applyFilters() {{
-    const q = search.value.toLowerCase();
-    const flag = filterFlag.value;
-    rows.forEach(r => {{
-      const text = (r.dataset.sku + ' ' + r.dataset.ten).toLowerCase();
-      const matchQ = text.includes(q);
-      const matchFlag = !flag || r.dataset.flag === flag;
-      r.style.display = (matchQ && matchFlag) ? '' : 'none';
-    }});
-  }}
-  search.addEventListener('input', applyFilters);
-  filterFlag.addEventListener('change', applyFilters);
-
-  document.querySelectorAll('th[data-k]').forEach(th => {{
-    let asc = true;
-    th.addEventListener('click', () => {{
-      const k = th.dataset.k;
-      const tbody = document.querySelector('#tbl tbody');
-      const sorted = rows.slice().sort((a, b) => {{
-        const av = a.dataset[k], bv = b.dataset[k];
-        const an = parseFloat(av), bn = parseFloat(bv);
-        let cmp;
-        if (!isNaN(an) && !isNaN(bn)) cmp = an - bn;
-        else cmp = String(av).localeCompare(String(bv), 'vi');
-        return asc ? cmp : -cmp;
-      }});
-      sorted.forEach(r => tbody.appendChild(r));
-      asc = !asc;
-    }});
+function applyFilters() {{
+  const q = search.value.toLowerCase();
+  const flag = filterFlag.value;
+  rows.forEach(r => {{
+    const text = (r.dataset.sku + ' ' + r.dataset.ten).toLowerCase();
+    const matchQ = text.includes(q);
+    const matchFlag = !flag || r.dataset.flag === flag;
+    r.style.display = (matchQ && matchFlag) ? '' : 'none';
   }});
+}}
+search.addEventListener('input', applyFilters);
+filterFlag.addEventListener('change', applyFilters);
+
+document.querySelectorAll('th[data-k]').forEach(th => {{
+  let asc = true;
+  th.addEventListener('click', () => {{
+    const k = th.dataset.k;
+    const tbody = document.querySelector('#tbl tbody');
+    const sorted = rows.slice().sort((a, b) => {{
+      const av = a.dataset[k], bv = b.dataset[k];
+      const an = parseFloat(av), bn = parseFloat(bv);
+      let cmp;
+      if (!isNaN(an) && !isNaN(bn)) cmp = an - bn;
+      else cmp = String(av).localeCompare(String(bv), 'vi');
+      return asc ? cmp : -cmp;
+    }});
+    sorted.forEach(r => tbody.appendChild(r));
+    asc = !asc;
+  }});
+}});
 </script>
 </body></html>"""
 
@@ -496,7 +514,7 @@ def generate_dashboard_html(results, output_path):
 
 def process_row(row, session):
     now_str = datetime.now(VN_TZ).strftime("%Y-%m-%d %H:%M")
-    url, domain_label = extract_url_and_label(row["link_raw"])
+    candidates = extract_urls_and_labels(row["link_raw"])
 
     result = {
         "sku": row["sku"],
@@ -505,12 +523,13 @@ def process_row(row, session):
         "gia_ban": row["gia_ban"],
         "gia_doi_thu": None,
         "ton_kho_doi_thu": None,
-        "nguon": domain_label,
-        "url": url,
+        "nguon": None,
+        "url": None,
         "gia_de_xuat": None,
         "chenh_lech": None,
         "loi_nhuan_thuc": None,
         "bien_thuc": None,
+        "so_nguon_kiem_tra": len(candidates),
         "co_canh_bao": "",
         "trang_thai_lay_gia": "",
         "cap_nhat_luc": now_str,
@@ -530,40 +549,57 @@ def process_row(row, session):
     elif flag_margin == "missing":
         flags.append("⚪ thiếu Giá nhập/Giá bán, chưa tính được")
 
-    if not url:
+    if not candidates:
         result["trang_thai_lay_gia"] = "bỏ qua — chưa có link đối thủ trong cột M"
         result["co_canh_bao"] = "; ".join(flags)
         return result
 
-    scrape = fetch_competitor_price(url, session)
-    if not scrape["ok"]:
-        result["trang_thai_lay_gia"] = f"LỖI: {scrape['error']}"
-        flags.append("⚠️ không lấy được giá tự động — cần Vũ kiểm tra tay")
-        result["co_canh_bao"] = "; ".join(flags)
-        return result
+    # Tải hết các đối thủ đang theo dõi cho SKU này, giữ lại từng kết quả
+    # để chọn ra giá THẤP NHẤT trong số đối thủ đang CÒN HÀNG.
+    scraped = []
+    for url, label in candidates:
+        r = fetch_competitor_price(url, session)
+        r["url"] = url
+        r["label"] = label
+        scraped.append(r)
+        time.sleep(REQUEST_DELAY)  # lịch sự với từng site, tránh bị chặn IP
 
-    gia_doi_thu = scrape["price"]
-    result["gia_doi_thu"] = gia_doi_thu
-    result["ton_kho_doi_thu"] = scrape["availability"]
-    result["trang_thai_lay_gia"] = f"OK ({scrape['source']})"
+    ok_results = [r for r in scraped if r["ok"]]
+    in_stock = [r for r in ok_results if r.get("availability") == "còn hàng"]
+    winner_pool = in_stock if in_stock else ok_results
 
-    de_xuat = gia_de_xuat_tu_doi_thu(gia_doi_thu)
-    result["gia_de_xuat"] = de_xuat
+    if winner_pool:
+        winner = min(winner_pool, key=lambda r: r["price"])
+        result["gia_doi_thu"] = winner["price"]
+        result["ton_kho_doi_thu"] = winner.get("availability") or "không rõ"
+        result["nguon"] = winner["label"]
+        result["url"] = winner["url"]
 
-    if row["gia_ban"] is not None:
-        result["chenh_lech"] = round(row["gia_ban"] - de_xuat)
+        total = len(candidates)
+        if in_stock:
+            result["trang_thai_lay_gia"] = f"OK ({winner['source']}) — thấp nhất trong {len(in_stock)}/{total} nguồn còn hàng"
+        else:
+            result["trang_thai_lay_gia"] = f"OK ({winner['source']}) — {len(ok_results)}/{total} nguồn lấy được giá nhưng TẤT CẢ đều hết hàng"
+            flags.append("⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực")
 
-    if "cần xác minh" in scrape["source"]:
-        flags.append("🟠 nguồn giá độ tin cậy thấp (fallback selector) — nên xác minh tay")
+        if "cần xác minh" in winner["source"]:
+            flags.append("🟠 nguồn giá độ tin cậy thấp (fallback selector) — nên xác minh tay")
 
-    if scrape["availability"] == "hết hàng":
-        flags.append("⚪ đối thủ đang HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực")
+        de_xuat = gia_de_xuat_tu_doi_thu(winner["price"])
+        result["gia_de_xuat"] = de_xuat
 
-    if row["gia_ban"] is not None:
-        if row["gia_ban"] > gia_doi_thu:
-            flags.append(f"🔴 Vutech đang CAO HƠN đối thủ {int(row['gia_ban'] - gia_doi_thu):,}đ — mất cạnh tranh".replace(",", "."))
-        elif result["chenh_lech"] is not None and result["chenh_lech"] < -20_000:
-            flags.append("🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận")
+        if row["gia_ban"] is not None:
+            result["chenh_lech"] = round(row["gia_ban"] - de_xuat)
+            if row["gia_ban"] > winner["price"]:
+                flags.append(
+                    f"🔴 Vutech đang CAO HƠN đối thủ rẻ nhất {int(row['gia_ban'] - winner['price']):,}đ — mất cạnh tranh".replace(",", ".")
+                )
+            elif result["chenh_lech"] is not None and result["chenh_lech"] < -20_000:
+                flags.append("🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận")
+    else:
+        err_detail = "; ".join(f"{r['label'] or r['url']}: {r.get('error', '?')}" for r in scraped)
+        result["trang_thai_lay_gia"] = f"LỖI: cả {len(candidates)} nguồn đều lỗi ({err_detail})"
+        flags.append("⚠️ không lấy được giá tự động từ bất kỳ nguồn nào — cần Vũ kiểm tra tay")
 
     result["co_canh_bao"] = "; ".join(flags)
     return result
@@ -577,9 +613,10 @@ def main():
     rows = read_source_rows(sh)
     print(f"Đọc được {len(rows)} SKU từ tab '{SOURCE_TAB}'.")
 
-    with_link = [r for r in rows if extract_url_and_label(r["link_raw"])[0]]
-    print(f"  → {len(with_link)} SKU có link đối thủ sẽ được refresh giá.")
-    print(f"  → {len(rows) - len(with_link)} SKU chưa có link, chỉ tính lại lợi nhuận từ Giá nhập/Giá bán có sẵn.")
+    with_link = [r for r in rows if extract_urls_and_labels(r["link_raw"])]
+    total_candidates = sum(len(extract_urls_and_labels(r["link_raw"])) for r in with_link)
+    print(f" → {len(with_link)} SKU có link đối thủ sẽ được refresh giá ({total_candidates} link đối thủ sẽ được kiểm tra).")
+    print(f" → {len(rows) - len(with_link)} SKU chưa có link, chỉ tính lại lợi nhuận từ Giá nhập/Giá bán có sẵn.")
 
     session = requests.Session()
     results = []
@@ -589,23 +626,20 @@ def main():
     for idx, row in enumerate(rows, start=1):
         r = process_row(row, session)
         results.append(r)
-        if r["url"]:
-            time.sleep(REQUEST_DELAY)  # lịch sự với site đối thủ, tránh bị chặn IP
-            domain = r["nguon"] or "?"
+        domain = r["nguon"] or "?"
+        if r["trang_thai_lay_gia"].startswith("OK"):
+            ok_count += 1
             bucket = domain_stats.setdefault(domain, {"ok": 0, "err": 0})
-            if r["trang_thai_lay_gia"].startswith("OK"):
-                ok_count += 1
-                bucket["ok"] += 1
-            else:
-                err_count += 1
-                bucket["err"] += 1
+            bucket["ok"] += 1
+        elif r["trang_thai_lay_gia"].startswith("LỖI"):
+            err_count += 1
         if idx % 20 == 0:
-            print(f"  ...đã xử lý {idx}/{len(rows)}")
+            print(f" ...đã xử lý {idx}/{len(rows)}")
 
-    print(f"\nKết quả scrape: {ok_count} OK / {err_count} lỗi (trên {len(with_link)} SKU có link).")
-    print("Theo domain:")
+    print(f"\nKết quả: {ok_count} SKU lấy được giá / {err_count} SKU lỗi hết (trên {len(with_link)} SKU có link).")
+    print("Nguồn thắng (giá thấp nhất) theo domain:")
     for domain, stat in sorted(domain_stats.items(), key=lambda x: -sum(x[1].values())):
-        print(f"  {domain}: {stat['ok']} OK, {stat['err']} lỗi")
+        print(f"  {domain}: {stat['ok']} lần là nguồn giá thấp nhất")
 
     ws_out = write_output(sh, results)
     print(f"\nĐã ghi kết quả vào tab '{OUTPUT_TAB}' ({ws_out.url}).")
@@ -614,7 +648,7 @@ def main():
     print(f"Đã xuất dashboard: {dashboard_path}")
 
     danger = [r for r in results if "🔴" in r["co_canh_bao"]]
-    print(f"\n⚠️  {len(danger)} SKU có cờ đỏ cần chú ý.")
+    print(f"\n⚠️ {len(danger)} SKU có cờ đỏ cần chú ý.")
 
     return results
 
