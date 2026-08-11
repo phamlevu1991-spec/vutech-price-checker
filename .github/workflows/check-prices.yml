@@ -27,8 +27,7 @@ jobs:
       - name: Chạy check_prices.py
         env:
           GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
-          SHEET_ID: ${{ secrets.SHEET_ID }}
-        run: python check_prices.py
+       run: python check_prices.py
 
       - name: Commit dashboard mới (nếu có thay đổi)
         run: |
