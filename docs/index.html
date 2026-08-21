@@ -32,14 +32,14 @@
 </style>
 </head><body>
 <h1>Vutech — Dashboard theo dõi giá đối thủ (Auto, 0 token)</h1>
-<div class="sub">Cập nhật lúc 20/08/2026 09:22 (giờ VN) · Nguồn: Google Sheet "Khởi nghiệp" / tab Website · Mỗi SKU có thể theo dõi nhiều đối thủ, dashboard hiển thị giá THẤP NHẤT trong số đối thủ còn hàng · Script chạy tự động, không dùng AI</div>
+<div class="sub">Cập nhật lúc 21/08/2026 09:28 (giờ VN) · Nguồn: Google Sheet "Khởi nghiệp" / tab Website · Mỗi SKU có thể theo dõi nhiều đối thủ, dashboard hiển thị giá THẤP NHẤT trong số đối thủ còn hàng · Script chạy tự động, không dùng AI</div>
 
 <div class="stats">
   <div class="stat"><div class="n">150</div><div class="l">Tổng SKU</div></div>
   <div class="stat"><div class="n">69</div><div class="l">Có link đối thủ</div></div>
-  <div class="stat danger"><div class="n">18</div><div class="l">Cờ đỏ (lỗ / dưới vốn / mất cạnh tranh)</div></div>
+  <div class="stat danger"><div class="n">16</div><div class="l">Cờ đỏ (lỗ / dưới vốn / mất cạnh tranh)</div></div>
   <div class="stat warn"><div class="n">96</div><div class="l">Cờ vàng (biên mỏng / cần xác minh)</div></div>
-  <div class="stat"><div class="n">7</div><div class="l">Lỗi lấy giá tự động</div></div>
+  <div class="stat"><div class="n">8</div><div class="l">Lỗi lấy giá tự động</div></div>
 </div>
 
 <div class="controls">
@@ -1504,21 +1504,21 @@
             </tr><tr class="ok"
               data-sku="MOU-COR-M55-WL-BLK" data-ten="Chuột Gaming Không Dây Corsair M55 Black Wireless"
               data-gianhap="995000.0" data-giaban="1215000.0"
-              data-giadoithu="1215000" data-loinhuan="185000.0"
+              data-giadoithu="0" data-loinhuan="185000.0"
               data-bien="15.2"
               data-flag="ok">
               <td>MOU-COR-M55-WL-BLK</td>
               <td>Chuột Gaming Không Dây Corsair M55 Black Wireless</td>
               <td class="num">995.000đ</td>
               <td class="num">1.215.000đ</td>
-              <td class="num">1.215.000đ</td>
-              <td>không rõ</td>
-              <td><a href="https://dtex.vn/corsair/linh-phu-kien/chuot-khong-day-corsair-m55-black-ch-931f000-ap-9902.html" target="_blank" rel="noopener">dtex.vn</a></td>
-              <td class="num">1.205.000đ</td>
+              <td class="num">—</td>
+              <td>—</td>
+              <td>—</td>
+              <td class="num">—</td>
               <td class="num">185.000đ</td>
               <td class="num">15.2%</td>
-              <td>⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực</td>
-              <td class="muted">OK (microdata) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
+              <td>⚠️ không lấy được giá tự động từ bất kỳ nguồn nào — cần Vũ kiểm tra tay</td>
+              <td class="muted">LỖI: cả 1 nguồn đều lỗi (dtex.vn: Lỗi tải trang: HTTPSConnectionPool(host='dtex.vn', port=443): Read timed out. (read timeout=15))</td>
             </tr><tr class="warn"
               data-sku="MOU-COR-IRONCLAW-WLSE-BLK" data-ten="Chuột Gaming Không Dây Corsair Ironclaw Wireless SE"
               data-gianhap="1865000.0" data-giaban="2100000.0"
@@ -1753,41 +1753,41 @@
               <td class="num">3.8%</td>
               <td>🟡 biên mỏng (<10%)</td>
               <td class="muted">bỏ qua — chưa có link đối thủ trong cột M</td>
-            </tr><tr class="danger"
+            </tr><tr class="warn"
               data-sku="KB-COR-K70-PRO-TKL-BLK" data-ten="Bàn Phím Cơ Gaming Có Dây Corsair K70 PRO TKL Hall Effect"
               data-gianhap="3880000.0" data-giaban="4250000.0"
-              data-giadoithu="2890000" data-loinhuan="335000.0"
+              data-giadoithu="5490000" data-loinhuan="335000.0"
               data-bien="7.9"
-              data-flag="danger">
+              data-flag="warn">
               <td>KB-COR-K70-PRO-TKL-BLK</td>
               <td>Bàn Phím Cơ Gaming Có Dây Corsair K70 PRO TKL Hall Effect</td>
               <td class="num">3.880.000đ</td>
               <td class="num">4.250.000đ</td>
-              <td class="num">2.890.000đ</td>
+              <td class="num">5.490.000đ</td>
               <td>không rõ</td>
               <td><a href="https://owlgaming.vn/ban-phim-corsair-k70-pro-tkl/" target="_blank" rel="noopener">owlgaming.vn</a></td>
-              <td class="num">2.880.000đ</td>
+              <td class="num">5.480.000đ</td>
               <td class="num">335.000đ</td>
               <td class="num">7.9%</td>
-              <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🟠 nguồn giá độ tin cậy thấp (fallback selector) — nên xác minh tay; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 1.360.000đ — mất cạnh tranh</td>
+              <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🟠 nguồn giá độ tin cậy thấp (fallback selector) — nên xác minh tay; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
               <td class="muted">OK (fallback-selector (cần xác minh tay)) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
-            </tr><tr class="danger"
+            </tr><tr class="warn"
               data-sku="KB-COR-K70-PRO-TKL-WHT" data-ten=""
               data-gianhap="3880000.0" data-giaban="4250000.0"
-              data-giadoithu="2890000" data-loinhuan="335000.0"
+              data-giadoithu="5490000" data-loinhuan="335000.0"
               data-bien="7.9"
-              data-flag="danger">
+              data-flag="warn">
               <td>KB-COR-K70-PRO-TKL-WHT</td>
               <td></td>
               <td class="num">3.880.000đ</td>
               <td class="num">4.250.000đ</td>
-              <td class="num">2.890.000đ</td>
+              <td class="num">5.490.000đ</td>
               <td>không rõ</td>
               <td><a href="https://owlgaming.vn/ban-phim-corsair-k70-pro-tkl/" target="_blank" rel="noopener">owlgaming.vn</a></td>
-              <td class="num">2.880.000đ</td>
+              <td class="num">5.480.000đ</td>
               <td class="num">335.000đ</td>
               <td class="num">7.9%</td>
-              <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🟠 nguồn giá độ tin cậy thấp (fallback selector) — nên xác minh tay; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 1.360.000đ — mất cạnh tranh</td>
+              <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🟠 nguồn giá độ tin cậy thấp (fallback selector) — nên xác minh tay; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
               <td class="muted">OK (fallback-selector (cần xác minh tay)) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
             </tr><tr class="danger"
               data-sku="KB-COR-K70-PRO-LIN-BLK" data-ten="Bàn Phím Cơ Gaming Có Dây Corsair K70 PRO RGB Cherry MX Red"
