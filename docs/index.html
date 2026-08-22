@@ -32,14 +32,14 @@
 </style>
 </head><body>
 <h1>Vutech — Dashboard theo dõi giá đối thủ (Auto, 0 token)</h1>
-<div class="sub">Cập nhật lúc 22/08/2026 11:21 (giờ VN) · Nguồn: Google Sheet "Khởi nghiệp" / tab Website · Mỗi SKU có thể theo dõi nhiều đối thủ, dashboard hiển thị giá THẤP NHẤT trong số đối thủ còn hàng · Script chạy tự động, không dùng AI</div>
+<div class="sub">Cập nhật lúc 22/08/2026 11:43 (giờ VN) · Nguồn: Google Sheet "Khởi nghiệp" / tab Website · Mỗi SKU có thể theo dõi nhiều đối thủ, dashboard hiển thị giá THẤP NHẤT trong số đối thủ còn hàng · Script chạy tự động, không dùng AI</div>
 
 <div class="stats">
   <div class="stat"><div class="n">504</div><div class="l">Tổng SKU</div></div>
   <div class="stat"><div class="n">441</div><div class="l">Có link đối thủ</div></div>
-  <div class="stat danger"><div class="n">169</div><div class="l">Cờ đỏ (lỗ / dưới vốn / mất cạnh tranh)</div></div>
-  <div class="stat warn"><div class="n">275</div><div class="l">Cờ vàng (biên mỏng / cần xác minh)</div></div>
-  <div class="stat"><div class="n">13</div><div class="l">Lỗi lấy giá tự động</div></div>
+  <div class="stat danger"><div class="n">165</div><div class="l">Cờ đỏ (lỗ / dưới vốn / mất cạnh tranh)</div></div>
+  <div class="stat warn"><div class="n">267</div><div class="l">Cờ vàng (biên mỏng / cần xác minh)</div></div>
+  <div class="stat"><div class="n">12</div><div class="l">Lỗi lấy giá tự động</div></div>
 </div>
 
 <div class="controls">
@@ -1908,13 +1908,13 @@
               <td class="num">810.000đ</td>
               <td class="num">899.000đ</td>
               <td class="num">950.000đ</td>
-              <td>không rõ</td>
+              <td>còn hàng</td>
               <td><a href="https://owlgaming.vn/ban-phim-corsair-k55-core-tkl-rgb/" target="_blank" rel="noopener">owlgaming.vn</a></td>
               <td class="num">949.000đ</td>
               <td class="num">89.000đ</td>
               <td class="num">9.9%</td>
-              <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🟠 nguồn giá độ tin cậy thấp (fallback selector) — nên xác minh tay; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
-              <td class="muted">OK (fallback-selector (cần xác minh tay)) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
+              <td>🟡 biên mỏng (<10%); 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
             </tr><tr class="danger"
               data-sku="KB-COR-K65-PLUS-75-LIN-SS-GRY" data-ten="Bàn Phím Cơ Gaming Không Dây Corsair K65 Plus CSR Red RGB"
               data-gianhap="3630000.0" data-giaban="3815000.0"
@@ -1987,42 +1987,42 @@
               <td class="num">4.8%</td>
               <td>🟡 biên mỏng (<10%)</td>
               <td class="muted">bỏ qua — chưa có link đối thủ trong cột M</td>
-            </tr><tr class="danger"
+            </tr><tr class="warn"
               data-sku="KB-COR-K70-PRO-TKL-BLK" data-ten="Bàn Phím Cơ Gaming Có Dây Corsair K70 PRO TKL Hall Effect"
               data-gianhap="3880000.0" data-giaban="4250000.0"
-              data-giadoithu="3790000" data-loinhuan="370000.0"
+              data-giadoithu="4675000" data-loinhuan="370000.0"
               data-bien="8.7"
-              data-flag="danger">
+              data-flag="warn">
               <td>KB-COR-K70-PRO-TKL-BLK</td>
               <td>Bàn Phím Cơ Gaming Có Dây Corsair K70 PRO TKL Hall Effect</td>
               <td class="num">3.880.000đ</td>
               <td class="num">4.250.000đ</td>
-              <td class="num">3.790.000đ</td>
-              <td>không rõ</td>
+              <td class="num">4.675.000đ</td>
+              <td>còn hàng</td>
               <td><a href="https://owlgaming.vn/ban-phim-corsair-k70-pro-tkl/" target="_blank" rel="noopener">owlgaming.vn</a></td>
-              <td class="num">3.780.000đ</td>
+              <td class="num">4.665.000đ</td>
               <td class="num">370.000đ</td>
               <td class="num">8.7%</td>
-              <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🟠 nguồn giá độ tin cậy thấp (fallback selector) — nên xác minh tay; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 460.000đ — mất cạnh tranh</td>
-              <td class="muted">OK (fallback-selector (cần xác minh tay)) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
-            </tr><tr class="danger"
+              <td>🟡 biên mỏng (<10%); 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
+            </tr><tr class="warn"
               data-sku="KB-COR-K70-PRO-TKL-WHT" data-ten=""
               data-gianhap="3880000.0" data-giaban="4250000.0"
-              data-giadoithu="3790000" data-loinhuan="370000.0"
+              data-giadoithu="4675000" data-loinhuan="370000.0"
               data-bien="8.7"
-              data-flag="danger">
+              data-flag="warn">
               <td>KB-COR-K70-PRO-TKL-WHT</td>
               <td></td>
               <td class="num">3.880.000đ</td>
               <td class="num">4.250.000đ</td>
-              <td class="num">3.790.000đ</td>
-              <td>không rõ</td>
+              <td class="num">4.675.000đ</td>
+              <td>còn hàng</td>
               <td><a href="https://owlgaming.vn/ban-phim-corsair-k70-pro-tkl/" target="_blank" rel="noopener">owlgaming.vn</a></td>
-              <td class="num">3.780.000đ</td>
+              <td class="num">4.665.000đ</td>
               <td class="num">370.000đ</td>
               <td class="num">8.7%</td>
-              <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🟠 nguồn giá độ tin cậy thấp (fallback selector) — nên xác minh tay; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 460.000đ — mất cạnh tranh</td>
-              <td class="muted">OK (fallback-selector (cần xác minh tay)) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
+              <td>🟡 biên mỏng (<10%); 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
             </tr><tr class="danger"
               data-sku="KB-COR-K70-PRO-LIN-BLK" data-ten="Bàn Phím Cơ Gaming Có Dây Corsair K70 PRO RGB Cherry MX Red"
               data-gianhap="3475000.0" data-giaban="3845000.0"
@@ -2322,13 +2322,13 @@
               <td class="num">7.560.000đ</td>
               <td class="num">9.180.000đ</td>
               <td class="num">8.490.000đ</td>
-              <td>không rõ</td>
+              <td>còn hàng</td>
               <td><a href="https://owlgaming.vn/ban-phim-corsair-galleon-100-sd/" target="_blank" rel="noopener">owlgaming.vn</a></td>
               <td class="num">8.480.000đ</td>
               <td class="num">1.620.000đ</td>
               <td class="num">17.6%</td>
-              <td>⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🟠 nguồn giá độ tin cậy thấp (fallback selector) — nên xác minh tay; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 690.000đ — mất cạnh tranh</td>
-              <td class="muted">OK (fallback-selector (cần xác minh tay)) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
+              <td>🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 690.000đ — mất cạnh tranh</td>
+              <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
             </tr><tr class="danger"
               data-sku="KB-COR-K100-AIR-FULL-MXULP-BLK" data-ten="Bàn Phím Cơ Gaming Không Dây CORSAIR K100 AIR WIRELESS Siêu Mỏng"
               data-gianhap="6170000.0" data-giaban="6480000.0"
@@ -2383,24 +2383,24 @@
               <td class="num">5.0%</td>
               <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 51.000đ — mất cạnh tranh</td>
               <td class="muted">OK (json-ld) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
-            </tr><tr class="danger"
+            </tr><tr class="warn"
               data-sku="KB-COR-K65-PLUS-75-LIN-SS-PRP" data-ten="Bàn Phím Cơ Gaming Không Dây Corsair K65 PLUS WIRELESS RGB Atomic Purple"
               data-gianhap="3630000.0" data-giaban="3815000.0"
-              data-giadoithu="3290000" data-loinhuan="185000.0"
+              data-giadoithu="4430000" data-loinhuan="185000.0"
               data-bien="4.8"
-              data-flag="danger">
+              data-flag="warn">
               <td>KB-COR-K65-PLUS-75-LIN-SS-PRP</td>
               <td>Bàn Phím Cơ Gaming Không Dây Corsair K65 PLUS WIRELESS RGB Atomic Purple</td>
               <td class="num">3.630.000đ</td>
               <td class="num">3.815.000đ</td>
-              <td class="num">3.290.000đ</td>
-              <td>không rõ</td>
+              <td class="num">4.430.000đ</td>
+              <td>còn hàng</td>
               <td><a href="https://owlgaming.vn/ban-phim-corsair-k65-plus-atomic-purple/" target="_blank" rel="noopener">owlgaming.vn</a></td>
-              <td class="num">3.280.000đ</td>
+              <td class="num">4.420.000đ</td>
               <td class="num">185.000đ</td>
               <td class="num">4.8%</td>
-              <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🟠 nguồn giá độ tin cậy thấp (fallback selector) — nên xác minh tay; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 525.000đ — mất cạnh tranh</td>
-              <td class="muted">OK (fallback-selector (cần xác minh tay)) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
+              <td>🟡 biên mỏng (<10%); 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
             </tr><tr class="warn"
               data-sku="KB-COR-K65-PLUS-TAC-SS-BLK" data-ten="Bàn Phím Cơ Gaming Không Dây Corsair K65 PLUS WIRELESS Switch Tactile"
               data-gianhap="3815000.0" data-giaban="3990000.0"
@@ -2797,24 +2797,24 @@
               <td class="num">3.4%</td>
               <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực</td>
               <td class="muted">OK (json-ld) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
-            </tr><tr class="warn"
+            </tr><tr class="danger"
               data-sku="MOU-COR-M55-BLK" data-ten="Chuột Gaming Có Dây Corsair M55 Black"
               data-gianhap="655000.0" data-giaban="800000.0"
-              data-giadoithu="5390000" data-loinhuan="145000.0"
+              data-giadoithu="795000" data-loinhuan="145000.0"
               data-bien="18.1"
-              data-flag="warn">
+              data-flag="danger">
               <td>MOU-COR-M55-BLK</td>
               <td>Chuột Gaming Có Dây Corsair M55 Black</td>
               <td class="num">655.000đ</td>
               <td class="num">800.000đ</td>
-              <td class="num">5.390.000đ</td>
-              <td>không rõ</td>
+              <td class="num">795.000đ</td>
+              <td>còn hàng</td>
               <td><a href="https://owlgaming.vn/chuot-corsair-m55/" target="_blank" rel="noopener">owlgaming.vn</a></td>
-              <td class="num">5.380.000đ</td>
+              <td class="num">794.000đ</td>
               <td class="num">145.000đ</td>
               <td class="num">18.1%</td>
-              <td>⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🟠 nguồn giá độ tin cậy thấp (fallback selector) — nên xác minh tay; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
-              <td class="muted">OK (fallback-selector (cần xác minh tay)) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
+              <td>🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 5.000đ — mất cạnh tranh</td>
+              <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
             </tr><tr class="danger"
               data-sku="MOU-COR-M55-WL-BLK" data-ten="Chuột Gaming Không Dây Corsair M55 Black Wireless"
               data-gianhap="995000.0" data-giaban="1215000.0"
@@ -2887,42 +2887,42 @@
               <td class="num">18.1%</td>
               <td>⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 695.000đ — mất cạnh tranh</td>
               <td class="muted">OK (meta-tag) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
-            </tr><tr class="warn"
+            </tr><tr class="ok"
               data-sku="MOU-COR-SABRE-V2PRO-MG-WHT" data-ten="Chuột Gaming Không Dây Corsair SABRE v2 PRO MG White"
               data-gianhap="3265000.0" data-giaban="3985000.0"
               data-giadoithu="3985000" data-loinhuan="720000.0"
               data-bien="18.1"
-              data-flag="warn">
+              data-flag="ok">
               <td>MOU-COR-SABRE-V2PRO-MG-WHT</td>
               <td>Chuột Gaming Không Dây Corsair SABRE v2 PRO MG White</td>
               <td class="num">3.265.000đ</td>
               <td class="num">3.985.000đ</td>
               <td class="num">3.985.000đ</td>
-              <td>không rõ</td>
+              <td>còn hàng</td>
               <td><a href="https://owlgaming.vn/chuot-corsair-sabre-v2-pro-wireless-magnesium-alloy/" target="_blank" rel="noopener">owlgaming.vn</a></td>
               <td class="num">3.975.000đ</td>
               <td class="num">720.000đ</td>
               <td class="num">18.1%</td>
-              <td>⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🟠 nguồn giá độ tin cậy thấp (fallback selector) — nên xác minh tay</td>
-              <td class="muted">OK (fallback-selector (cần xác minh tay)) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
-            </tr><tr class="danger"
+              <td></td>
+              <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
+            </tr><tr class="ok"
               data-sku="MOU-COR-SABRE-V2PRO-CF-BLK" data-ten="Chuột Gaming Không Dây Corsair SABRE v2 PRO Carbon Fiber Wireless"
               data-gianhap="4230000.0" data-giaban="4990000.0"
-              data-giadoithu="3690000" data-loinhuan="760000.0"
+              data-giadoithu="5165000" data-loinhuan="760000.0"
               data-bien="15.2"
-              data-flag="danger">
+              data-flag="ok">
               <td>MOU-COR-SABRE-V2PRO-CF-BLK</td>
               <td>Chuột Gaming Không Dây Corsair SABRE v2 PRO Carbon Fiber Wireless</td>
               <td class="num">4.230.000đ</td>
               <td class="num">4.990.000đ</td>
-              <td class="num">3.690.000đ</td>
-              <td>không rõ</td>
+              <td class="num">5.165.000đ</td>
+              <td>còn hàng</td>
               <td><a href="https://owlgaming.vn/chuot-corsair-sabre-v2-pro-carbon-fiber-wireless/" target="_blank" rel="noopener">owlgaming.vn</a></td>
-              <td class="num">3.680.000đ</td>
+              <td class="num">5.155.000đ</td>
               <td class="num">760.000đ</td>
               <td class="num">15.2%</td>
-              <td>⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🟠 nguồn giá độ tin cậy thấp (fallback selector) — nên xác minh tay; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 1.300.000đ — mất cạnh tranh</td>
-              <td class="muted">OK (fallback-selector (cần xác minh tay)) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
+              <td>🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
             </tr><tr class="ok"
               data-sku="MOU-COR-SCIMITAR-ELITESE-BLK" data-ten="Chuột Gaming Không Dây Corsair Scimitar Elite SE"
               data-gianhap="2915000.0" data-giaban="3450000.0"
@@ -3156,7 +3156,7 @@
               <td class="num">1.015.000đ</td>
               <td class="num">24.8%</td>
               <td>⚠️ không lấy được giá tự động từ bất kỳ nguồn nào — cần Vũ kiểm tra tay</td>
-              <td class="muted">LỖI: cả 1 nguồn đều lỗi (htt.com.vn: Không tìm thấy giá bằng bất kỳ phương pháp nào đã thử)</td>
+              <td class="muted">LỖI: cả 1 nguồn đều lỗi (htt.com.vn: Lỗi tải trang: HTTPSConnectionPool(host='htt.com.vn', port=443): Read timed out. (read timeout=15))</td>
             </tr><tr class="warn"
               data-sku="SDK-ELG-STREAMDECK-NEO-BLK" data-ten="Bộ Điều Khiển Livestream Elgato Stream Deck Neo"
               data-gianhap="2405000.0" data-giaban="2600000.0"
@@ -3589,24 +3589,24 @@
               <td class="num">13.2%</td>
               <td>⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 90.000đ — mất cạnh tranh</td>
               <td class="muted">OK (meta-tag) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
-            </tr><tr class="danger"
+            </tr><tr class="ok"
               data-sku="ACC-ELG-USBHUB-STREAMDECKPLUS-BLK" data-ten="USB Hub Elgato Cho Stream Deck +"
               data-gianhap="1460000.0" data-giaban="1680000.0"
-              data-giadoithu="1490000" data-loinhuan="220000.0"
+              data-giadoithu="1810000" data-loinhuan="220000.0"
               data-bien="13.1"
-              data-flag="danger">
+              data-flag="ok">
               <td>ACC-ELG-USBHUB-STREAMDECKPLUS-BLK</td>
               <td>USB Hub Elgato Cho Stream Deck +</td>
               <td class="num">1.460.000đ</td>
               <td class="num">1.680.000đ</td>
-              <td class="num">1.490.000đ</td>
-              <td>không rõ</td>
+              <td class="num">1.810.000đ</td>
+              <td>còn hàng</td>
               <td><a href="https://owlgaming.vn/thiet-bi-elgato-usb-hub-for-stream-deck/" target="_blank" rel="noopener">owlgaming.vn</a></td>
-              <td class="num">1.480.000đ</td>
+              <td class="num">1.800.000đ</td>
               <td class="num">220.000đ</td>
               <td class="num">13.1%</td>
-              <td>⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🟠 nguồn giá độ tin cậy thấp (fallback selector) — nên xác minh tay; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 190.000đ — mất cạnh tranh</td>
-              <td class="muted">OK (fallback-selector (cần xác minh tay)) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
+              <td>🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
             </tr><tr class="warn"
               data-sku="CAP-ELG-4KPRO-BLK" data-ten="Thiết Bị Ghi Hình Elgato Game Capture 4K Pro"
               data-gianhap="6755000.0" data-giaban="7095000.0"
@@ -3834,13 +3834,13 @@
               <td class="num">409.000đ</td>
               <td class="num">515.000đ</td>
               <td class="num">490.000đ</td>
-              <td>không rõ</td>
+              <td>còn hàng</td>
               <td><a href="https://owlgaming.vn/gia-do-laptop-hyperwork-lh01/" target="_blank" rel="noopener">owlgaming.vn</a></td>
               <td class="num">489.000đ</td>
               <td class="num">106.000đ</td>
               <td class="num">20.6%</td>
-              <td>⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🟠 nguồn giá độ tin cậy thấp (fallback selector) — nên xác minh tay; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 25.000đ — mất cạnh tranh</td>
-              <td class="muted">OK (fallback-selector (cần xác minh tay)) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
+              <td>🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 25.000đ — mất cạnh tranh</td>
+              <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
             </tr><tr class="danger"
               data-sku="GDL-HPW-LT03-BLK" data-ten="Giá Đỡ Laptop Hyperwork LT03"
               data-gianhap="209000.0" data-giaban="339000.0"
@@ -3942,13 +3942,13 @@
               <td class="num">799.000đ</td>
               <td class="num">1.159.000đ</td>
               <td class="num">990.000đ</td>
-              <td>không rõ</td>
+              <td>còn hàng</td>
               <td><a href="https://owlgaming.vn/arm-man-hinh-hyperwork-p1-dual/" target="_blank" rel="noopener">owlgaming.vn</a></td>
               <td class="num">989.000đ</td>
               <td class="num">360.000đ</td>
               <td class="num">31.1%</td>
-              <td>⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🟠 nguồn giá độ tin cậy thấp (fallback selector) — nên xác minh tay; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 169.000đ — mất cạnh tranh</td>
-              <td class="muted">OK (fallback-selector (cần xác minh tay)) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
+              <td>🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 169.000đ — mất cạnh tranh</td>
+              <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
             </tr><tr class="ok"
               data-sku="GDM-HPW-T6-BLK" data-ten="Giá Đỡ Màn Hình Hyperwork T6"
               data-gianhap="319000.0" data-giaban="459000.0"
@@ -4104,13 +4104,13 @@
               <td class="num">1.755.000đ</td>
               <td class="num">2.390.000đ</td>
               <td class="num">2.190.000đ</td>
-              <td>không rõ</td>
+              <td>còn hàng</td>
               <td><a href="https://owlgaming.vn/arm-man-hinh-hyperwork-t9-pro-iii/" target="_blank" rel="noopener">owlgaming.vn</a></td>
               <td class="num">2.180.000đ</td>
               <td class="num">635.000đ</td>
               <td class="num">26.6%</td>
-              <td>⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🟠 nguồn giá độ tin cậy thấp (fallback selector) — nên xác minh tay; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 200.000đ — mất cạnh tranh</td>
-              <td class="muted">OK (fallback-selector (cần xác minh tay)) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
+              <td>🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 200.000đ — mất cạnh tranh</td>
+              <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
             </tr><tr class="ok"
               data-sku="GDM-HPW-VISIONXSTEALTH-BLK" data-ten="Giá Đỡ Màn Hình Hyperwork VisionX Stealth"
               data-gianhap="1649455.0" data-giaban="2195000.0"
@@ -8974,21 +8974,21 @@
             </tr><tr class="ok"
               data-sku="GPD-RAZ-RAIJU-V3-PRO-BLK" data-ten="Tay Cầm Chơi Game Không Dây Razer Raiju V3 Pro"
               data-gianhap="4872000.0" data-giaban="6090000.0"
-              data-giadoithu="0" data-loinhuan="1218000.0"
+              data-giadoithu="6090000" data-loinhuan="1218000.0"
               data-bien="20.0"
               data-flag="ok">
               <td>GPD-RAZ-RAIJU-V3-PRO-BLK</td>
               <td>Tay Cầm Chơi Game Không Dây Razer Raiju V3 Pro</td>
               <td class="num">4.872.000đ</td>
               <td class="num">6.090.000đ</td>
-              <td class="num">—</td>
-              <td>—</td>
-              <td>—</td>
-              <td class="num">—</td>
+              <td class="num">6.090.000đ</td>
+              <td>còn hàng</td>
+              <td><a href="https://owlgaming.vn/tay-cam-choi-game-razer-raiju-v3-pro/" target="_blank" rel="noopener">owlgaming.vn</a></td>
+              <td class="num">6.080.000đ</td>
               <td class="num">1.218.000đ</td>
               <td class="num">20.0%</td>
-              <td>⚠️ không lấy được giá tự động từ bất kỳ nguồn nào — cần Vũ kiểm tra tay</td>
-              <td class="muted">LỖI: cả 1 nguồn đều lỗi (owlgaming.vn: Lỗi tải trang: HTTPSConnectionPool(host='owlgaming.vn', port=443): Read timed out. (read timeout=15))</td>
+              <td></td>
+              <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
             </tr><tr class="ok"
               data-sku="GPD-RAZ-RAIJU-V3-PRO-WHT" data-ten="Tay Cầm Chơi Game Không Dây Razer Raiju V3 Pro"
               data-gianhap="4872000.0" data-giaban="6090000.0"
