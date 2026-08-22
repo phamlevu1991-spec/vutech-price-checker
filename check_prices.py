@@ -28,6 +28,15 @@ GIỚI HẠN QUAN TRỌNG (đọc kỹ trước khi tin tưởng 100% kết qu�
 - Nếu 1 site đối thủ đổi giao diện, script có thể lấy sai/không lấy được giá
   — mỗi dòng đều có cột "Trạng thái lấy giá" để biết dòng nào tin được, dòng
   nào cần Vũ tự kiểm tra tay.
+
+QUY TẮC TỐI THƯỢNG (thêm 22/08/2026, chốt với Vũ): KHÔNG ĐƯỢC LỖ, và biên lãi
+tối thiểu phải là markup 5% trên giá vốn (Giá bán sàn = Giá nhập × 1.05). Giá
+đề xuất theo đối thủ KHÔNG BAO GIỜ được để thấp hơn giá sàn này — nếu giá đối
+thủ ép xuống dưới sàn, ưu tiên giữ sàn 5%, chấp nhận mất lợi thế giá rẻ nhất.
+Script tự tính 3 chỉ số mới mỗi ngày (xem tab "Theo dõi giá đối thủ (Auto)" +
+tab riêng "Đề xuất tăng giá (Auto)"): (1) số SKU sẽ LỖ nếu bán đúng giá đề
+xuất theo đối thủ, (2) số SKU đang dưới sàn markup 5%, (3) danh sách SKU cần
+tăng giá (bắt buộc do dưới sàn, hoặc cơ hội do đối thủ đã tăng giá).
 """
 
 import json
@@ -59,6 +68,12 @@ SOURCE_RANGE = "C3:M5000"  # KHÔNG thêm tên sheet — ws.get() đã tự gắ
 DATA_START_ROW = 3
 
 SHIP_FEE = 0  # anh không còn chịu phí ship từ 22/08/2026 (cập nhật theo yêu cầu Vũ)
+
+# QUY TẮC TỐI THƯỢNG (chốt 22/08/2026 với Vũ): KHÔNG ĐƯỢC LỖ + biên lãi tối thiểu 5%.
+# Biên 5% tính theo MARKUP trên GIÁ VỐN (giá nhập) — không phải % trên giá bán:
+#   Giá bán sàn = Giá nhập × 1.05, làm tròn LÊN bội số 1.000đ.
+# Ví dụ: giá vốn 950.000đ → giá bán sàn tối thiểu = 997.500đ → làm tròn lên 998.000đ.
+MARGIN_FLOOR_MARKUP = 0.05
 REQUEST_TIMEOUT = 15
 REQUEST_DELAY = 1.2  # giây, nghỉ giữa 2 lần tải trang để lịch sự với site đối thủ
 VN_TZ = timezone(timedelta(hours=7))
@@ -248,6 +263,16 @@ def gia_de_xuat_tu_doi_thu(gia_doi_thu):
     return gia_doi_thu - 10_000
 
 
+def gia_san_markup_5pct(gia_nhap):
+    """Quy tắc tối thượng (chốt 22/08/2026 với Vũ): giá bán KHÔNG ĐƯỢC dưới mức
+    markup 5% trên giá vốn, bất kể giá đối thủ rẻ hơn bao nhiêu. Trả về giá bán
+    sàn tối thiểu, làm tròn LÊN bội số 1.000đ cho đẹp giá. None nếu chưa có giá nhập."""
+    if not gia_nhap:
+        return None
+    raw = gia_nhap * (1 + MARGIN_FLOOR_MARKUP)
+    return int((round(raw) + 999) // 1000 * 1000)
+
+
 def tinh_loi_nhuan_thuc(gia_ban, gia_nhap):
     """Công thức cập nhật 2026-08-22: Lợi nhuận thực = Giá bán - Giá nhập (anh không còn chịu phí ship, SHIP_FEE=0)."""
     if not gia_ban or not gia_nhap:
@@ -351,6 +376,11 @@ def write_output(sh, results):
         "Chênh lệch (hiện tại - đề xuất)",
         "Lợi nhuận thực",
         "Biên thực %",
+        "Giá sàn markup 5% (giá vốn)",
+        "Giá đề xuất CUỐI (đã áp sàn, không lỗ)",
+        "Lỗ nếu theo giá đối thủ?",
+        "Dưới sàn markup 5%?",
+        "Cần tăng giá?",
         "Cờ cảnh báo",
         "Trạng thái lấy giá",
         "Cập nhật lúc (giờ VN)",
@@ -371,6 +401,11 @@ def write_output(sh, results):
                 r["chenh_lech"] if r["chenh_lech"] is not None else "",
                 r["loi_nhuan_thuc"] if r["loi_nhuan_thuc"] is not None else "",
                 r["bien_thuc"] if r["bien_thuc"] is not None else "",
+                r["gia_san_5pct"] or "",
+                r["gia_de_xuat_cuoi"] or "",
+                "Có" if r["lo_neu_theo_doi_thu"] else "",
+                "Có" if r["duoi_san_5pct"] else "",
+                r["ly_do_tang_gia"] if r["can_tang_gia"] else "",
                 r["co_canh_bao"],
                 r["trang_thai_lay_gia"],
                 r["cap_nhat_luc"],
@@ -385,6 +420,69 @@ def write_output(sh, results):
 
     ws.update([header] + body, value_input_option="USER_ENTERED")
     return ws
+
+
+PRICE_INCREASE_TAB = "Đề xuất tăng giá (Auto)"
+
+
+def write_price_increase_list(sh, results):
+    """Tab hành động riêng (chốt 22/08/2026): CHỈ liệt kê SKU cần tăng giá bán —
+    hoặc BẮT BUỘC (đang dưới sàn markup 5% trên giá vốn), hoặc CƠ HỘI (đối thủ
+    đã tăng giá). Sắp BẮT BUỘC lên đầu (nghiêm trọng hơn), trong mỗi nhóm sắp
+    theo mức tăng cần thiết giảm dần. Đây là danh sách Vũ duyệt rồi Claude dùng
+    skill vutech-1-danh-gia-dinh-gia để sửa giá trên Haravan."""
+    header = [
+        "SKU",
+        "Tên sản phẩm (mở nhanh Haravan)",
+        "Giá nhập",
+        "Giá bán hiện tại",
+        "Giá đề xuất mới",
+        "Mức cần tăng",
+        "Biên hiện tại theo giá vốn %",
+        "Lý do",
+        "Nguồn giá đối thủ tham khảo",
+    ]
+    rows = [r for r in results if r["can_tang_gia"]]
+
+    def sort_key(r):
+        muc_tang = (r["gia_de_xuat_cuoi"] or r["gia_san_5pct"] or 0) - (r["gia_ban"] or 0)
+        bat_buoc = 0 if r["duoi_san_5pct"] else 1  # bắt buộc (0) lên trước cơ hội (1)
+        return (bat_buoc, -muc_tang)
+
+    rows.sort(key=sort_key)
+
+    body = []
+    for r in rows:
+        gia_moi = r["gia_de_xuat_cuoi"] or r["gia_san_5pct"]
+        muc_tang = round(gia_moi - r["gia_ban"]) if (gia_moi is not None and r["gia_ban"] is not None) else ""
+        bien_von = (
+            round((r["gia_ban"] - r["gia_nhap"]) / r["gia_nhap"] * 100, 1)
+            if r["gia_nhap"] and r["gia_ban"] is not None
+            else ""
+        )
+        ten_haravan_url = f"https://vutech.myharavan.com/admin/products?query={r['ten']}"
+        body.append(
+            [
+                r["sku"],
+                f'=HYPERLINK("{ten_haravan_url}";"{r["ten"]}")',
+                r["gia_nhap"] or "",
+                r["gia_ban"] or "",
+                gia_moi or "",
+                muc_tang,
+                bien_von,
+                r["ly_do_tang_gia"],
+                (f'=HYPERLINK("{r["url"]}";"{r["nguon"]}")' if r["url"] else (r["nguon"] or "")),
+            ]
+        )
+
+    try:
+        ws = sh.worksheet(PRICE_INCREASE_TAB)
+        ws.clear()
+    except gspread.exceptions.WorksheetNotFound:
+        ws = sh.add_worksheet(title=PRICE_INCREASE_TAB, rows=max(len(body) + 10, 50), cols=len(header) + 2)
+
+    ws.update([header] + body, value_input_option="USER_ENTERED")
+    return ws, len(body)
 
 
 def format_vnd(v):
@@ -403,6 +501,9 @@ def generate_dashboard_html(results, output_path):
     danger = [r for r in results if "🔴" in r["co_canh_bao"]]
     warn = [r for r in results if "🟡" in r["co_canh_bao"] or "🟠" in r["co_canh_bao"]]
     err = [r for r in with_link if not r["trang_thai_lay_gia"].startswith("OK")]
+    lo_neu_theo_doi_thu = [r for r in results if r["lo_neu_theo_doi_thu"]]
+    duoi_san_5pct = [r for r in results if r["duoi_san_5pct"]]
+    can_tang_gia = [r for r in results if r["can_tang_gia"]]
 
     rows_html = []
     for r in results:
@@ -473,6 +574,9 @@ def generate_dashboard_html(results, output_path):
   <div class="stat danger"><div class="n">{len(danger)}</div><div class="l">Cờ đỏ (lỗ / dưới vốn / mất cạnh tranh)</div></div>
   <div class="stat warn"><div class="n">{len(warn)}</div><div class="l">Cờ vàng (biên mỏng / cần xác minh)</div></div>
   <div class="stat"><div class="n">{len(err)}</div><div class="l">Lỗi lấy giá tự động</div></div>
+  <div class="stat danger"><div class="n">{len(lo_neu_theo_doi_thu)}</div><div class="l">Lỗ nếu theo giá đối thủ</div></div>
+  <div class="stat danger"><div class="n">{len(duoi_san_5pct)}</div><div class="l">Dưới sàn markup 5% (giá vốn)</div></div>
+  <div class="stat warn"><div class="n">{len(can_tang_gia)}</div><div class="l">Cần tăng giá hôm nay</div></div>
 </div>
 
 <div class="controls">
@@ -567,11 +671,25 @@ def process_row(row, session):
         "co_canh_bao": "",
         "trang_thai_lay_gia": "",
         "cap_nhat_luc": now_str,
+        # Quy tắc tối thượng 22/08/2026: không được lỗ + markup tối thiểu 5% trên giá vốn.
+        "gia_san_5pct": None,
+        "duoi_san_5pct": False,
+        "gia_de_xuat_cuoi": None,
+        "lo_neu_theo_doi_thu": False,
+        "can_tang_gia": False,
+        "ly_do_tang_gia": "",
     }
 
     loi_nhuan, bien, flag_margin = tinh_loi_nhuan_thuc(row["gia_ban"], row["gia_nhap"])
     result["loi_nhuan_thuc"] = loi_nhuan
     result["bien_thuc"] = bien
+
+    # Giá sàn markup 5% + cờ "đang dưới sàn" — tính được ngay cả khi SKU chưa có
+    # link đối thủ nào, vì chỉ cần Giá nhập + Giá bán hiện tại.
+    gia_san = gia_san_markup_5pct(row["gia_nhap"])
+    result["gia_san_5pct"] = gia_san
+    if gia_san is not None and row["gia_ban"] is not None:
+        result["duoi_san_5pct"] = row["gia_ban"] < gia_san
 
     flags = []
     if flag_margin == "gia_ban_duoi_von":
@@ -583,57 +701,82 @@ def process_row(row, session):
     elif flag_margin == "missing":
         flags.append("⚪ thiếu Giá nhập/Giá bán, chưa tính được")
 
+    if result["duoi_san_5pct"]:
+        flags.append("🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng")
+
     if not candidates:
         result["trang_thai_lay_gia"] = "bỏ qua — chưa có link đối thủ trong cột M"
-        result["co_canh_bao"] = "; ".join(flags)
-        return result
-
-    # Tải hết các đối thủ đang theo dõi cho SKU này, giữ lại từng kết quả
-    # để chọn ra giá THẤP NHẤT trong số đối thủ đang CÒN HÀNG.
-    scraped = []
-    for url, label in candidates:
-        r = fetch_competitor_price(url, session)
-        r["url"] = url
-        r["label"] = label
-        scraped.append(r)
-        time.sleep(REQUEST_DELAY)  # lịch sự với từng site, tránh bị chặn IP
-
-    ok_results = [r for r in scraped if r["ok"]]
-    in_stock = [r for r in ok_results if r.get("availability") == "còn hàng"]
-    winner_pool = in_stock if in_stock else ok_results
-
-    if winner_pool:
-        winner = min(winner_pool, key=lambda r: r["price"])
-        result["gia_doi_thu"] = winner["price"]
-        result["ton_kho_doi_thu"] = winner.get("availability") or "không rõ"
-        result["nguon"] = winner["label"]
-        result["url"] = winner["url"]
-
-        total = len(candidates)
-        if in_stock:
-            result["trang_thai_lay_gia"] = f"OK ({winner['source']}) — thấp nhất trong {len(in_stock)}/{total} nguồn còn hàng"
-        else:
-            result["trang_thai_lay_gia"] = f"OK ({winner['source']}) — {len(ok_results)}/{total} nguồn lấy được giá nhưng TẤT CẢ đều hết hàng"
-            flags.append("⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực")
-
-        if "cần xác minh" in winner["source"]:
-            flags.append("🟠 nguồn giá độ tin cậy thấp (fallback selector) — nên xác minh tay")
-
-        de_xuat = gia_de_xuat_tu_doi_thu(winner["price"])
-        result["gia_de_xuat"] = de_xuat
-
-        if row["gia_ban"] is not None:
-            result["chenh_lech"] = round(row["gia_ban"] - de_xuat)
-            if row["gia_ban"] > winner["price"]:
-                flags.append(
-                    f"🔴 Vutech đang CAO HƠN đối thủ rẻ nhất {int(row['gia_ban'] - winner['price']):,}đ — mất cạnh tranh".replace(",", ".")
-                )
-            elif result["chenh_lech"] is not None and result["chenh_lech"] < -20_000:
-                flags.append("🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận")
     else:
-        err_detail = "; ".join(f"{r['label'] or r['url']}: {r.get('error', '?')}" for r in scraped)
-        result["trang_thai_lay_gia"] = f"LỖI: cả {len(candidates)} nguồn đều lỗi ({err_detail})"
-        flags.append("⚠️ không lấy được giá tự động từ bất kỳ nguồn nào — cần Vũ kiểm tra tay")
+        # Tải hết các đối thủ đang theo dõi cho SKU này, giữ lại từng kết quả
+        # để chọn ra giá THẤP NHẤT trong số đối thủ đang CÒN HÀNG.
+        scraped = []
+        for url, label in candidates:
+            r = fetch_competitor_price(url, session)
+            r["url"] = url
+            r["label"] = label
+            scraped.append(r)
+            time.sleep(REQUEST_DELAY)  # lịch sự với từng site, tránh bị chặn IP
+
+        ok_results = [r for r in scraped if r["ok"]]
+        in_stock = [r for r in ok_results if r.get("availability") == "còn hàng"]
+        winner_pool = in_stock if in_stock else ok_results
+
+        if winner_pool:
+            winner = min(winner_pool, key=lambda r: r["price"])
+            result["gia_doi_thu"] = winner["price"]
+            result["ton_kho_doi_thu"] = winner.get("availability") or "không rõ"
+            result["nguon"] = winner["label"]
+            result["url"] = winner["url"]
+
+            total = len(candidates)
+            if in_stock:
+                result["trang_thai_lay_gia"] = f"OK ({winner['source']}) — thấp nhất trong {len(in_stock)}/{total} nguồn còn hàng"
+            else:
+                result["trang_thai_lay_gia"] = f"OK ({winner['source']}) — {len(ok_results)}/{total} nguồn lấy được giá nhưng TẤT CẢ đều hết hàng"
+                flags.append("⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực")
+
+            if "cần xác minh" in winner["source"]:
+                flags.append("🟠 nguồn giá độ tin cậy thấp (fallback selector) — nên xác minh tay")
+
+            de_xuat = gia_de_xuat_tu_doi_thu(winner["price"])
+            result["gia_de_xuat"] = de_xuat
+
+            # Quy tắc tối thượng: giá đề xuất cuối cùng không bao giờ được thấp hơn
+            # giá sàn markup 5% — nếu giá theo đối thủ thấp hơn sàn, ƯU TIÊN sàn,
+            # chấp nhận mất lợi thế giá rẻ nhất để không bán lỗ/lãi quá mỏng.
+            if gia_san is not None:
+                result["gia_de_xuat_cuoi"] = max(de_xuat, gia_san)
+            else:
+                result["gia_de_xuat_cuoi"] = de_xuat
+
+            if row["gia_nhap"] is not None:
+                result["lo_neu_theo_doi_thu"] = de_xuat < row["gia_nhap"]
+                if result["lo_neu_theo_doi_thu"]:
+                    flags.append("🔴 LỖ nếu bán đúng giá đề xuất theo đối thủ — giá đối thủ đang thấp hơn cả giá vốn")
+
+            if row["gia_ban"] is not None:
+                result["chenh_lech"] = round(row["gia_ban"] - de_xuat)
+                if row["gia_ban"] > winner["price"]:
+                    flags.append(
+                        f"🔴 Vutech đang CAO HƠN đối thủ rẻ nhất {int(row['gia_ban'] - winner['price']):,}đ — mất cạnh tranh".replace(",", ".")
+                    )
+                elif result["chenh_lech"] is not None and result["chenh_lech"] < -20_000:
+                    flags.append("🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận")
+        else:
+            err_detail = "; ".join(f"{r['label'] or r['url']}: {r.get('error', '?')}" for r in scraped)
+            result["trang_thai_lay_gia"] = f"LỖI: cả {len(candidates)} nguồn đều lỗi ({err_detail})"
+            flags.append("⚠️ không lấy được giá tự động từ bất kỳ nguồn nào — cần Vũ kiểm tra tay")
+
+    # "Cần tăng giá?" — hợp nhất 2 lý do dưới 1 cờ hành động duy nhất:
+    # (1) BẮT BUỘC — giá bán hiện tại dưới sàn markup 5% trên giá vốn;
+    # (2) CƠ HỘI — đối thủ đã tăng giá nên giá đề xuất cuối cùng cao hơn giá đang bán.
+    target_price = result["gia_de_xuat_cuoi"] if result["gia_de_xuat_cuoi"] is not None else result["gia_san_5pct"]
+    if target_price is not None and row["gia_ban"] is not None and row["gia_ban"] < target_price:
+        result["can_tang_gia"] = True
+        if result["duoi_san_5pct"]:
+            result["ly_do_tang_gia"] = "🔴 BẮT BUỘC — giá bán hiện tại dưới sàn markup 5% trên giá vốn"
+        else:
+            result["ly_do_tang_gia"] = "🟢 Cơ hội — đối thủ đã tăng giá, có thể tăng giá bán mà vẫn cạnh tranh"
 
     result["co_canh_bao"] = "; ".join(flags)
     return result
@@ -678,11 +821,19 @@ def main():
     ws_out = write_output(sh, results)
     print(f"\nĐã ghi kết quả vào tab '{OUTPUT_TAB}' ({ws_out.url}).")
 
+    ws_tang_gia, so_can_tang_gia = write_price_increase_list(sh, results)
+    print(f"Đã ghi danh sách cần tăng giá vào tab '{PRICE_INCREASE_TAB}' ({ws_tang_gia.url}).")
+
     dashboard_path = generate_dashboard_html(results, os.path.join("docs", "index.html"))
     print(f"Đã xuất dashboard: {dashboard_path}")
 
     danger = [r for r in results if "🔴" in r["co_canh_bao"]]
+    lo_neu_theo_doi_thu = [r for r in results if r["lo_neu_theo_doi_thu"]]
+    duoi_san_5pct = [r for r in results if r["duoi_san_5pct"]]
     print(f"\n⚠️ {len(danger)} SKU có cờ đỏ cần chú ý.")
+    print(f"🔴 QUY TẮC TỐI THƯỢNG: {len(lo_neu_theo_doi_thu)} SKU sẽ LỖ nếu bán đúng giá đề xuất theo đối thủ.")
+    print(f"🔴 QUY TẮC TỐI THƯỢNG: {len(duoi_san_5pct)} SKU đang dưới sàn markup 5% trên giá vốn.")
+    print(f"🟢 {so_can_tang_gia} SKU cần tăng giá hôm nay (bắt buộc + cơ hội) — xem tab '{PRICE_INCREASE_TAB}'.")
 
     return results
 
