@@ -128,6 +128,20 @@ def extract_from_ldjson(soup):
                     offers = offers[0] if offers else None
                 if isinstance(offers, dict):
                     price = _clean_price(offers.get("price"))
+                    if not price:
+                        # Sự cố 22/08/2026: owlgaming.vn (và có thể site khác) không để
+                        # giá trực tiếp ở offers.price, mà bọc trong
+                        # offers.priceSpecification[].price (khai báo giá theo
+                        # schema.org UnitPriceSpecification, thường kèm cờ
+                        # valueAddedTaxIncluded cho yêu cầu hiển thị giá/VAT VN).
+                        # Không đọc được path này khiến script rơi xuống tận
+                        # fallback-selector và lấy NHẦM giá 1 sản phẩm khác hẳn
+                        # (SKU MOU-COR-SABRE-V2PRO-CF-BLK bị lấy nhầm giá ghế gaming).
+                        pspec = offers.get("priceSpecification")
+                        if isinstance(pspec, list):
+                            pspec = pspec[0] if pspec else None
+                        if isinstance(pspec, dict):
+                            price = _clean_price(pspec.get("price"))
                     if price:
                         return price, _clean_availability(offers.get("availability")), "json-ld"
     return None, None, None
@@ -158,13 +172,33 @@ def extract_from_microdata(soup):
     return None, None, None
 
 
+# Sự cố 22/08/2026: selector "ưu tiên #4" từng lấy nhầm giá của 1 sản phẩm KHÁC
+# (thường ở khối "Sản phẩm liên quan/gợi ý") vì soup.select_one() quét TOÀN
+# TRANG, không chỉ khu vực sản phẩm chính. Trước khi tìm theo selector, loại bỏ
+# hẳn các khối liên quan/gợi ý/upsell ra khỏi cây HTML để giảm rủi ro này.
+_RELATED_SECTION_SELECTORS = [
+    ".related", ".related-products", ".products.related",
+    ".upsells", ".up-sells", ".cross-sells",
+    "[class*='lien-quan']", "[class*='goi-y']", "[class*='tuong-tu']",
+    "[class*='san-pham-khac']", "[id*='related']",
+    "aside", "footer",
+]
+
+
 def extract_from_common_selectors(soup):
     """Ưu tiên #4 (thấp nhất, cần Vũ xác minh) — selector giá phổ biến của
     WooCommerce/Sapo/Haravan/theme tự code. Không dùng làm nguồn duy nhất
-    để tự tin cao — luôn gắn nhãn 'cần xác minh' khi rơi vào nhánh này."""
+    để tự tin cao — luôn gắn nhãn 'cần xác minh' khi rơi vào nhánh này.
+    Trước khi tìm, dọn bỏ các khối sản phẩm liên quan/gợi ý (xem
+    _RELATED_SECTION_SELECTORS) để tránh lấy nhầm giá sản phẩm khác — sự cố
+    thật đã xảy ra 22/08/2026 với SKU MOU-COR-SABRE-V2PRO-CF-BLK."""
+    scoped = BeautifulSoup(str(soup), "lxml")
+    for sel in _RELATED_SECTION_SELECTORS:
+        for tag in scoped.select(sel):
+            tag.decompose()
     selectors = [
-        ".price ins .amount",
         ".price .amount",
+        ".price ins .amount",
         ".product-price .price",
         ".product-price",
         ".current-price",
@@ -172,7 +206,7 @@ def extract_from_common_selectors(soup):
         "[class*='price'] .amount",
     ]
     for sel in selectors:
-        el = soup.select_one(sel)
+        el = scoped.select_one(sel)
         if el:
             price = _clean_price(el.get_text())
             if price:
