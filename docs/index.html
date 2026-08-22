@@ -32,14 +32,17 @@
 </style>
 </head><body>
 <h1>Vutech — Dashboard theo dõi giá đối thủ (Auto, 0 token)</h1>
-<div class="sub">Cập nhật lúc 22/08/2026 11:43 (giờ VN) · Nguồn: Google Sheet "Khởi nghiệp" / tab Website · Mỗi SKU có thể theo dõi nhiều đối thủ, dashboard hiển thị giá THẤP NHẤT trong số đối thủ còn hàng · Script chạy tự động, không dùng AI</div>
+<div class="sub">Cập nhật lúc 22/08/2026 12:20 (giờ VN) · Nguồn: Google Sheet "Khởi nghiệp" / tab Website · Mỗi SKU có thể theo dõi nhiều đối thủ, dashboard hiển thị giá THẤP NHẤT trong số đối thủ còn hàng · Script chạy tự động, không dùng AI</div>
 
 <div class="stats">
   <div class="stat"><div class="n">504</div><div class="l">Tổng SKU</div></div>
   <div class="stat"><div class="n">441</div><div class="l">Có link đối thủ</div></div>
-  <div class="stat danger"><div class="n">165</div><div class="l">Cờ đỏ (lỗ / dưới vốn / mất cạnh tranh)</div></div>
+  <div class="stat danger"><div class="n">225</div><div class="l">Cờ đỏ (lỗ / dưới vốn / mất cạnh tranh)</div></div>
   <div class="stat warn"><div class="n">267</div><div class="l">Cờ vàng (biên mỏng / cần xác minh)</div></div>
   <div class="stat"><div class="n">12</div><div class="l">Lỗi lấy giá tự động</div></div>
+  <div class="stat danger"><div class="n">36</div><div class="l">Lỗ nếu theo giá đối thủ</div></div>
+  <div class="stat danger"><div class="n">74</div><div class="l">Dưới sàn markup 5% (giá vốn)</div></div>
+  <div class="stat warn"><div class="n">226</div><div class="l">Cần tăng giá hôm nay</div></div>
 </div>
 
 <div class="controls">
@@ -115,12 +118,12 @@
               <td class="num">5.0%</td>
               <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
               <td class="muted">OK (json-ld) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
-            </tr><tr class="warn"
+            </tr><tr class="danger"
               data-sku="KB-ROG-AZOTH96HELITE-BLK" data-ten="Bàn Phím Cơ Gaming Không Dây Asus ROG Azoth 96 HE Lite"
               data-gianhap="7750000.0" data-giaban="8137500.0"
               data-giadoithu="9590000" data-loinhuan="387500.0"
               data-bien="4.8"
-              data-flag="warn">
+              data-flag="danger">
               <td>KB-ROG-AZOTH96HELITE-BLK</td>
               <td>Bàn Phím Cơ Gaming Không Dây Asus ROG Azoth 96 HE Lite</td>
               <td class="num">7.750.000đ</td>
@@ -131,14 +134,14 @@
               <td class="num">9.580.000đ</td>
               <td class="num">387.500đ</td>
               <td class="num">4.8%</td>
-              <td>🟡 biên mỏng (<10%); 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
-            </tr><tr class="warn"
+            </tr><tr class="danger"
               data-sku="KB-ROG-AZOTH96HELITE-WHT" data-ten="Bàn Phím Cơ Gaming Không Dây Asus ROG Azoth 96 HE Lite"
               data-gianhap="7750000.0" data-giaban="8137500.0"
               data-giadoithu="9590000" data-loinhuan="387500.0"
               data-bien="4.8"
-              data-flag="warn">
+              data-flag="danger">
               <td>KB-ROG-AZOTH96HELITE-WHT</td>
               <td>Bàn Phím Cơ Gaming Không Dây Asus ROG Azoth 96 HE Lite</td>
               <td class="num">7.750.000đ</td>
@@ -149,7 +152,7 @@
               <td class="num">9.580.000đ</td>
               <td class="num">387.500đ</td>
               <td class="num">4.8%</td>
-              <td>🟡 biên mỏng (<10%); 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
             </tr><tr class="warn"
               data-sku="KB-ROG-AZOTHX-WHT" data-ten="Bàn Phím Cơ Gaming Không Dây Asus ROG Azoth X"
@@ -203,7 +206,7 @@
               <td class="num">4.680.000đ</td>
               <td class="num">240.000đ</td>
               <td class="num">4.8%</td>
-              <td>🟡 biên mỏng (<10%); 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 350.000đ — mất cạnh tranh</td>
+              <td>🟡 biên mỏng (<10%); 🔴 LỖ nếu bán đúng giá đề xuất theo đối thủ — giá đối thủ đang thấp hơn cả giá vốn; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 350.000đ — mất cạnh tranh</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
             </tr><tr class="danger"
               data-sku="KB-ROG-FALCHIONACE75HEV2-RED" data-ten="Bàn Phím Cơ Gaming Có Dây Asus ROG Falchion Ace 75HE V2"
@@ -221,7 +224,7 @@
               <td class="num">4.680.000đ</td>
               <td class="num">240.000đ</td>
               <td class="num">4.8%</td>
-              <td>🟡 biên mỏng (<10%); 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 350.000đ — mất cạnh tranh</td>
+              <td>🟡 biên mỏng (<10%); 🔴 LỖ nếu bán đúng giá đề xuất theo đối thủ — giá đối thủ đang thấp hơn cả giá vốn; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 350.000đ — mất cạnh tranh</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
             </tr><tr class="warn"
               data-sku="KB-ROG-FALCHIONACE75HEV2-WHT" data-ten="Bàn Phím Cơ Gaming Có Dây Asus ROG Falchion Ace 75HE V2"
@@ -419,7 +422,7 @@
               <td class="num">2.480.000đ</td>
               <td class="num">450.000đ</td>
               <td class="num">15.1%</td>
-              <td>🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 500.000đ — mất cạnh tranh</td>
+              <td>🔴 LỖ nếu bán đúng giá đề xuất theo đối thủ — giá đối thủ đang thấp hơn cả giá vốn; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 500.000đ — mất cạnh tranh</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
             </tr><tr class="ok"
               data-sku="MOU-ROG-HARPE-II-ACE-BLK" data-ten="Chuột Gaming Không Dây Asus ROG Harpe II Ace"
@@ -473,14 +476,14 @@
               <td class="num">789.000đ</td>
               <td class="num">44.500đ</td>
               <td class="num">4.8%</td>
-              <td>🟡 biên mỏng (<10%); 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 144.500đ — mất cạnh tranh</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; 🔴 LỖ nếu bán đúng giá đề xuất theo đối thủ — giá đối thủ đang thấp hơn cả giá vốn; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 144.500đ — mất cạnh tranh</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
-            </tr><tr class="warn"
+            </tr><tr class="danger"
               data-sku="HSE-ASU-ROG-DELTA-II-WHT" data-ten="Tai Nghe Gaming Không Dây Asus ROG Delta II Moonlight White"
               data-gianhap="4650000.0" data-giaban="4882500.0"
               data-giadoithu="0" data-loinhuan="232500.0"
               data-bien="4.8"
-              data-flag="warn">
+              data-flag="danger">
               <td>HSE-ASU-ROG-DELTA-II-WHT</td>
               <td>Tai Nghe Gaming Không Dây Asus ROG Delta II Moonlight White</td>
               <td class="num">4.650.000đ</td>
@@ -491,14 +494,14 @@
               <td class="num">—</td>
               <td class="num">232.500đ</td>
               <td class="num">4.8%</td>
-              <td>🟡 biên mỏng (<10%)</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng</td>
               <td class="muted">bỏ qua — chưa có link đối thủ trong cột M</td>
-            </tr><tr class="warn"
+            </tr><tr class="danger"
               data-sku="HSE-ASU-ROG-KITHARA-BLK" data-ten="Tai Nghe Gaming Có Dây Asus ROG Kithara"
               data-gianhap="7190000.0" data-giaban="7549500.0"
               data-giadoithu="0" data-loinhuan="359500.0"
               data-bien="4.8"
-              data-flag="warn">
+              data-flag="danger">
               <td>HSE-ASU-ROG-KITHARA-BLK</td>
               <td>Tai Nghe Gaming Có Dây Asus ROG Kithara</td>
               <td class="num">7.190.000đ</td>
@@ -509,14 +512,14 @@
               <td class="num">—</td>
               <td class="num">359.500đ</td>
               <td class="num">4.8%</td>
-              <td>🟡 biên mỏng (<10%)</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng</td>
               <td class="muted">bỏ qua — chưa có link đối thủ trong cột M</td>
-            </tr><tr class="warn"
+            </tr><tr class="danger"
               data-sku="HSE-ASU-TUF-H1-GEN2-BLK" data-ten="Tai Nghe Gaming Có Dây Asus TUF Gaming H1 Gen II"
               data-gianhap="950000.0" data-giaban="997500.0"
               data-giadoithu="0" data-loinhuan="47500.0"
               data-bien="4.8"
-              data-flag="warn">
+              data-flag="danger">
               <td>HSE-ASU-TUF-H1-GEN2-BLK</td>
               <td>Tai Nghe Gaming Có Dây Asus TUF Gaming H1 Gen II</td>
               <td class="num">950.000đ</td>
@@ -527,7 +530,7 @@
               <td class="num">—</td>
               <td class="num">47.500đ</td>
               <td class="num">4.8%</td>
-              <td>🟡 biên mỏng (<10%)</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng</td>
               <td class="muted">bỏ qua — chưa có link đối thủ trong cột M</td>
             </tr><tr class="ok"
               data-sku="HSE-ROG-PELTA-BLK" data-ten="Tai Nghe Gaming Không Dây Asus ROG Pelta"
@@ -671,7 +674,7 @@
               <td class="num">2.480.000đ</td>
               <td class="num">450.000đ</td>
               <td class="num">15.1%</td>
-              <td>🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 500.000đ — mất cạnh tranh</td>
+              <td>🔴 LỖ nếu bán đúng giá đề xuất theo đối thủ — giá đối thủ đang thấp hơn cả giá vốn; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 500.000đ — mất cạnh tranh</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
             </tr><tr class="ok"
               data-sku="MOU-ASU-ROG-HARPE-II-ACE-BLK" data-ten="Chuột Gaming Không Dây Asus ROG Harpe II Ace"
@@ -815,7 +818,7 @@
               <td class="num">1.380.000đ</td>
               <td class="num">66.500đ</td>
               <td class="num">4.8%</td>
-              <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 6.500đ — mất cạnh tranh</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 6.500đ — mất cạnh tranh</td>
               <td class="muted">OK (meta-tag) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
             </tr><tr class="danger"
               data-sku="MOU-ATK-A9AIR-ORG" data-ten="Chuột Gaming Không Dây ATK Dragonfly A9 AIR"
@@ -833,7 +836,7 @@
               <td class="num">1.380.000đ</td>
               <td class="num">66.500đ</td>
               <td class="num">4.8%</td>
-              <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 6.500đ — mất cạnh tranh</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 6.500đ — mất cạnh tranh</td>
               <td class="muted">OK (meta-tag) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
             </tr><tr class="danger"
               data-sku="MOU-ATK-A9AIR-SWH" data-ten="Chuột Gaming Không Dây ATK Dragonfly A9 AIR"
@@ -851,7 +854,7 @@
               <td class="num">1.380.000đ</td>
               <td class="num">66.500đ</td>
               <td class="num">4.8%</td>
-              <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 6.500đ — mất cạnh tranh</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 6.500đ — mất cạnh tranh</td>
               <td class="muted">OK (meta-tag) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
             </tr><tr class="danger"
               data-sku="MOU-ATK-A9AIR-WHT" data-ten="Chuột Gaming Không Dây ATK Dragonfly A9 AIR"
@@ -869,7 +872,7 @@
               <td class="num">1.380.000đ</td>
               <td class="num">66.500đ</td>
               <td class="num">4.8%</td>
-              <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 6.500đ — mất cạnh tranh</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 6.500đ — mất cạnh tranh</td>
               <td class="muted">OK (meta-tag) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
             </tr><tr class="ok"
               data-sku="MOU-ATK-A9PLUS-BLK" data-ten="Chuột Gaming Không Dây ATK Dragonfly A9 Plus"
@@ -995,7 +998,7 @@
               <td class="num">1.289.000đ</td>
               <td class="num">64.250đ</td>
               <td class="num">4.8%</td>
-              <td>🟡 biên mỏng (<10%); 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 50.250đ — mất cạnh tranh</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 50.250đ — mất cạnh tranh</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
             </tr><tr class="danger"
               data-sku="MOU-ATK-A9ULTIMATE-WHT" data-ten="Chuột Gaming Không Dây ATK Dragonfly A9 Ultimate"
@@ -1013,7 +1016,7 @@
               <td class="num">1.289.000đ</td>
               <td class="num">64.250đ</td>
               <td class="num">4.8%</td>
-              <td>🟡 biên mỏng (<10%); 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 50.250đ — mất cạnh tranh</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 50.250đ — mất cạnh tranh</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
             </tr><tr class="warn"
               data-sku="MOU-ATK-A9ULTRAMAX2-BLK" data-ten="Chuột Gaming Không Dây ATK Dragonfly A9 Ultra Max 2.0"
@@ -1051,12 +1054,12 @@
               <td class="num">4.8%</td>
               <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
               <td class="muted">OK (meta-tag) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
-            </tr><tr class="warn"
+            </tr><tr class="danger"
               data-sku="MOU-ATK-F1V2ULTIMATE-BLK" data-ten="Chuột Gaming Không Dây ATK Blazing Sky F1 V2 Ultimate 2.0"
               data-gianhap="1310000.0" data-giaban="1375500.0"
               data-giadoithu="1490000" data-loinhuan="65500.0"
               data-bien="4.8"
-              data-flag="warn">
+              data-flag="danger">
               <td>MOU-ATK-F1V2ULTIMATE-BLK</td>
               <td>Chuột Gaming Không Dây ATK Blazing Sky F1 V2 Ultimate 2.0</td>
               <td class="num">1.310.000đ</td>
@@ -1067,14 +1070,14 @@
               <td class="num">1.480.000đ</td>
               <td class="num">65.500đ</td>
               <td class="num">4.8%</td>
-              <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
               <td class="muted">OK (meta-tag) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
-            </tr><tr class="warn"
+            </tr><tr class="danger"
               data-sku="MOU-ATK-F1V2ULTIMATE-CPK" data-ten="Chuột Gaming Không Dây ATK Blazing Sky F1 V2 Ultimate 2.0"
               data-gianhap="1310000.0" data-giaban="1375500.0"
               data-giadoithu="1490000" data-loinhuan="65500.0"
               data-bien="4.8"
-              data-flag="warn">
+              data-flag="danger">
               <td>MOU-ATK-F1V2ULTIMATE-CPK</td>
               <td>Chuột Gaming Không Dây ATK Blazing Sky F1 V2 Ultimate 2.0</td>
               <td class="num">1.310.000đ</td>
@@ -1085,14 +1088,14 @@
               <td class="num">1.480.000đ</td>
               <td class="num">65.500đ</td>
               <td class="num">4.8%</td>
-              <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
               <td class="muted">OK (meta-tag) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
-            </tr><tr class="warn"
+            </tr><tr class="danger"
               data-sku="MOU-ATK-F1V2ULTIMATE-PBL" data-ten="Chuột Gaming Không Dây ATK Blazing Sky F1 V2 Ultimate 2.0"
               data-gianhap="1310000.0" data-giaban="1375500.0"
               data-giadoithu="1490000" data-loinhuan="65500.0"
               data-bien="4.8"
-              data-flag="warn">
+              data-flag="danger">
               <td>MOU-ATK-F1V2ULTIMATE-PBL</td>
               <td>Chuột Gaming Không Dây ATK Blazing Sky F1 V2 Ultimate 2.0</td>
               <td class="num">1.310.000đ</td>
@@ -1103,14 +1106,14 @@
               <td class="num">1.480.000đ</td>
               <td class="num">65.500đ</td>
               <td class="num">4.8%</td>
-              <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
               <td class="muted">OK (meta-tag) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
-            </tr><tr class="warn"
+            </tr><tr class="danger"
               data-sku="MOU-ATK-F1V2ULTIMATE-WHT" data-ten="Chuột Gaming Không Dây ATK Blazing Sky F1 V2 Ultimate 2.0"
               data-gianhap="1310000.0" data-giaban="1375500.0"
               data-giadoithu="1490000" data-loinhuan="65500.0"
               data-bien="4.8"
-              data-flag="warn">
+              data-flag="danger">
               <td>MOU-ATK-F1V2ULTIMATE-WHT</td>
               <td>Chuột Gaming Không Dây ATK Blazing Sky F1 V2 Ultimate 2.0</td>
               <td class="num">1.310.000đ</td>
@@ -1121,7 +1124,7 @@
               <td class="num">1.480.000đ</td>
               <td class="num">65.500đ</td>
               <td class="num">4.8%</td>
-              <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
               <td class="muted">OK (meta-tag) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
             </tr><tr class="danger"
               data-sku="MOU-ATK-F1V2ULTRAMAX-BLK" data-ten="Chuột Gaming Không Dây ATK Blazing Sky F1 V2 Ultra Max 2.0"
@@ -1139,7 +1142,7 @@
               <td class="num">989.000đ</td>
               <td class="num">49.500đ</td>
               <td class="num">4.8%</td>
-              <td>🟡 biên mỏng (<10%); 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 49.500đ — mất cạnh tranh</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; 🔴 LỖ nếu bán đúng giá đề xuất theo đối thủ — giá đối thủ đang thấp hơn cả giá vốn; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 49.500đ — mất cạnh tranh</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
             </tr><tr class="danger"
               data-sku="MOU-ATK-F1V2ULTRAMAX-WHT" data-ten="Chuột Gaming Không Dây ATK Blazing Sky F1 V2 Ultra Max 2.0"
@@ -1157,7 +1160,7 @@
               <td class="num">989.000đ</td>
               <td class="num">49.500đ</td>
               <td class="num">4.8%</td>
-              <td>🟡 biên mỏng (<10%); 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 49.500đ — mất cạnh tranh</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; 🔴 LỖ nếu bán đúng giá đề xuất theo đối thủ — giá đối thủ đang thấp hơn cả giá vốn; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 49.500đ — mất cạnh tranh</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
             </tr><tr class="warn"
               data-sku="MOU-ATK-GHOSTHOLLOWCFEXTREME-BLK" data-ten="Chuột Gaming Không Dây ATK Blazing Sky GHOST Hollow Carbon Fiber Extreme"
@@ -1267,12 +1270,12 @@
               <td class="num">4.8%</td>
               <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
               <td class="muted">OK (json-ld) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
-            </tr><tr class="warn"
+            </tr><tr class="danger"
               data-sku="MOU-ATK-R1-BLK" data-ten="Chuột Gaming Không Dây ATK Dragonfly R1"
               data-gianhap="490000.0" data-giaban="514500.0"
               data-giadoithu="0" data-loinhuan="24500.0"
               data-bien="4.8"
-              data-flag="warn">
+              data-flag="danger">
               <td>MOU-ATK-R1-BLK</td>
               <td>Chuột Gaming Không Dây ATK Dragonfly R1</td>
               <td class="num">490.000đ</td>
@@ -1283,14 +1286,14 @@
               <td class="num">—</td>
               <td class="num">24.500đ</td>
               <td class="num">4.8%</td>
-              <td>🟡 biên mỏng (<10%)</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng</td>
               <td class="muted">bỏ qua — chưa có link đối thủ trong cột M</td>
-            </tr><tr class="warn"
+            </tr><tr class="danger"
               data-sku="MOU-ATK-R1-WHT" data-ten="Chuột Gaming Không Dây ATK Dragonfly R1"
               data-gianhap="490000.0" data-giaban="514500.0"
               data-giadoithu="0" data-loinhuan="24500.0"
               data-bien="4.8"
-              data-flag="warn">
+              data-flag="danger">
               <td>MOU-ATK-R1-WHT</td>
               <td>Chuột Gaming Không Dây ATK Dragonfly R1</td>
               <td class="num">490.000đ</td>
@@ -1301,7 +1304,7 @@
               <td class="num">—</td>
               <td class="num">24.500đ</td>
               <td class="num">4.8%</td>
-              <td>🟡 biên mỏng (<10%)</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng</td>
               <td class="muted">bỏ qua — chưa có link đối thủ trong cột M</td>
             </tr><tr class="ok"
               data-sku="MOU-ATK-R1S-BLK" data-ten="Chuột Gaming Không Dây ATK Dragonfly R1S"
@@ -1339,12 +1342,12 @@
               <td class="num">15.4%</td>
               <td>🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
-            </tr><tr class="warn"
+            </tr><tr class="danger"
               data-sku="MOU-ATK-R1SEP-BLK" data-ten="Chuột Gaming Không Dây ATK Dragonfly R1SE+"
               data-gianhap="450000.0" data-giaban="472500.0"
               data-giadoithu="599000" data-loinhuan="22500.0"
               data-bien="4.8"
-              data-flag="warn">
+              data-flag="danger">
               <td>MOU-ATK-R1SEP-BLK</td>
               <td>Chuột Gaming Không Dây ATK Dragonfly R1SE+</td>
               <td class="num">450.000đ</td>
@@ -1355,14 +1358,14 @@
               <td class="num">598.000đ</td>
               <td class="num">22.500đ</td>
               <td class="num">4.8%</td>
-              <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
               <td class="muted">OK (json-ld) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
-            </tr><tr class="warn"
+            </tr><tr class="danger"
               data-sku="MOU-ATK-R1SEP-WHT" data-ten="Chuột Gaming Không Dây ATK Dragonfly R1SE+"
               data-gianhap="450000.0" data-giaban="472500.0"
               data-giadoithu="599000" data-loinhuan="22500.0"
               data-bien="4.8"
-              data-flag="warn">
+              data-flag="danger">
               <td>MOU-ATK-R1SEP-WHT</td>
               <td>Chuột Gaming Không Dây ATK Dragonfly R1SE+</td>
               <td class="num">450.000đ</td>
@@ -1373,14 +1376,14 @@
               <td class="num">598.000đ</td>
               <td class="num">22.500đ</td>
               <td class="num">4.8%</td>
-              <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
               <td class="muted">OK (json-ld) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
-            </tr><tr class="warn"
+            </tr><tr class="danger"
               data-sku="MOU-ATK-X1V2AIRPLUS-BSV" data-ten="Chuột Gaming Không Dây ATK Blazing Sky X1 V2 Air+"
               data-gianhap="1535000.0" data-giaban="1611750.0"
               data-giadoithu="0" data-loinhuan="76750.0"
               data-bien="4.8"
-              data-flag="warn">
+              data-flag="danger">
               <td>MOU-ATK-X1V2AIRPLUS-BSV</td>
               <td>Chuột Gaming Không Dây ATK Blazing Sky X1 V2 Air+</td>
               <td class="num">1.535.000đ</td>
@@ -1391,14 +1394,14 @@
               <td class="num">—</td>
               <td class="num">76.750đ</td>
               <td class="num">4.8%</td>
-              <td>🟡 biên mỏng (<10%)</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng</td>
               <td class="muted">bỏ qua — chưa có link đối thủ trong cột M</td>
-            </tr><tr class="warn"
+            </tr><tr class="danger"
               data-sku="MOU-ATK-X1V2AIRPLUS-ORG" data-ten="Chuột Gaming Không Dây ATK Blazing Sky X1 V2 Air+"
               data-gianhap="1535000.0" data-giaban="1611750.0"
               data-giadoithu="0" data-loinhuan="76750.0"
               data-bien="4.8"
-              data-flag="warn">
+              data-flag="danger">
               <td>MOU-ATK-X1V2AIRPLUS-ORG</td>
               <td>Chuột Gaming Không Dây ATK Blazing Sky X1 V2 Air+</td>
               <td class="num">1.535.000đ</td>
@@ -1409,14 +1412,14 @@
               <td class="num">—</td>
               <td class="num">76.750đ</td>
               <td class="num">4.8%</td>
-              <td>🟡 biên mỏng (<10%)</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng</td>
               <td class="muted">bỏ qua — chưa có link đối thủ trong cột M</td>
-            </tr><tr class="warn"
+            </tr><tr class="danger"
               data-sku="MOU-ATK-X1V2AIRPLUS-SWH" data-ten="Chuột Gaming Không Dây ATK Blazing Sky X1 V2 Air+"
               data-gianhap="1535000.0" data-giaban="1611750.0"
               data-giadoithu="0" data-loinhuan="76750.0"
               data-bien="4.8"
-              data-flag="warn">
+              data-flag="danger">
               <td>MOU-ATK-X1V2AIRPLUS-SWH</td>
               <td>Chuột Gaming Không Dây ATK Blazing Sky X1 V2 Air+</td>
               <td class="num">1.535.000đ</td>
@@ -1427,14 +1430,14 @@
               <td class="num">—</td>
               <td class="num">76.750đ</td>
               <td class="num">4.8%</td>
-              <td>🟡 biên mỏng (<10%)</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng</td>
               <td class="muted">bỏ qua — chưa có link đối thủ trong cột M</td>
-            </tr><tr class="warn"
+            </tr><tr class="danger"
               data-sku="MOU-ATK-X1V2EXTREME-PUR" data-ten="Chuột Gaming Không Dây ATK Blazing Sky X1 V2 Extreme"
               data-gianhap="1790000.0" data-giaban="1879500.0"
               data-giadoithu="0" data-loinhuan="89500.0"
               data-bien="4.8"
-              data-flag="warn">
+              data-flag="danger">
               <td>MOU-ATK-X1V2EXTREME-PUR</td>
               <td>Chuột Gaming Không Dây ATK Blazing Sky X1 V2 Extreme</td>
               <td class="num">1.790.000đ</td>
@@ -1445,14 +1448,14 @@
               <td class="num">—</td>
               <td class="num">89.500đ</td>
               <td class="num">4.8%</td>
-              <td>🟡 biên mỏng (<10%)</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng</td>
               <td class="muted">bỏ qua — chưa có link đối thủ trong cột M</td>
-            </tr><tr class="warn"
+            </tr><tr class="danger"
               data-sku="MOU-ATK-X1V2EXTREME-RED" data-ten="Chuột Gaming Không Dây ATK Blazing Sky X1 V2 Extreme"
               data-gianhap="1790000.0" data-giaban="1879500.0"
               data-giadoithu="0" data-loinhuan="89500.0"
               data-bien="4.8"
-              data-flag="warn">
+              data-flag="danger">
               <td>MOU-ATK-X1V2EXTREME-RED</td>
               <td>Chuột Gaming Không Dây ATK Blazing Sky X1 V2 Extreme</td>
               <td class="num">1.790.000đ</td>
@@ -1463,14 +1466,14 @@
               <td class="num">—</td>
               <td class="num">89.500đ</td>
               <td class="num">4.8%</td>
-              <td>🟡 biên mỏng (<10%)</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng</td>
               <td class="muted">bỏ qua — chưa có link đối thủ trong cột M</td>
-            </tr><tr class="warn"
+            </tr><tr class="danger"
               data-sku="MOU-ATK-X1V2ULTIMATE-BLK" data-ten="Chuột Gaming Không Dây ATK Blazing Sky X1 V2 Ultimate"
               data-gianhap="1290000.0" data-giaban="1354500.0"
               data-giadoithu="1490000" data-loinhuan="64500.0"
               data-bien="4.8"
-              data-flag="warn">
+              data-flag="danger">
               <td>MOU-ATK-X1V2ULTIMATE-BLK</td>
               <td>Chuột Gaming Không Dây ATK Blazing Sky X1 V2 Ultimate</td>
               <td class="num">1.290.000đ</td>
@@ -1481,14 +1484,14 @@
               <td class="num">1.480.000đ</td>
               <td class="num">64.500đ</td>
               <td class="num">4.8%</td>
-              <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
               <td class="muted">OK (meta-tag) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
-            </tr><tr class="warn"
+            </tr><tr class="danger"
               data-sku="MOU-ATK-X1V2ULTIMATE-RED" data-ten="Chuột Gaming Không Dây ATK Blazing Sky X1 V2 Ultimate"
               data-gianhap="1290000.0" data-giaban="1354500.0"
               data-giadoithu="1490000" data-loinhuan="64500.0"
               data-bien="4.8"
-              data-flag="warn">
+              data-flag="danger">
               <td>MOU-ATK-X1V2ULTIMATE-RED</td>
               <td>Chuột Gaming Không Dây ATK Blazing Sky X1 V2 Ultimate</td>
               <td class="num">1.290.000đ</td>
@@ -1499,14 +1502,14 @@
               <td class="num">1.480.000đ</td>
               <td class="num">64.500đ</td>
               <td class="num">4.8%</td>
-              <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
               <td class="muted">OK (meta-tag) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
-            </tr><tr class="warn"
+            </tr><tr class="danger"
               data-sku="MOU-ATK-X1V2ULTIMATE-SLV" data-ten="Chuột Gaming Không Dây ATK Blazing Sky X1 V2 Ultimate"
               data-gianhap="1290000.0" data-giaban="1354500.0"
               data-giadoithu="1490000" data-loinhuan="64500.0"
               data-bien="4.8"
-              data-flag="warn">
+              data-flag="danger">
               <td>MOU-ATK-X1V2ULTIMATE-SLV</td>
               <td>Chuột Gaming Không Dây ATK Blazing Sky X1 V2 Ultimate</td>
               <td class="num">1.290.000đ</td>
@@ -1517,14 +1520,14 @@
               <td class="num">1.480.000đ</td>
               <td class="num">64.500đ</td>
               <td class="num">4.8%</td>
-              <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
               <td class="muted">OK (meta-tag) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
-            </tr><tr class="warn"
+            </tr><tr class="danger"
               data-sku="MOU-ATK-X1V2ULTIMATE-WHT" data-ten="Chuột Gaming Không Dây ATK Blazing Sky X1 V2 Ultimate"
               data-gianhap="1290000.0" data-giaban="1354500.0"
               data-giadoithu="1490000" data-loinhuan="64500.0"
               data-bien="4.8"
-              data-flag="warn">
+              data-flag="danger">
               <td>MOU-ATK-X1V2ULTIMATE-WHT</td>
               <td>Chuột Gaming Không Dây ATK Blazing Sky X1 V2 Ultimate</td>
               <td class="num">1.290.000đ</td>
@@ -1535,14 +1538,14 @@
               <td class="num">1.480.000đ</td>
               <td class="num">64.500đ</td>
               <td class="num">4.8%</td>
-              <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
               <td class="muted">OK (meta-tag) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
-            </tr><tr class="warn"
+            </tr><tr class="danger"
               data-sku="MOU-ATK-X1V2ULTRAMAX2-BLK" data-ten="Chuột Gaming Không Dây ATK Blazing Sky X1 V2 Ultra Max 2.0"
               data-gianhap="1016000.0" data-giaban="1039500.0"
               data-giadoithu="1049000" data-loinhuan="23500.0"
               data-bien="2.3"
-              data-flag="warn">
+              data-flag="danger">
               <td>MOU-ATK-X1V2ULTRAMAX2-BLK</td>
               <td>Chuột Gaming Không Dây ATK Blazing Sky X1 V2 Ultra Max 2.0</td>
               <td class="num">1.016.000đ</td>
@@ -1553,14 +1556,14 @@
               <td class="num">1.039.000đ</td>
               <td class="num">23.500đ</td>
               <td class="num">2.3%</td>
-              <td>🟡 biên mỏng (<10%)</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
-            </tr><tr class="warn"
+            </tr><tr class="danger"
               data-sku="MOU-ATK-X1V2ULTRAMAX2-WHT" data-ten="Chuột Gaming Không Dây ATK Blazing Sky X1 V2 Ultra Max 2.0"
               data-gianhap="1016000.0" data-giaban="1039500.0"
               data-giadoithu="1049000" data-loinhuan="23500.0"
               data-bien="2.3"
-              data-flag="warn">
+              data-flag="danger">
               <td>MOU-ATK-X1V2ULTRAMAX2-WHT</td>
               <td>Chuột Gaming Không Dây ATK Blazing Sky X1 V2 Ultra Max 2.0</td>
               <td class="num">1.016.000đ</td>
@@ -1571,7 +1574,7 @@
               <td class="num">1.039.000đ</td>
               <td class="num">23.500đ</td>
               <td class="num">2.3%</td>
-              <td>🟡 biên mỏng (<10%)</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
             </tr><tr class="danger"
               data-sku="KB-AUL-F75-75-RED-BLK" data-ten="Bàn Phím Cơ Gaming Có Dây AULA F75 (Đen)"
@@ -1589,7 +1592,7 @@
               <td class="num">649.000đ</td>
               <td class="num">37.000đ</td>
               <td class="num">5.2%</td>
-              <td>🟡 biên mỏng (<10%); 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 60.000đ — mất cạnh tranh</td>
+              <td>🟡 biên mỏng (<10%); 🔴 LỖ nếu bán đúng giá đề xuất theo đối thủ — giá đối thủ đang thấp hơn cả giá vốn; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 60.000đ — mất cạnh tranh</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
             </tr><tr class="danger"
               data-sku="KB-AUL-F75-75-RED-WHT" data-ten="Bàn Phím Cơ Gaming Có Dây AULA F75 (Trắng)"
@@ -1607,7 +1610,7 @@
               <td class="num">649.000đ</td>
               <td class="num">37.000đ</td>
               <td class="num">5.2%</td>
-              <td>🟡 biên mỏng (<10%); 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 60.000đ — mất cạnh tranh</td>
+              <td>🟡 biên mỏng (<10%); 🔴 LỖ nếu bán đúng giá đề xuất theo đối thủ — giá đối thủ đang thấp hơn cả giá vốn; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 60.000đ — mất cạnh tranh</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
             </tr><tr class="warn"
               data-sku="KB-AUL-F75-75-PNK-BLKBLUORG" data-ten="Bàn Phím Cơ Gaming Có Dây AULA F75 (Đen + Xanh Đậm + Cam)"
@@ -1699,12 +1702,12 @@
               <td class="num">5.2%</td>
               <td>🟡 biên mỏng (<10%); 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
-            </tr><tr class="warn"
+            </tr><tr class="danger"
               data-sku="KB-AUL-F2023-BLK" data-ten="Bàn Phím Giả Cơ Gaming Có Dây AULA F2023"
               data-gianhap="205000.0" data-giaban="215000.0"
               data-giadoithu="249000" data-loinhuan="10000.0"
               data-bien="4.7"
-              data-flag="warn">
+              data-flag="danger">
               <td>KB-AUL-F2023-BLK</td>
               <td>Bàn Phím Giả Cơ Gaming Có Dây AULA F2023</td>
               <td class="num">205.000đ</td>
@@ -1715,7 +1718,7 @@
               <td class="num">248.000đ</td>
               <td class="num">10.000đ</td>
               <td class="num">4.7%</td>
-              <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
               <td class="muted">OK (json-ld) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
             </tr><tr class="warn"
               data-sku="KB-AUL-HERO84HE-75-LIN-WHTPNK" data-ten="Bàn Phím Cơ Gaming Có Dây AULA HERO 84 HE"
@@ -1735,12 +1738,12 @@
               <td class="num">5.0%</td>
               <td>🟡 biên mỏng (<10%); 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
-            </tr><tr class="warn"
+            </tr><tr class="danger"
               data-sku="KB-AUL-S102PRO-GRN" data-ten="Bàn Phím Giả Cơ Gaming Không Dây AULA S102 PRO"
               data-gianhap="605000.0" data-giaban="635000.0"
               data-giadoithu="790000" data-loinhuan="30000.0"
               data-bien="4.7"
-              data-flag="warn">
+              data-flag="danger">
               <td>KB-AUL-S102PRO-GRN</td>
               <td>Bàn Phím Giả Cơ Gaming Không Dây AULA S102 PRO</td>
               <td class="num">605.000đ</td>
@@ -1751,14 +1754,14 @@
               <td class="num">789.000đ</td>
               <td class="num">30.000đ</td>
               <td class="num">4.7%</td>
-              <td>🟡 biên mỏng (<10%); 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
-            </tr><tr class="warn"
+            </tr><tr class="danger"
               data-sku="KB-AUL-S102PRO-GRY" data-ten="Bàn Phím Giả Cơ Gaming Không Dây AULA S102 PRO"
               data-gianhap="605000.0" data-giaban="635000.0"
               data-giadoithu="790000" data-loinhuan="30000.0"
               data-bien="4.7"
-              data-flag="warn">
+              data-flag="danger">
               <td>KB-AUL-S102PRO-GRY</td>
               <td>Bàn Phím Giả Cơ Gaming Không Dây AULA S102 PRO</td>
               <td class="num">605.000đ</td>
@@ -1769,14 +1772,14 @@
               <td class="num">789.000đ</td>
               <td class="num">30.000đ</td>
               <td class="num">4.7%</td>
-              <td>🟡 biên mỏng (<10%); 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
-            </tr><tr class="warn"
+            </tr><tr class="danger"
               data-sku="KB-AUL-S102PRO-PNK" data-ten="Bàn Phím Giả Cơ Gaming Không Dây AULA S102 PRO"
               data-gianhap="605000.0" data-giaban="635000.0"
               data-giadoithu="790000" data-loinhuan="30000.0"
               data-bien="4.7"
-              data-flag="warn">
+              data-flag="danger">
               <td>KB-AUL-S102PRO-PNK</td>
               <td>Bàn Phím Giả Cơ Gaming Không Dây AULA S102 PRO</td>
               <td class="num">605.000đ</td>
@@ -1787,7 +1790,7 @@
               <td class="num">789.000đ</td>
               <td class="num">30.000đ</td>
               <td class="num">4.7%</td>
-              <td>🟡 biên mỏng (<10%); 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
             </tr><tr class="warn"
               data-sku="MOU-AUL-SC580X-BLK" data-ten="Chuột Gaming Không Dây AULA SC580X"
@@ -2255,7 +2258,7 @@
               <td class="num">3.580.000đ</td>
               <td class="num">260.000đ</td>
               <td class="num">4.8%</td>
-              <td>🟡 biên mỏng (<10%); 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 1.850.000đ — mất cạnh tranh</td>
+              <td>🟡 biên mỏng (<10%); 🔴 LỖ nếu bán đúng giá đề xuất theo đối thủ — giá đối thủ đang thấp hơn cả giá vốn; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 1.850.000đ — mất cạnh tranh</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
             </tr><tr class="warn"
               data-sku="KB-COR-K100-AIR-WL-BLK" data-ten="Bàn Phím Cơ Gaming Không Dây Corsair K100 AIR Wireless"
@@ -2363,7 +2366,7 @@
               <td class="num">4.980.000đ</td>
               <td class="num">260.000đ</td>
               <td class="num">4.8%</td>
-              <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 450.000đ — mất cạnh tranh</td>
+              <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🔴 LỖ nếu bán đúng giá đề xuất theo đối thủ — giá đối thủ đang thấp hơn cả giá vốn; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 450.000đ — mất cạnh tranh</td>
               <td class="muted">OK (json-ld) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
             </tr><tr class="danger"
               data-sku="KB-COR-K55-CORE-FULL-BLK" data-ten="Bàn Phím Gaming Có Dây Corsair K55 CORE RGB"
@@ -2381,7 +2384,7 @@
               <td class="num">848.000đ</td>
               <td class="num">45.000đ</td>
               <td class="num">5.0%</td>
-              <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 51.000đ — mất cạnh tranh</td>
+              <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🔴 LỖ nếu bán đúng giá đề xuất theo đối thủ — giá đối thủ đang thấp hơn cả giá vốn; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 51.000đ — mất cạnh tranh</td>
               <td class="muted">OK (json-ld) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
             </tr><tr class="warn"
               data-sku="KB-COR-K65-PLUS-75-LIN-SS-PRP" data-ten="Bàn Phím Cơ Gaming Không Dây Corsair K65 PLUS WIRELESS RGB Atomic Purple"
@@ -2401,12 +2404,12 @@
               <td class="num">4.8%</td>
               <td>🟡 biên mỏng (<10%); 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
-            </tr><tr class="warn"
+            </tr><tr class="danger"
               data-sku="KB-COR-K65-PLUS-TAC-SS-BLK" data-ten="Bàn Phím Cơ Gaming Không Dây Corsair K65 PLUS WIRELESS Switch Tactile"
               data-gianhap="3815000.0" data-giaban="3990000.0"
               data-giadoithu="3990000" data-loinhuan="175000.0"
               data-bien="4.4"
-              data-flag="warn">
+              data-flag="danger">
               <td>KB-COR-K65-PLUS-TAC-SS-BLK</td>
               <td>Bàn Phím Cơ Gaming Không Dây Corsair K65 PLUS WIRELESS Switch Tactile</td>
               <td class="num">3.815.000đ</td>
@@ -2417,7 +2420,7 @@
               <td class="num">3.980.000đ</td>
               <td class="num">175.000đ</td>
               <td class="num">4.4%</td>
-              <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực</td>
               <td class="muted">OK (meta-tag) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
             </tr><tr class="warn"
               data-sku="KB-COR-K70-CORE-TKL-MLX-RED-BLK" data-ten="Bàn Phím Cơ Gaming Có Dây Corsair K70 CORE TKL RGB Switch MLX Red"
@@ -2453,7 +2456,7 @@
               <td class="num">2.980.000đ</td>
               <td class="num">165.000đ</td>
               <td class="num">4.8%</td>
-              <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 430.000đ — mất cạnh tranh</td>
+              <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🔴 LỖ nếu bán đúng giá đề xuất theo đối thủ — giá đối thủ đang thấp hơn cả giá vốn; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 430.000đ — mất cạnh tranh</td>
               <td class="muted">OK (meta-tag) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
             </tr><tr class="warn"
               data-sku="KB-COR-K70-PRO-FULL-MXB-BLK" data-ten="Bàn Phím Cơ Gaming Có Dây Corsair K70 PRO Switch Cherry MX Brown"
@@ -2507,7 +2510,7 @@
               <td class="num">3.380.000đ</td>
               <td class="num">180.000đ</td>
               <td class="num">4.8%</td>
-              <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 360.000đ — mất cạnh tranh</td>
+              <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🔴 LỖ nếu bán đúng giá đề xuất theo đối thủ — giá đối thủ đang thấp hơn cả giá vốn; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 360.000đ — mất cạnh tranh</td>
               <td class="muted">OK (meta-tag) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
             </tr><tr class="warn"
               data-sku="KB-COR-K70-PRO-FULL-OPX-BLK" data-ten="Bàn Phím Cơ Gaming Có Dây Corsair K70 PRO Switch OPX Optical"
@@ -2687,7 +2690,7 @@
               <td class="num">3.980.000đ</td>
               <td class="num">210.000đ</td>
               <td class="num">4.8%</td>
-              <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 420.000đ — mất cạnh tranh</td>
+              <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🔴 LỖ nếu bán đúng giá đề xuất theo đối thủ — giá đối thủ đang thấp hơn cả giá vốn; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 420.000đ — mất cạnh tranh</td>
               <td class="muted">OK (meta-tag) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
             </tr><tr class="warn"
               data-sku="KB-COR-VANGUARD-AIR-99-OPXLP-BLK" data-ten="Bàn Phím Cơ Gaming Không Dây Corsair VANGUARD AIR 99 Switch OPX Low Profile Đen"
@@ -2725,12 +2728,12 @@
               <td class="num">4.8%</td>
               <td>🟡 biên mỏng (<10%)</td>
               <td class="muted">bỏ qua — chưa có link đối thủ trong cột M</td>
-            </tr><tr class="warn"
+            </tr><tr class="danger"
               data-sku="MOU-COR-SABRE-V2PRO-BLK" data-ten="Chuột Gaming Không Dây Corsair SABRE v2 PRO UltraLight"
               data-gianhap="2295000.0" data-giaban="2390000.0"
               data-giadoithu="2800000" data-loinhuan="95000.0"
               data-bien="4.0"
-              data-flag="warn">
+              data-flag="danger">
               <td>MOU-COR-SABRE-V2PRO-BLK</td>
               <td>Chuột Gaming Không Dây Corsair SABRE v2 PRO UltraLight</td>
               <td class="num">2.295.000đ</td>
@@ -2741,7 +2744,7 @@
               <td class="num">2.790.000đ</td>
               <td class="num">95.000đ</td>
               <td class="num">4.0%</td>
-              <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
               <td class="muted">OK (microdata) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
             </tr><tr class="danger"
               data-sku="MOU-COR-KATARPRO-BLK" data-ten="Chuột Gaming Có Dây Corsair Katar PRO"
@@ -2779,12 +2782,12 @@
               <td class="num">6.7%</td>
               <td>🟡 biên mỏng (<10%)</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
-            </tr><tr class="warn"
+            </tr><tr class="danger"
               data-sku="MOU-COR-HARPOON-WL-BLK" data-ten="Chuột Gaming Không Dây Corsair Harpoon RGB Wireless"
               data-gianhap="1150000.0" data-giaban="1190000.0"
               data-giadoithu="1190000" data-loinhuan="40000.0"
               data-bien="3.4"
-              data-flag="warn">
+              data-flag="danger">
               <td>MOU-COR-HARPOON-WL-BLK</td>
               <td>Chuột Gaming Không Dây Corsair Harpoon RGB Wireless</td>
               <td class="num">1.150.000đ</td>
@@ -2795,7 +2798,7 @@
               <td class="num">1.180.000đ</td>
               <td class="num">40.000đ</td>
               <td class="num">3.4%</td>
-              <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực</td>
               <td class="muted">OK (json-ld) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
             </tr><tr class="danger"
               data-sku="MOU-COR-M55-BLK" data-ten="Chuột Gaming Có Dây Corsair M55 Black"
@@ -3011,7 +3014,7 @@
               <td class="num">389.000đ</td>
               <td class="num">135.000đ</td>
               <td class="num">16.0%</td>
-              <td>⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 455.000đ — mất cạnh tranh</td>
+              <td>⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🔴 LỖ nếu bán đúng giá đề xuất theo đối thủ — giá đối thủ đang thấp hơn cả giá vốn; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 455.000đ — mất cạnh tranh</td>
               <td class="muted">OK (json-ld) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
             </tr><tr class="warn"
               data-sku="HEA-COR-HS80MAX-RGB-GRY" data-ten="Tai Nghe Không Dây Corsair HS80 MAX Wireless RGB"
@@ -3031,12 +3034,12 @@
               <td class="num">5.1%</td>
               <td>🟡 biên mỏng (<10%); 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
-            </tr><tr class="warn"
+            </tr><tr class="danger"
               data-sku="HSE-COR-HS55-STEREO-BLK" data-ten="Tai Nghe Gaming Có Dây Corsair HS55 STEREO Carbon"
               data-gianhap="915000.0" data-giaban="930000.0"
               data-giadoithu="990000" data-loinhuan="15000.0"
               data-bien="1.6"
-              data-flag="warn">
+              data-flag="danger">
               <td>HSE-COR-HS55-STEREO-BLK</td>
               <td>Tai Nghe Gaming Có Dây Corsair HS55 STEREO Carbon</td>
               <td class="num">915.000đ</td>
@@ -3047,7 +3050,7 @@
               <td class="num">989.000đ</td>
               <td class="num">15.000đ</td>
               <td class="num">1.6%</td>
-              <td>🟡 biên mỏng (<10%); 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
             </tr><tr class="warn"
               data-sku="HSE-COR-HS80MAX-RGB-GRY" data-ten="Tai Nghe Gaming Không Dây Corsair HS80 MAX RGB"
@@ -3156,7 +3159,7 @@
               <td class="num">1.015.000đ</td>
               <td class="num">24.8%</td>
               <td>⚠️ không lấy được giá tự động từ bất kỳ nguồn nào — cần Vũ kiểm tra tay</td>
-              <td class="muted">LỖI: cả 1 nguồn đều lỗi (htt.com.vn: Lỗi tải trang: HTTPSConnectionPool(host='htt.com.vn', port=443): Read timed out. (read timeout=15))</td>
+              <td class="muted">LỖI: cả 1 nguồn đều lỗi (htt.com.vn: Không tìm thấy giá bằng bất kỳ phương pháp nào đã thử)</td>
             </tr><tr class="warn"
               data-sku="SDK-ELG-STREAMDECK-NEO-BLK" data-ten="Bộ Điều Khiển Livestream Elgato Stream Deck Neo"
               data-gianhap="2405000.0" data-giaban="2600000.0"
@@ -3263,7 +3266,7 @@
               <td class="num">5.880.000đ</td>
               <td class="num">390.000đ</td>
               <td class="num">4.8%</td>
-              <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 2.225.000đ — mất cạnh tranh</td>
+              <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🔴 LỖ nếu bán đúng giá đề xuất theo đối thủ — giá đối thủ đang thấp hơn cả giá vốn; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 2.225.000đ — mất cạnh tranh</td>
               <td class="muted">OK (meta-tag) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
             </tr><tr class="danger"
               data-sku="LGT-ELG-KEYLIGHT-BLK" data-ten="Đèn Livestream Elgato Key Light"
@@ -3443,7 +3446,7 @@
               <td class="num">3.389.000đ</td>
               <td class="num">450.000đ</td>
               <td class="num">11.5%</td>
-              <td>⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 516.000đ — mất cạnh tranh</td>
+              <td>⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🔴 LỖ nếu bán đúng giá đề xuất theo đối thủ — giá đối thủ đang thấp hơn cả giá vốn; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 516.000đ — mất cạnh tranh</td>
               <td class="muted">OK (meta-tag) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
             </tr><tr class="danger"
               data-sku="MIC-ELG-WAVE3-WHT" data-ten="Micro Livestream Elgato Wave 3 (Trắng)"
@@ -3461,7 +3464,7 @@
               <td class="num">3.389.000đ</td>
               <td class="num">450.000đ</td>
               <td class="num">11.5%</td>
-              <td>⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 516.000đ — mất cạnh tranh</td>
+              <td>⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🔴 LỖ nếu bán đúng giá đề xuất theo đối thủ — giá đối thủ đang thấp hơn cả giá vốn; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 516.000đ — mất cạnh tranh</td>
               <td class="muted">OK (meta-tag) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
             </tr><tr class="ok"
               data-sku="MIC-ELG-WAVE3MK2-BLK" data-ten="Micro Livestream Elgato Wave 3 MK.2 (Đen)"
@@ -3569,7 +3572,7 @@
               <td class="num">2.289.000đ</td>
               <td class="num">124.000đ</td>
               <td class="num">4.8%</td>
-              <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 310.000đ — mất cạnh tranh</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🔴 LỖ nếu bán đúng giá đề xuất theo đối thủ — giá đối thủ đang thấp hơn cả giá vốn; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 310.000đ — mất cạnh tranh</td>
               <td class="muted">OK (meta-tag) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
             </tr><tr class="danger"
               data-sku="SDK-ELG-STREAMDECK-PEDAL-BLK" data-ten="Bàn Đạp Điều Khiển Elgato Stream Deck Pedal (Đen)"
@@ -3643,12 +3646,12 @@
               <td class="num">5.3%</td>
               <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
               <td class="muted">OK (meta-tag) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
-            </tr><tr class="warn"
+            </tr><tr class="danger"
               data-sku="CAP-ELG-4KX-BLK" data-ten="Thiết Bị Ghi Hình Elgato Game Capture 4K X"
               data-gianhap="5560000.0" data-giaban="5780000.0"
               data-giadoithu="5990000" data-loinhuan="220000.0"
               data-bien="3.8"
-              data-flag="warn">
+              data-flag="danger">
               <td>CAP-ELG-4KX-BLK</td>
               <td>Thiết Bị Ghi Hình Elgato Game Capture 4K X</td>
               <td class="num">5.560.000đ</td>
@@ -3659,7 +3662,7 @@
               <td class="num">5.980.000đ</td>
               <td class="num">220.000đ</td>
               <td class="num">3.8%</td>
-              <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
               <td class="muted">OK (meta-tag) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
             </tr><tr class="warn"
               data-sku="CAP-ELG-CAMLINK4K-BLK" data-ten="Thiết Bị Ghi Hình Elgato Cam Link 4K"
@@ -3715,12 +3718,12 @@
               <td class="num">21.3%</td>
               <td>⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
               <td class="muted">OK (meta-tag) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
-            </tr><tr class="warn"
+            </tr><tr class="danger"
               data-sku="CAM-ELG-FACECAM4K-BLK" data-ten="Webcam Elgato Facecam 4K"
               data-gianhap="4950000.0" data-giaban="4989000.0"
               data-giadoithu="5690000" data-loinhuan="39000.0"
               data-bien="0.8"
-              data-flag="warn">
+              data-flag="danger">
               <td>CAM-ELG-FACECAM4K-BLK</td>
               <td>Webcam Elgato Facecam 4K</td>
               <td class="num">4.950.000đ</td>
@@ -3731,7 +3734,7 @@
               <td class="num">5.680.000đ</td>
               <td class="num">39.000đ</td>
               <td class="num">0.8%</td>
-              <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
               <td class="muted">OK (meta-tag) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
             </tr><tr class="ok"
               data-sku="CAM-ELG-FACECAMMK2-BLK" data-ten="Webcam Elgato Facecam MK.2"
@@ -4741,12 +4744,12 @@
               <td class="num">7.3%</td>
               <td>🟡 biên mỏng (<10%); 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
-            </tr><tr class="warn"
+            </tr><tr class="danger"
               data-sku="KB-LOG-G915X-TKL-TAC-LS-WHT" data-ten="Bàn Phím Gaming Không Dây Logitech G915 X TKL Lightspeed Tactile"
               data-gianhap="3880000.0" data-giaban="4049000.0"
               data-giadoithu="4350000" data-loinhuan="169000.0"
               data-bien="4.2"
-              data-flag="warn">
+              data-flag="danger">
               <td>KB-LOG-G915X-TKL-TAC-LS-WHT</td>
               <td>Bàn Phím Gaming Không Dây Logitech G915 X TKL Lightspeed Tactile</td>
               <td class="num">3.880.000đ</td>
@@ -4757,7 +4760,7 @@
               <td class="num">4.340.000đ</td>
               <td class="num">169.000đ</td>
               <td class="num">4.2%</td>
-              <td>🟡 biên mỏng (<10%); 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
             </tr><tr class="warn"
               data-sku="KB-LOG-GPROX-60-TAC-LS-RSE" data-ten="Bàn Phím Gaming Không Dây Logitech G Pro X 60 Lightspeed Tactile"
@@ -4885,12 +4888,12 @@
               <td class="num">5.3%</td>
               <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
               <td class="muted">OK (json-ld) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
-            </tr><tr class="warn"
+            </tr><tr class="danger"
               data-sku="MOU-LOG-G903" data-ten="Chuột Chơi Game Không Dây Logitech G903 HERO Lightspeed"
               data-gianhap="1950000.0" data-giaban="1990000.0"
               data-giadoithu="2650000" data-loinhuan="40000.0"
               data-bien="2.0"
-              data-flag="warn">
+              data-flag="danger">
               <td>MOU-LOG-G903</td>
               <td>Chuột Chơi Game Không Dây Logitech G903 HERO Lightspeed</td>
               <td class="num">1.950.000đ</td>
@@ -4901,7 +4904,7 @@
               <td class="num">2.640.000đ</td>
               <td class="num">40.000đ</td>
               <td class="num">2.0%</td>
-              <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
               <td class="muted">OK (json-ld) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
             </tr><tr class="warn"
               data-sku="MOU-LOG-PRO2LS" data-ten="Chuột Chơi Game Không Dây Logitech PRO 2 Lightspeed"
@@ -5047,12 +5050,12 @@
               <td class="num">10.3%</td>
               <td></td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
-            </tr><tr class="warn"
+            </tr><tr class="danger"
               data-sku="MOU-LOG-G402-BLK" data-ten="Chuột Gaming Có Dây Logitech G402 Hyperion Fury"
               data-gianhap="595000.0" data-giaban="619000.0"
               data-giadoithu="650000" data-loinhuan="24000.0"
               data-bien="3.9"
-              data-flag="warn">
+              data-flag="danger">
               <td>MOU-LOG-G402-BLK</td>
               <td>Chuột Gaming Có Dây Logitech G402 Hyperion Fury</td>
               <td class="num">595.000đ</td>
@@ -5063,14 +5066,14 @@
               <td class="num">649.000đ</td>
               <td class="num">24.000đ</td>
               <td class="num">3.9%</td>
-              <td>🟡 biên mỏng (<10%); 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
-            </tr><tr class="warn"
+            </tr><tr class="danger"
               data-sku="MOU-LOG-G403-HERO" data-ten="Chuột Gaming Có Dây Logitech G403 Hero"
               data-gianhap="880000.0" data-giaban="890000.0"
               data-giadoithu="990000" data-loinhuan="10000.0"
               data-bien="1.1"
-              data-flag="warn">
+              data-flag="danger">
               <td>MOU-LOG-G403-HERO</td>
               <td>Chuột Gaming Có Dây Logitech G403 Hero</td>
               <td class="num">880.000đ</td>
@@ -5081,7 +5084,7 @@
               <td class="num">989.000đ</td>
               <td class="num">10.000đ</td>
               <td class="num">1.1%</td>
-              <td>🟡 biên mỏng (<10%); 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
             </tr><tr class="danger"
               data-sku="MOU-LOG-G502-HERO-BLK" data-ten="Chuột Gaming Có Dây Logitech G502 Hero"
@@ -5191,12 +5194,12 @@
               <td class="num">11.4%</td>
               <td></td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
-            </tr><tr class="warn"
+            </tr><tr class="danger"
               data-sku="MOU-LOG-G502-X-PLUS-WL-BLK" data-ten="Chuột Gaming Không Dây Logitech G502 X Plus"
               data-gianhap="3070000.0" data-giaban="3189000.0"
               data-giadoithu="3490000" data-loinhuan="119000.0"
               data-bien="3.7"
-              data-flag="warn">
+              data-flag="danger">
               <td>MOU-LOG-G502-X-PLUS-WL-BLK</td>
               <td>Chuột Gaming Không Dây Logitech G502 X Plus</td>
               <td class="num">3.070.000đ</td>
@@ -5207,7 +5210,7 @@
               <td class="num">3.480.000đ</td>
               <td class="num">119.000đ</td>
               <td class="num">3.7%</td>
-              <td>🟡 biên mỏng (<10%); 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
             </tr><tr class="warn"
               data-sku="CHU-LOG-G102-WHT" data-ten="Chuột Gaming Có Dây Logitech G102 Lightsync"
@@ -5263,12 +5266,12 @@
               <td class="num">8.7%</td>
               <td>🟡 biên mỏng (<10%); 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
-            </tr><tr class="warn"
+            </tr><tr class="danger"
               data-sku="MOU-LOG-G502-LS-BLK" data-ten="Chuột Gaming Không Dây Logitech G502 Lightspeed"
               data-gianhap="1850000.0" data-giaban="1879000.0"
               data-giadoithu="1889000" data-loinhuan="29000.0"
               data-bien="1.5"
-              data-flag="warn">
+              data-flag="danger">
               <td>MOU-LOG-G502-LS-BLK</td>
               <td>Chuột Gaming Không Dây Logitech G502 Lightspeed</td>
               <td class="num">1.850.000đ</td>
@@ -5279,14 +5282,14 @@
               <td class="num">1.879.000đ</td>
               <td class="num">29.000đ</td>
               <td class="num">1.5%</td>
-              <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực</td>
               <td class="muted">OK (json-ld) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
-            </tr><tr class="warn"
+            </tr><tr class="danger"
               data-sku="MOU-LOG-G502-X-PLUS-WL-WHT" data-ten="Chuột Gaming Không Dây Logitech G502 X Plus"
               data-gianhap="3070000.0" data-giaban="3190000.0"
               data-giadoithu="3490000" data-loinhuan="120000.0"
               data-bien="3.8"
-              data-flag="warn">
+              data-flag="danger">
               <td>MOU-LOG-G502-X-PLUS-WL-WHT</td>
               <td>Chuột Gaming Không Dây Logitech G502 X Plus</td>
               <td class="num">3.070.000đ</td>
@@ -5297,7 +5300,7 @@
               <td class="num">3.480.000đ</td>
               <td class="num">120.000đ</td>
               <td class="num">3.8%</td>
-              <td>🟡 biên mỏng (<10%); 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
             </tr><tr class="danger"
               data-sku="MOU-LOG-G502X-CORDED-WHT" data-ten="Chuột Gaming Có Dây Logitech G502 X Corded"
@@ -5587,12 +5590,12 @@
               <td class="num">9.7%</td>
               <td>🟡 biên mỏng (<10%)</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
-            </tr><tr class="warn"
+            </tr><tr class="danger"
               data-sku="MOU-LOG-PROXSL2SE-WHT" data-ten="Chuột Gaming Không Dây Logitech PRO X Superlight 2 SE"
               data-gianhap="2420000.0" data-giaban="2490000.0"
               data-giadoithu="2690000" data-loinhuan="70000.0"
               data-bien="2.8"
-              data-flag="warn">
+              data-flag="danger">
               <td>MOU-LOG-PROXSL2SE-WHT</td>
               <td>Chuột Gaming Không Dây Logitech PRO X Superlight 2 SE</td>
               <td class="num">2.420.000đ</td>
@@ -5603,7 +5606,7 @@
               <td class="num">2.680.000đ</td>
               <td class="num">70.000đ</td>
               <td class="num">2.8%</td>
-              <td>🟡 biên mỏng (<10%); 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
             </tr><tr class="warn"
               data-sku="CHG-LOG-PP2-BLK" data-ten="Bộ Sạc Không Dây Logitech PowerPlay 2 Wireless Charging System"
@@ -5675,7 +5678,7 @@
               <td class="num">639.000đ</td>
               <td class="num">195.000đ</td>
               <td class="num">21.9%</td>
-              <td>⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 250.000đ — mất cạnh tranh</td>
+              <td>⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🔴 LỖ nếu bán đúng giá đề xuất theo đối thủ — giá đối thủ đang thấp hơn cả giá vốn; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 250.000đ — mất cạnh tranh</td>
               <td class="muted">OK (meta-tag) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
             </tr><tr class="danger"
               data-sku="PAD-LOG-G740-BLK" data-ten="Lót Chuột Gaming Logitech G740 Cloth"
@@ -5693,14 +5696,14 @@
               <td class="num">798.000đ</td>
               <td class="num">90.000đ</td>
               <td class="num">10.1%</td>
-              <td>⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 91.000đ — mất cạnh tranh</td>
+              <td>⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🔴 LỖ nếu bán đúng giá đề xuất theo đối thủ — giá đối thủ đang thấp hơn cả giá vốn; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 91.000đ — mất cạnh tranh</td>
               <td class="muted">OK (json-ld) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
-            </tr><tr class="warn"
+            </tr><tr class="danger"
               data-sku="PAD-LOG-G840-BLK" data-ten="Lót Chuột Gaming Logitech G840 XL Cloth"
               data-gianhap="950000.0" data-giaban="990000.0"
               data-giadoithu="990000" data-loinhuan="40000.0"
               data-bien="4.0"
-              data-flag="warn">
+              data-flag="danger">
               <td>PAD-LOG-G840-BLK</td>
               <td>Lót Chuột Gaming Logitech G840 XL Cloth</td>
               <td class="num">950.000đ</td>
@@ -5711,7 +5714,7 @@
               <td class="num">989.000đ</td>
               <td class="num">40.000đ</td>
               <td class="num">4.0%</td>
-              <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực</td>
               <td class="muted">OK (json-ld) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
             </tr><tr class="warn"
               data-sku="HSE-LOG-GPROX-BLK" data-ten="Tai Nghe Gaming Có Dây Logitech G Pro X"
@@ -5857,12 +5860,12 @@
               <td class="num">7.8%</td>
               <td>🟡 biên mỏng (<10%); 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
-            </tr><tr class="warn"
+            </tr><tr class="danger"
               data-sku="HSE-LOG-G435-BLK" data-ten="Tai Nghe Gaming Không Dây Logitech G435 Lightspeed"
               data-gianhap="1250000.0" data-giaban="1299000.0"
               data-giadoithu="1390000" data-loinhuan="49000.0"
               data-bien="3.8"
-              data-flag="warn">
+              data-flag="danger">
               <td>HSE-LOG-G435-BLK</td>
               <td>Tai Nghe Gaming Không Dây Logitech G435 Lightspeed</td>
               <td class="num">1.250.000đ</td>
@@ -5873,7 +5876,7 @@
               <td class="num">1.380.000đ</td>
               <td class="num">49.000đ</td>
               <td class="num">3.8%</td>
-              <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
               <td class="muted">OK (json-ld) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
             </tr><tr class="ok"
               data-sku="HSE-LOG-G522-BLK" data-ten="Tai Nghe Gaming Không Dây Logitech G522 Lightspeed RGB"
@@ -6109,12 +6112,12 @@
               <td class="num">5.4%</td>
               <td>🟡 biên mỏng (<10%); 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
-            </tr><tr class="warn"
+            </tr><tr class="danger"
               data-sku="SFT-LOG-DFS" data-ten="Cần Số Sàn Logitech Driving Force Shifter Cho G29/G920/G923"
               data-gianhap="1070000.0" data-giaban="1100000.0"
               data-giadoithu="1160000" data-loinhuan="30000.0"
               data-bien="2.7"
-              data-flag="warn">
+              data-flag="danger">
               <td>SFT-LOG-DFS</td>
               <td>Cần Số Sàn Logitech Driving Force Shifter Cho G29/G920/G923</td>
               <td class="num">1.070.000đ</td>
@@ -6125,7 +6128,7 @@
               <td class="num">1.150.000đ</td>
               <td class="num">30.000đ</td>
               <td class="num">2.7%</td>
-              <td>🟡 biên mỏng (<10%); 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
             </tr><tr class="warn"
               data-sku="JOY-LOG-E3DP" data-ten="Cần Điều Khiển Chơi Game Logitech Extreme 3D Pro Joystick"
@@ -6217,12 +6220,12 @@
               <td class="num">10.0%</td>
               <td>🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 310.000đ — mất cạnh tranh</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
-            </tr><tr class="warn"
+            </tr><tr class="danger"
               data-sku="KB-MCH-G75PRO-TOFU-BLUCAB" data-ten="Bàn Phím Cơ Gaming Không Dây MCHOSE G75 Pro"
               data-gianhap="944000.0" data-giaban="991000.0"
               data-giadoithu="1290000" data-loinhuan="47000.0"
               data-bien="4.7"
-              data-flag="warn">
+              data-flag="danger">
               <td>KB-MCH-G75PRO-TOFU-BLUCAB</td>
               <td>Bàn Phím Cơ Gaming Không Dây MCHOSE G75 Pro</td>
               <td class="num">944.000đ</td>
@@ -6233,7 +6236,7 @@
               <td class="num">1.280.000đ</td>
               <td class="num">47.000đ</td>
               <td class="num">4.7%</td>
-              <td>🟡 biên mỏng (<10%); 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
             </tr><tr class="warn"
               data-sku="KB-MCH-G75PRO-MATCHA-GRNMTC" data-ten="Bàn Phím Cơ Gaming Không Dây MCHOSE G75 Pro"
@@ -6253,12 +6256,12 @@
               <td class="num">4.8%</td>
               <td>🟡 biên mỏng (<10%); 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
-            </tr><tr class="warn"
+            </tr><tr class="danger"
               data-sku="KB-MCH-G75PRO-MATCHA-ARCSNW" data-ten="Bàn Phím Cơ Gaming Không Dây MCHOSE G75 Pro"
               data-gianhap="1044000.0" data-giaban="1096000.0"
               data-giadoithu="1390000" data-loinhuan="52000.0"
               data-bien="4.7"
-              data-flag="warn">
+              data-flag="danger">
               <td>KB-MCH-G75PRO-MATCHA-ARCSNW</td>
               <td>Bàn Phím Cơ Gaming Không Dây MCHOSE G75 Pro</td>
               <td class="num">1.044.000đ</td>
@@ -6269,7 +6272,7 @@
               <td class="num">1.380.000đ</td>
               <td class="num">52.000đ</td>
               <td class="num">4.7%</td>
-              <td>🟡 biên mỏng (<10%); 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
             </tr><tr class="warn"
               data-sku="KB-MCH-G75PRO-MATCHA-BLK" data-ten="Bàn Phím Cơ Gaming Không Dây MCHOSE G75 Pro"
@@ -6307,12 +6310,12 @@
               <td class="num">4.8%</td>
               <td>🟡 biên mỏng (<10%); 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
-            </tr><tr class="warn"
+            </tr><tr class="danger"
               data-sku="KB-MCH-ACE68-ICERHINO-WHTTOPO" data-ten="Bàn Phím Cơ Gaming Có Dây MCHOSE Ace68"
               data-gianhap="822000.0" data-giaban="863000.0"
               data-giadoithu="990000" data-loinhuan="41000.0"
               data-bien="4.8"
-              data-flag="warn">
+              data-flag="danger">
               <td>KB-MCH-ACE68-ICERHINO-WHTTOPO</td>
               <td>Bàn Phím Cơ Gaming Có Dây MCHOSE Ace68</td>
               <td class="num">822.000đ</td>
@@ -6323,7 +6326,7 @@
               <td class="num">989.000đ</td>
               <td class="num">41.000đ</td>
               <td class="num">4.8%</td>
-              <td>🟡 biên mỏng (<10%); 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
             </tr><tr class="danger"
               data-sku="KB-MCH-ACE68ULTRA-WHTTOPO" data-ten="Bàn Phím Cơ Gaming Có Dây MCHOSE Ace68 Ultra Esports"
@@ -6341,14 +6344,14 @@
               <td class="num">989.000đ</td>
               <td class="num">58.000đ</td>
               <td class="num">4.7%</td>
-              <td>🟡 biên mỏng (<10%); 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 235.000đ — mất cạnh tranh</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; 🔴 LỖ nếu bán đúng giá đề xuất theo đối thủ — giá đối thủ đang thấp hơn cả giá vốn; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 235.000đ — mất cạnh tranh</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
-            </tr><tr class="warn"
+            </tr><tr class="danger"
               data-sku="KB-MCH-ACE68ULTRA-BLKTOPO" data-ten="Bàn Phím Cơ Gaming Có Dây MCHOSE Ace68 Ultra Esports"
               data-gianhap="1167000.0" data-giaban="1225000.0"
               data-giadoithu="1490000" data-loinhuan="58000.0"
               data-bien="4.7"
-              data-flag="warn">
+              data-flag="danger">
               <td>KB-MCH-ACE68ULTRA-BLKTOPO</td>
               <td>Bàn Phím Cơ Gaming Có Dây MCHOSE Ace68 Ultra Esports</td>
               <td class="num">1.167.000đ</td>
@@ -6359,7 +6362,7 @@
               <td class="num">1.480.000đ</td>
               <td class="num">58.000đ</td>
               <td class="num">4.7%</td>
-              <td>🟡 biên mỏng (<10%); 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
             </tr><tr class="warn"
               data-sku="KB-MCH-ACE68AIR-SNWWHT" data-ten="Bàn Phím Cơ Gaming Có Dây MCHOSE Ace68 Air"
@@ -6379,12 +6382,12 @@
               <td class="num">4.8%</td>
               <td>🟡 biên mỏng (<10%); 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
-            </tr><tr class="warn"
+            </tr><tr class="danger"
               data-sku="KB-MCH-K99V3-SKYBLU" data-ten="Bàn Phím Cơ Gaming Không Dây MCHOSE K99 V3"
               data-gianhap="1422000.0" data-giaban="1493000.0"
               data-giadoithu="1790000" data-loinhuan="71000.0"
               data-bien="4.8"
-              data-flag="warn">
+              data-flag="danger">
               <td>KB-MCH-K99V3-SKYBLU</td>
               <td>Bàn Phím Cơ Gaming Không Dây MCHOSE K99 V3</td>
               <td class="num">1.422.000đ</td>
@@ -6395,7 +6398,7 @@
               <td class="num">1.780.000đ</td>
               <td class="num">71.000đ</td>
               <td class="num">4.8%</td>
-              <td>🟡 biên mỏng (<10%); 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
             </tr><tr class="warn"
               data-sku="KB-MCH-K99V3-MTNGRAD" data-ten="Bàn Phím Cơ Gaming Không Dây MCHOSE K99 V3"
@@ -6469,12 +6472,12 @@
               <td class="num">4.8%</td>
               <td>🟡 biên mỏng (<10%); 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
-            </tr><tr class="warn"
+            </tr><tr class="danger"
               data-sku="MOU-MCH-G3V2-WHT" data-ten="Chuột Gaming Không Dây MCHOSE G3 V2"
               data-gianhap="341000.0" data-giaban="358000.0"
               data-giadoithu="449000" data-loinhuan="17000.0"
               data-bien="4.7"
-              data-flag="warn">
+              data-flag="danger">
               <td>MOU-MCH-G3V2-WHT</td>
               <td>Chuột Gaming Không Dây MCHOSE G3 V2</td>
               <td class="num">341.000đ</td>
@@ -6485,14 +6488,14 @@
               <td class="num">448.000đ</td>
               <td class="num">17.000đ</td>
               <td class="num">4.7%</td>
-              <td>🟡 biên mỏng (<10%); 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
-            </tr><tr class="warn"
+            </tr><tr class="danger"
               data-sku="MOU-MCH-G3V2-BLK" data-ten="Chuột Gaming Không Dây MCHOSE G3 V2"
               data-gianhap="341000.0" data-giaban="358000.0"
               data-giadoithu="449000" data-loinhuan="17000.0"
               data-bien="4.7"
-              data-flag="warn">
+              data-flag="danger">
               <td>MOU-MCH-G3V2-BLK</td>
               <td>Chuột Gaming Không Dây MCHOSE G3 V2</td>
               <td class="num">341.000đ</td>
@@ -6503,14 +6506,14 @@
               <td class="num">448.000đ</td>
               <td class="num">17.000đ</td>
               <td class="num">4.7%</td>
-              <td>🟡 biên mỏng (<10%); 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
-            </tr><tr class="warn"
+            </tr><tr class="danger"
               data-sku="MOU-MCH-G3V2-BLU" data-ten="Chuột Gaming Không Dây MCHOSE G3 V2"
               data-gianhap="341000.0" data-giaban="358000.0"
               data-giadoithu="449000" data-loinhuan="17000.0"
               data-bien="4.7"
-              data-flag="warn">
+              data-flag="danger">
               <td>MOU-MCH-G3V2-BLU</td>
               <td>Chuột Gaming Không Dây MCHOSE G3 V2</td>
               <td class="num">341.000đ</td>
@@ -6521,14 +6524,14 @@
               <td class="num">448.000đ</td>
               <td class="num">17.000đ</td>
               <td class="num">4.7%</td>
-              <td>🟡 biên mỏng (<10%); 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
-            </tr><tr class="warn"
+            </tr><tr class="danger"
               data-sku="MOU-MCH-G3V2PRO-WHT" data-ten="Chuột Gaming Không Dây MCHOSE G3 V2 Pro"
               data-gianhap="567000.0" data-giaban="595000.0"
               data-giadoithu="690000" data-loinhuan="28000.0"
               data-bien="4.7"
-              data-flag="warn">
+              data-flag="danger">
               <td>MOU-MCH-G3V2PRO-WHT</td>
               <td>Chuột Gaming Không Dây MCHOSE G3 V2 Pro</td>
               <td class="num">567.000đ</td>
@@ -6539,7 +6542,7 @@
               <td class="num">689.000đ</td>
               <td class="num">28.000đ</td>
               <td class="num">4.7%</td>
-              <td>🟡 biên mỏng (<10%); 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
             </tr><tr class="warn"
               data-sku="MOU-MCH-A7V2PRO-BLK" data-ten="Chuột Gaming Không Dây MCHOSE A7 V2 Pro"
@@ -7133,7 +7136,7 @@
               <td class="num">3.680.000đ</td>
               <td class="num">289.000đ</td>
               <td class="num">7.3%</td>
-              <td>🟡 biên mỏng (<10%); 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 289.000đ — mất cạnh tranh</td>
+              <td>🟡 biên mỏng (<10%); 🔴 LỖ nếu bán đúng giá đề xuất theo đối thủ — giá đối thủ đang thấp hơn cả giá vốn; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 289.000đ — mất cạnh tranh</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
             </tr><tr class="ok"
               data-sku="MOU-RAZ-VIPERV3-HS-BLK" data-ten="Chuột Chơi Game Không Dây Razer Viper V3 HyperSpeed"
@@ -7205,7 +7208,7 @@
               <td class="num">889.000đ</td>
               <td class="num">47.000đ</td>
               <td class="num">5.0%</td>
-              <td>🟡 biên mỏng (<10%); 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 50.000đ — mất cạnh tranh</td>
+              <td>🟡 biên mỏng (<10%); 🔴 LỖ nếu bán đúng giá đề xuất theo đối thủ — giá đối thủ đang thấp hơn cả giá vốn; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 50.000đ — mất cạnh tranh</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
             </tr><tr class="danger"
               data-sku="MOU-RAZ-BASILISK-V3-PRO-35K-BLK" data-ten="Chuột Gaming Có Dây Razer Basilisk V3 Pro 35K"
@@ -7295,7 +7298,7 @@
               <td class="num">2.480.000đ</td>
               <td class="num">155.000đ</td>
               <td class="num">4.8%</td>
-              <td>🟡 biên mỏng (<10%); 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 765.000đ — mất cạnh tranh</td>
+              <td>🟡 biên mỏng (<10%); 🔴 LỖ nếu bán đúng giá đề xuất theo đối thủ — giá đối thủ đang thấp hơn cả giá vốn; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 765.000đ — mất cạnh tranh</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
             </tr><tr class="danger"
               data-sku="MOU-RAZ-BASILISK-V3-PRO-WHT" data-ten="Chuột Gaming Có Dây Razer Basilisk V3 Pro"
@@ -7313,14 +7316,14 @@
               <td class="num">2.480.000đ</td>
               <td class="num">155.000đ</td>
               <td class="num">4.8%</td>
-              <td>🟡 biên mỏng (<10%); 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 765.000đ — mất cạnh tranh</td>
+              <td>🟡 biên mỏng (<10%); 🔴 LỖ nếu bán đúng giá đề xuất theo đối thủ — giá đối thủ đang thấp hơn cả giá vốn; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 765.000đ — mất cạnh tranh</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
-            </tr><tr class="warn"
+            </tr><tr class="danger"
               data-sku="MOU-RAZ-BASILISK-V3-X-HYPERSPEED-BLK" data-ten="Chuột Gaming Không Dây Razer Basilisk V3 X HyperSpeed"
               data-gianhap="1330000.0" data-giaban="1396500.0"
               data-giadoithu="1490000" data-loinhuan="66500.0"
               data-bien="4.8"
-              data-flag="warn">
+              data-flag="danger">
               <td>MOU-RAZ-BASILISK-V3-X-HYPERSPEED-BLK</td>
               <td>Chuột Gaming Không Dây Razer Basilisk V3 X HyperSpeed</td>
               <td class="num">1.330.000đ</td>
@@ -7331,7 +7334,7 @@
               <td class="num">1.480.000đ</td>
               <td class="num">66.500đ</td>
               <td class="num">4.8%</td>
-              <td>🟡 biên mỏng (<10%); 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
             </tr><tr class="danger"
               data-sku="MOU-RAZ-COBRA-BLK" data-ten="Chuột Gaming Có Dây Razer Cobra"
@@ -7367,7 +7370,7 @@
               <td class="num">2.480.000đ</td>
               <td class="num">123.500đ</td>
               <td class="num">4.8%</td>
-              <td>🟡 biên mỏng (<10%); 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 103.500đ — mất cạnh tranh</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 103.500đ — mất cạnh tranh</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
             </tr><tr class="danger"
               data-sku="MOU-RAZ-COBRA-PRO-WHT" data-ten="Chuột Gaming Không Dây Razer Cobra Pro"
@@ -7385,7 +7388,7 @@
               <td class="num">2.580.000đ</td>
               <td class="num">127.500đ</td>
               <td class="num">4.8%</td>
-              <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 87.500đ — mất cạnh tranh</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 87.500đ — mất cạnh tranh</td>
               <td class="muted">OK (json-ld) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
             </tr><tr class="danger"
               data-sku="MOU-RAZ-DEATHADDER-ESSENTIAL-BLK" data-ten="Chuột Gaming Có Dây Razer DeathAdder Essential"
@@ -7421,7 +7424,7 @@
               <td class="num">369.000đ</td>
               <td class="num">100.000đ</td>
               <td class="num">20.4%</td>
-              <td>🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 120.000đ — mất cạnh tranh</td>
+              <td>🔴 LỖ nếu bán đúng giá đề xuất theo đối thủ — giá đối thủ đang thấp hơn cả giá vốn; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 120.000đ — mất cạnh tranh</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
             </tr><tr class="danger"
               data-sku="MOU-RAZ-DEATHADDER-V3-HYPERSPEED-BLK" data-ten="Chuột Gaming Không Dây Razer DeathAdder V3 HyperSpeed"
@@ -7439,7 +7442,7 @@
               <td class="num">2.120.000đ</td>
               <td class="num">101.500đ</td>
               <td class="num">4.8%</td>
-              <td>🟡 biên mỏng (<10%); 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 1.500đ — mất cạnh tranh</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 1.500đ — mất cạnh tranh</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
             </tr><tr class="danger"
               data-sku="MOU-RAZ-DEATHADDER-V4-PRO-NIKO-BLK" data-ten="Chuột Gaming Không Dây Razer DeathAdder V4 Pro - NiKo Edition"
@@ -7457,7 +7460,7 @@
               <td class="num">3.680.000đ</td>
               <td class="num">197.000đ</td>
               <td class="num">4.8%</td>
-              <td>🟡 biên mỏng (<10%); 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 400.000đ — mất cạnh tranh</td>
+              <td>🟡 biên mỏng (<10%); 🔴 LỖ nếu bán đúng giá đề xuất theo đối thủ — giá đối thủ đang thấp hơn cả giá vốn; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 400.000đ — mất cạnh tranh</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
             </tr><tr class="danger"
               data-sku="MOU-RAZ-NAGA-V2-HYPERSPEED-BLK" data-ten="Chuột Gaming Không Dây Razer Naga V2 HyperSpeed"
@@ -7585,12 +7588,12 @@
               <td class="num">21.3%</td>
               <td>🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 250.000đ — mất cạnh tranh</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
-            </tr><tr class="warn"
+            </tr><tr class="danger"
               data-sku="MOU-RAZ-VIPER-V3-PRO-CS2-BLK" data-ten="Chuột Gaming Không Dây Razer Viper V3 Pro - Counter-Strike 2 Edition"
               data-gianhap="3992000.0" data-giaban="4190000.0"
               data-giadoithu="4680000" data-loinhuan="198000.0"
               data-bien="4.7"
-              data-flag="warn">
+              data-flag="danger">
               <td>MOU-RAZ-VIPER-V3-PRO-CS2-BLK</td>
               <td>Chuột Gaming Không Dây Razer Viper V3 Pro - Counter-Strike 2 Edition</td>
               <td class="num">3.992.000đ</td>
@@ -7601,7 +7604,7 @@
               <td class="num">4.670.000đ</td>
               <td class="num">198.000đ</td>
               <td class="num">4.7%</td>
-              <td>🟡 biên mỏng (<10%); 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
             </tr><tr class="warn"
               data-sku="MOU-RAZ-VIPER-V3-PRO-SE-BLK" data-ten="Chuột Gaming Không Dây Razer Viper V3 Pro SE"
@@ -8105,7 +8108,7 @@
               <td class="num">289.000đ</td>
               <td class="num">140.000đ</td>
               <td class="num">20.0%</td>
-              <td>🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 409.000đ — mất cạnh tranh</td>
+              <td>🔴 LỖ nếu bán đúng giá đề xuất theo đối thủ — giá đối thủ đang thấp hơn cả giá vốn; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 409.000đ — mất cạnh tranh</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
             </tr><tr class="danger"
               data-sku="PAD-RAZ-STRIDER-CHROMA-BLK" data-ten="Lót Chuột Razer Strider Chroma"
@@ -8285,7 +8288,7 @@
               <td class="num">2.480.000đ</td>
               <td class="num">230.000đ</td>
               <td class="num">8.2%</td>
-              <td>🟡 biên mỏng (<10%); 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 320.000đ — mất cạnh tranh</td>
+              <td>🟡 biên mỏng (<10%); 🔴 LỖ nếu bán đúng giá đề xuất theo đối thủ — giá đối thủ đang thấp hơn cả giá vốn; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 320.000đ — mất cạnh tranh</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
             </tr><tr class="danger"
               data-sku="HSE-RAZ-BARRACUDA-X-2022-PNK" data-ten="Tai Nghe Gaming Không Dây Razer Barracuda X (2022)"
@@ -8303,7 +8306,7 @@
               <td class="num">2.480.000đ</td>
               <td class="num">230.000đ</td>
               <td class="num">8.2%</td>
-              <td>🟡 biên mỏng (<10%); 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 320.000đ — mất cạnh tranh</td>
+              <td>🟡 biên mỏng (<10%); 🔴 LỖ nếu bán đúng giá đề xuất theo đối thủ — giá đối thủ đang thấp hơn cả giá vốn; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 320.000đ — mất cạnh tranh</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
             </tr><tr class="danger"
               data-sku="HSE-RAZ-BARRACUDA-X-2022-WHT" data-ten="Tai Nghe Gaming Không Dây Razer Barracuda X (2022)"
@@ -8321,14 +8324,14 @@
               <td class="num">2.480.000đ</td>
               <td class="num">230.000đ</td>
               <td class="num">8.2%</td>
-              <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 320.000đ — mất cạnh tranh</td>
+              <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🔴 LỖ nếu bán đúng giá đề xuất theo đối thủ — giá đối thủ đang thấp hơn cả giá vốn; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 320.000đ — mất cạnh tranh</td>
               <td class="muted">OK (json-ld) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
-            </tr><tr class="warn"
+            </tr><tr class="danger"
               data-sku="HSE-RAZ-BARRACUDA-X-CHROMA-BLK" data-ten="Tai Nghe Gaming Không Dây Razer Barracuda X Chroma"
               data-gianhap="3130000.0" data-giaban="3286500.0"
               data-giadoithu="3580000" data-loinhuan="156500.0"
               data-bien="4.8"
-              data-flag="warn">
+              data-flag="danger">
               <td>HSE-RAZ-BARRACUDA-X-CHROMA-BLK</td>
               <td>Tai Nghe Gaming Không Dây Razer Barracuda X Chroma</td>
               <td class="num">3.130.000đ</td>
@@ -8339,7 +8342,7 @@
               <td class="num">3.570.000đ</td>
               <td class="num">156.500đ</td>
               <td class="num">4.8%</td>
-              <td>🟡 biên mỏng (<10%); 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
             </tr><tr class="warn"
               data-sku="HSE-RAZ-BARRACUDA-X-CHROMA-PHG" data-ten="Tai Nghe Gaming Không Dây Razer Barracuda X Chroma"
@@ -8377,12 +8380,12 @@
               <td class="num">4.8%</td>
               <td>🟡 biên mỏng (<10%); 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
-            </tr><tr class="warn"
+            </tr><tr class="danger"
               data-sku="HSE-RAZ-BARRACUDA-X-CHROMA-WHT" data-ten="Tai Nghe Gaming Không Dây Razer Barracuda X Chroma"
               data-gianhap="3130000.0" data-giaban="3286500.0"
               data-giadoithu="3680000" data-loinhuan="156500.0"
               data-bien="4.8"
-              data-flag="warn">
+              data-flag="danger">
               <td>HSE-RAZ-BARRACUDA-X-CHROMA-WHT</td>
               <td>Tai Nghe Gaming Không Dây Razer Barracuda X Chroma</td>
               <td class="num">3.130.000đ</td>
@@ -8393,7 +8396,7 @@
               <td class="num">3.670.000đ</td>
               <td class="num">156.500đ</td>
               <td class="num">4.8%</td>
-              <td>🟡 biên mỏng (<10%); 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
             </tr><tr class="danger"
               data-sku="HSE-RAZ-BLACKSHARK-V2-X-BLK" data-ten="Tai Nghe Gaming Có Dây Razer BlackShark V2 X"
@@ -8827,12 +8830,12 @@
               <td class="num">19.6%</td>
               <td>🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 100.000đ — mất cạnh tranh</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
-            </tr><tr class="warn"
+            </tr><tr class="danger"
               data-sku="HSE-RAZ-KRAKEN-V3-X-USB-2022-BLK" data-ten="Tai Nghe Gaming Có Dây Razer Kraken V3 X - USB (2022)"
               data-gianhap="968000.0" data-giaban="1016400.0"
               data-giadoithu="1250000" data-loinhuan="48400.0"
               data-bien="4.8"
-              data-flag="warn">
+              data-flag="danger">
               <td>HSE-RAZ-KRAKEN-V3-X-USB-2022-BLK</td>
               <td>Tai Nghe Gaming Có Dây Razer Kraken V3 X - USB (2022)</td>
               <td class="num">968.000đ</td>
@@ -8843,7 +8846,7 @@
               <td class="num">1.240.000đ</td>
               <td class="num">48.400đ</td>
               <td class="num">4.8%</td>
-              <td>🟡 biên mỏng (<10%); 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
             </tr><tr class="warn"
               data-sku="HSE-RAZ-KRAKEN-V4-PRO-BLK" data-ten="Tai Nghe Gaming Không Dây Razer Kraken V4 Pro"
@@ -9023,7 +9026,7 @@
               <td class="num">4.780.000đ</td>
               <td class="num">1.210.000đ</td>
               <td class="num">19.9%</td>
-              <td>⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 1.300.000đ — mất cạnh tranh</td>
+              <td>⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🔴 LỖ nếu bán đúng giá đề xuất theo đối thủ — giá đối thủ đang thấp hơn cả giá vốn; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 1.300.000đ — mất cạnh tranh</td>
               <td class="muted">OK (meta-tag) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
             </tr><tr class="danger"
               data-sku="GPD-RAZ-WOLVERINE-V3-PRO-XBOX-SERIES-X-S-BLK" data-ten="Tay Cầm Chơi Game Không Dây Razer Wolverine V3 Pro - Xbox Series X/S"
@@ -9059,7 +9062,7 @@
               <td class="num">4.780.000đ</td>
               <td class="num">1.340.000đ</td>
               <td class="num">21.3%</td>
-              <td>⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 1.500.000đ — mất cạnh tranh</td>
+              <td>⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🔴 LỖ nếu bán đúng giá đề xuất theo đối thủ — giá đối thủ đang thấp hơn cả giá vốn; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 1.500.000đ — mất cạnh tranh</td>
               <td class="muted">OK (meta-tag) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
             </tr><tr class="danger"
               data-sku="GPD-RAZ-WOLVERINE-V3-TOURNAMENT-8K-PC-BLK" data-ten="Tay Cầm Chơi Game Có Dây Razer Wolverine V3 Tournament 8K PC"
@@ -9077,7 +9080,7 @@
               <td class="num">2.480.000đ</td>
               <td class="num">630.000đ</td>
               <td class="num">19.7%</td>
-              <td>⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 700.000đ — mất cạnh tranh</td>
+              <td>⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🔴 LỖ nếu bán đúng giá đề xuất theo đối thủ — giá đối thủ đang thấp hơn cả giá vốn; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 700.000đ — mất cạnh tranh</td>
               <td class="muted">OK (meta-tag) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
             </tr><tr class="danger"
               data-sku="GPD-RAZ-WOLVERINE-V3-TOURNAMENT-EDITION-XBOX-SERIES-X-S-BLK" data-ten="Tay Cầm Chơi Game Có Dây Razer Wolverine V3 Tournament Edition - Xbox Series X/S"
@@ -9115,12 +9118,12 @@
               <td class="num">—%</td>
               <td>⚪ thiếu Giá nhập/Giá bán, chưa tính được; ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 700.000đ — mất cạnh tranh</td>
               <td class="muted">OK (meta-tag) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
-            </tr><tr class="warn"
+            </tr><tr class="danger"
               data-sku="LCD-VSP-IP3205S-BLK" data-ten="Màn Hình LCD VSP IP3205S 32 Inch FHD IPS 75Hz 5ms"
               data-gianhap="2830000.0" data-giaban="2950000.0"
               data-giadoithu="2990000" data-loinhuan="120000.0"
               data-bien="4.1"
-              data-flag="warn">
+              data-flag="danger">
               <td>LCD-VSP-IP3205S-BLK</td>
               <td>Màn Hình LCD VSP IP3205S 32 Inch FHD IPS 75Hz 5ms</td>
               <td class="num">2.830.000đ</td>
@@ -9131,7 +9134,7 @@
               <td class="num">2.980.000đ</td>
               <td class="num">120.000đ</td>
               <td class="num">4.1%</td>
-              <td>🟡 biên mỏng (<10%); 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
             </tr>
 </tbody>
