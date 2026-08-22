@@ -58,7 +58,7 @@ OUTPUT_TAB = "Theo dõi giá đối thủ (Auto)"
 SOURCE_RANGE = "C3:M5000"  # KHÔNG thêm tên sheet — ws.get() đã tự gắn tên sheet của chính nó
 DATA_START_ROW = 3
 
-SHIP_FEE = 35_000  # phí ship cố định cộng vào mỗi đơn, theo Bước 5 skill vutech-1-danh-gia-dinh-gia
+SHIP_FEE = 0  # anh không còn chịu phí ship từ 22/08/2026 (cập nhật theo yêu cầu Vũ)
 REQUEST_TIMEOUT = 15
 REQUEST_DELAY = 1.2  # giây, nghỉ giữa 2 lần tải trang để lịch sự với site đối thủ
 VN_TZ = timezone(timedelta(hours=7))
@@ -215,7 +215,7 @@ def gia_de_xuat_tu_doi_thu(gia_doi_thu):
 
 
 def tinh_loi_nhuan_thuc(gia_ban, gia_nhap):
-    """Công thức chốt 2026-07-13: Lợi nhuận thực = Giá bán - Giá nhập - 35.000đ ship."""
+        """Công thức cập nhật 2026-08-22: Lợi nhuận thực = Giá bán - Giá nhập (anh không còn chịu phí ship, SHIP_FEE=0)."""
     if not gia_ban or not gia_nhap:
         return None, None, "missing"
     loi_nhuan = gia_ban - gia_nhap - SHIP_FEE
