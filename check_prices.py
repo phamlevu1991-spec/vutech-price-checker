@@ -215,7 +215,7 @@ def gia_de_xuat_tu_doi_thu(gia_doi_thu):
 
 
 def tinh_loi_nhuan_thuc(gia_ban, gia_nhap):
-        """Công thức cập nhật 2026-08-22: Lợi nhuận thực = Giá bán - Giá nhập (anh không còn chịu phí ship, SHIP_FEE=0)."""
+    """Công thức cập nhật 2026-08-22: Lợi nhuận thực = Giá bán - Giá nhập (anh không còn chịu phí ship, SHIP_FEE=0)."""
     if not gia_ban or not gia_nhap:
         return None, None, "missing"
     loi_nhuan = gia_ban - gia_nhap - SHIP_FEE
