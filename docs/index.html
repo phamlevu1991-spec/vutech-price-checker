@@ -32,17 +32,17 @@
 </style>
 </head><body>
 <h1>Vutech — Dashboard theo dõi giá đối thủ (Auto, 0 token)</h1>
-<div class="sub">Cập nhật lúc 26/08/2026 12:22 (giờ VN) · Nguồn: Google Sheet "Khởi nghiệp" / tab Website · Mỗi SKU có thể theo dõi nhiều đối thủ, dashboard hiển thị giá THẤP NHẤT trong số đối thủ còn hàng · Script chạy tự động, không dùng AI</div>
+<div class="sub">Cập nhật lúc 26/08/2026 13:07 (giờ VN) · Nguồn: Google Sheet "Khởi nghiệp" / tab Website · Mỗi SKU có thể theo dõi nhiều đối thủ, dashboard hiển thị giá THẤP NHẤT trong số đối thủ còn hàng · Script chạy tự động, không dùng AI</div>
 
 <div class="stats">
   <div class="stat"><div class="n">490</div><div class="l">Tổng SKU</div></div>
   <div class="stat"><div class="n">280</div><div class="l">Có link đối thủ</div></div>
-  <div class="stat danger"><div class="n">102</div><div class="l">Cờ đỏ (lỗ / dưới vốn / mất cạnh tranh)</div></div>
+  <div class="stat danger"><div class="n">107</div><div class="l">Cờ đỏ (lỗ / dưới vốn / mất cạnh tranh)</div></div>
   <div class="stat warn"><div class="n">174</div><div class="l">Cờ vàng (biên mỏng / cần xác minh)</div></div>
   <div class="stat"><div class="n">9</div><div class="l">Lỗi lấy giá tự động</div></div>
-  <div class="stat danger"><div class="n">22</div><div class="l">Lỗ nếu theo giá đối thủ</div></div>
+  <div class="stat danger"><div class="n">23</div><div class="l">Lỗ nếu theo giá đối thủ</div></div>
   <div class="stat danger"><div class="n">24</div><div class="l">Dưới sàn markup 5% (giá vốn)</div></div>
-  <div class="stat warn"><div class="n">41</div><div class="l">Cần tăng giá hôm nay</div></div>
+  <div class="stat warn"><div class="n">46</div><div class="l">Cần tăng giá hôm nay</div></div>
 </div>
 
 <div class="controls">
@@ -208,96 +208,96 @@
               <td class="num">3.0%</td>
               <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng</td>
               <td class="muted">bỏ qua — chưa có link đối thủ trong cột M</td>
-            </tr><tr class="ok"
+            </tr><tr class="danger"
               data-sku="MOU-ASU-TUF-M3-GEN2-BLK" data-ten="Chuột Gaming Có Dây Asus TUF M3 Gen II"
               data-gianhap="345000.0" data-giaban="399000.0"
-              data-giadoithu="400000" data-loinhuan="54000.0"
+              data-giadoithu="380000" data-loinhuan="54000.0"
               data-bien="13.5"
-              data-flag="ok">
+              data-flag="danger">
               <td>MOU-ASU-TUF-M3-GEN2-BLK</td>
               <td>Chuột Gaming Có Dây Asus TUF M3 Gen II</td>
               <td class="num">345.000đ</td>
               <td class="num">399.000đ</td>
-              <td class="num">400.000đ</td>
+              <td class="num">380.000đ</td>
               <td>còn hàng</td>
-              <td><a href="https://gearvn.com/products/chuot-asus-tuf-gaming-m3-gen-ii" target="_blank" rel="noopener">gearvn.com</a></td>
-              <td class="num">399.000đ</td>
+              <td><a href="https://xgear.net/products/chuot-gaming-asus-tuf-m3-gen-2" target="_blank" rel="noopener">xgear.net</a> <span class="muted">(3 nguồn)</span></td>
+              <td class="num">379.000đ</td>
               <td class="num">54.000đ</td>
               <td class="num">13.5%</td>
-              <td></td>
-              <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
-            </tr><tr class="ok"
+              <td>🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 19.000đ — mất cạnh tranh</td>
+              <td class="muted">OK (json-ld) — thấp nhất trong 1/3 nguồn còn hàng</td>
+            </tr><tr class="danger"
               data-sku="KB-ASU-TUF-K1-BLK" data-ten="Bàn Phím Gaming Có Dây Asus TUF Gaming K1"
               data-gianhap="760000.0" data-giaban="1040000.0"
-              data-giadoithu="1050000" data-loinhuan="280000.0"
+              data-giadoithu="749000" data-loinhuan="280000.0"
               data-bien="26.9"
-              data-flag="ok">
+              data-flag="danger">
               <td>KB-ASU-TUF-K1-BLK</td>
               <td>Bàn Phím Gaming Có Dây Asus TUF Gaming K1</td>
               <td class="num">760.000đ</td>
               <td class="num">1.040.000đ</td>
-              <td class="num">1.050.000đ</td>
-              <td>hết hàng</td>
-              <td><a href="https://gearvn.com/products/ban-phim-asus-tuf-gaming-k1" target="_blank" rel="noopener">gearvn.com</a></td>
-              <td class="num">1.040.000đ</td>
+              <td class="num">749.000đ</td>
+              <td>còn hàng</td>
+              <td><a href="https://hacom.vn/ban-phim-game-asus-tuf-k1-usb" target="_blank" rel="noopener">hacom.vn</a> <span class="muted">(3 nguồn)</span></td>
+              <td class="num">748.000đ</td>
               <td class="num">280.000đ</td>
               <td class="num">26.9%</td>
-              <td>⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực</td>
-              <td class="muted">OK (json-ld) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
-            </tr><tr class="ok"
+              <td>🔴 LỖ nếu bán đúng giá đề xuất theo đối thủ — giá đối thủ đang thấp hơn cả giá vốn; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 291.000đ — mất cạnh tranh</td>
+              <td class="muted">OK (json-ld) — thấp nhất trong 2/3 nguồn còn hàng</td>
+            </tr><tr class="danger"
               data-sku="KB-ASU-TUF-K3-LIN-BLK" data-ten="Bàn Phím Cơ Gaming Có Dây Asus TUF Gaming K3 Red Switch"
               data-gianhap="1580000.0" data-giaban="1780000.0"
-              data-giadoithu="1790000" data-loinhuan="200000.0"
+              data-giadoithu="1499000" data-loinhuan="200000.0"
               data-bien="11.2"
-              data-flag="ok">
+              data-flag="danger">
               <td>KB-ASU-TUF-K3-LIN-BLK</td>
               <td>Bàn Phím Cơ Gaming Có Dây Asus TUF Gaming K3 Red Switch</td>
               <td class="num">1.580.000đ</td>
               <td class="num">1.780.000đ</td>
-              <td class="num">1.790.000đ</td>
-              <td>hết hàng</td>
-              <td><a href="https://gearvn.com/products/ban-phim-asus-tuf-gaming-k3" target="_blank" rel="noopener">gearvn.com</a></td>
-              <td class="num">1.780.000đ</td>
+              <td class="num">1.499.000đ</td>
+              <td>còn hàng</td>
+              <td><a href="https://hacom.vn/ban-phim-co-asus-tuf-k3-rgb-usb-red-sw" target="_blank" rel="noopener">hacom.vn</a> <span class="muted">(3 nguồn)</span></td>
+              <td class="num">1.489.000đ</td>
               <td class="num">200.000đ</td>
               <td class="num">11.2%</td>
-              <td>⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực</td>
-              <td class="muted">OK (json-ld) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
-            </tr><tr class="danger"
+              <td>🔴 LỖ nếu bán đúng giá đề xuất theo đối thủ — giá đối thủ đang thấp hơn cả giá vốn; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 281.000đ — mất cạnh tranh</td>
+              <td class="muted">OK (json-ld) — thấp nhất trong 2/3 nguồn còn hàng</td>
+            </tr><tr class="warn"
               data-sku="KB-ROG-FALCHIONACE75HEV2-BLK" data-ten="Bàn Phím Cơ Gaming Có Dây Asus ROG Falchion Ace 75HE V2"
               data-gianhap="4800000.0" data-giaban="5040000.0"
-              data-giadoithu="4690000" data-loinhuan="240000.0"
+              data-giadoithu="6490000" data-loinhuan="240000.0"
               data-bien="4.8"
-              data-flag="danger">
+              data-flag="warn">
               <td>KB-ROG-FALCHIONACE75HEV2-BLK</td>
               <td>Bàn Phím Cơ Gaming Có Dây Asus ROG Falchion Ace 75HE V2</td>
               <td class="num">4.800.000đ</td>
               <td class="num">5.040.000đ</td>
-              <td class="num">4.690.000đ</td>
-              <td>còn hàng</td>
-              <td><a href="https://gearvn.com/products/ban-phim-asus-m605-rog-falchion-ace-hfx" target="_blank" rel="noopener">gearvn.com</a></td>
-              <td class="num">4.680.000đ</td>
+              <td class="num">6.490.000đ</td>
+              <td>không rõ</td>
+              <td><a href="https://techspace.vn/ban-phim-asus-rog-falchion-ace-75-he-black-white" target="_blank" rel="noopener">techspace.vn</a></td>
+              <td class="num">6.480.000đ</td>
               <td class="num">240.000đ</td>
               <td class="num">4.8%</td>
-              <td>🟡 biên mỏng (<10%); 🔴 LỖ nếu bán đúng giá đề xuất theo đối thủ — giá đối thủ đang thấp hơn cả giá vốn; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 350.000đ — mất cạnh tranh</td>
-              <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
-            </tr><tr class="danger"
+              <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td class="muted">OK (meta-tag) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
+            </tr><tr class="warn"
               data-sku="KB-ROG-FALCHIONACE75HEV2-RED" data-ten="Bàn Phím Cơ Gaming Có Dây Asus ROG Falchion Ace 75HE V2"
               data-gianhap="4800000.0" data-giaban="5040000.0"
-              data-giadoithu="4690000" data-loinhuan="240000.0"
+              data-giadoithu="6490000" data-loinhuan="240000.0"
               data-bien="4.8"
-              data-flag="danger">
+              data-flag="warn">
               <td>KB-ROG-FALCHIONACE75HEV2-RED</td>
               <td>Bàn Phím Cơ Gaming Có Dây Asus ROG Falchion Ace 75HE V2</td>
               <td class="num">4.800.000đ</td>
               <td class="num">5.040.000đ</td>
-              <td class="num">4.690.000đ</td>
-              <td>còn hàng</td>
-              <td><a href="https://gearvn.com/products/ban-phim-asus-m605-rog-falchion-ace-hfx" target="_blank" rel="noopener">gearvn.com</a></td>
-              <td class="num">4.680.000đ</td>
+              <td class="num">6.490.000đ</td>
+              <td>không rõ</td>
+              <td><a href="https://techspace.vn/ban-phim-asus-rog-falchion-ace-75-he-black-white" target="_blank" rel="noopener">techspace.vn</a></td>
+              <td class="num">6.480.000đ</td>
               <td class="num">240.000đ</td>
               <td class="num">4.8%</td>
-              <td>🟡 biên mỏng (<10%); 🔴 LỖ nếu bán đúng giá đề xuất theo đối thủ — giá đối thủ đang thấp hơn cả giá vốn; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 350.000đ — mất cạnh tranh</td>
-              <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
+              <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td class="muted">OK (meta-tag) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
             </tr><tr class="warn"
               data-sku="KB-ROG-FALCHIONACE75HEV2-WHT" data-ten="Bàn Phím Cơ Gaming Có Dây Asus ROG Falchion Ace 75HE V2"
               data-gianhap="4800000.0" data-giaban="5040000.0"
@@ -373,111 +373,111 @@
             </tr><tr class="ok"
               data-sku="KB-ROG-TUFK3GENII-BLU" data-ten="Bàn Phím Cơ Gaming Có Dây Asus TUF Gaming K3 Gen II"
               data-gianhap="1225000.0" data-giaban="1440000.0"
-              data-giadoithu="1450000" data-loinhuan="215000.0"
+              data-giadoithu="1470000" data-loinhuan="215000.0"
               data-bien="14.9"
               data-flag="ok">
               <td>KB-ROG-TUFK3GENII-BLU</td>
               <td>Bàn Phím Cơ Gaming Có Dây Asus TUF Gaming K3 Gen II</td>
               <td class="num">1.225.000đ</td>
               <td class="num">1.440.000đ</td>
-              <td class="num">1.450.000đ</td>
-              <td>hết hàng</td>
-              <td><a href="https://gearvn.com/products/ban-phim-asus-tuf-gaming-k3-gen-ii-1" target="_blank" rel="noopener">gearvn.com</a></td>
-              <td class="num">1.440.000đ</td>
+              <td class="num">1.470.000đ</td>
+              <td>còn hàng</td>
+              <td><a href="https://www.tnc.com.vn/ban-phim-co-gaming-co-day-asus-tuf-gaming-k3-gen-ii-blue-switch.html" target="_blank" rel="noopener">www.tnc.com.vn</a> <span class="muted">(3 nguồn)</span></td>
+              <td class="num">1.460.000đ</td>
               <td class="num">215.000đ</td>
               <td class="num">14.9%</td>
-              <td>⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực</td>
-              <td class="muted">OK (json-ld) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
-            </tr><tr class="ok"
+              <td></td>
+              <td class="muted">OK (json-ld) — thấp nhất trong 2/3 nguồn còn hàng</td>
+            </tr><tr class="danger"
               data-sku="KB-ROG-TUFK3GENII-RED" data-ten="Bàn Phím Cơ Gaming Có Dây Asus TUF Gaming K3 Gen II"
               data-gianhap="1225000.0" data-giaban="1440000.0"
-              data-giadoithu="1450000" data-loinhuan="215000.0"
+              data-giadoithu="1199000" data-loinhuan="215000.0"
               data-bien="14.9"
-              data-flag="ok">
+              data-flag="danger">
               <td>KB-ROG-TUFK3GENII-RED</td>
               <td>Bàn Phím Cơ Gaming Có Dây Asus TUF Gaming K3 Gen II</td>
               <td class="num">1.225.000đ</td>
               <td class="num">1.440.000đ</td>
-              <td class="num">1.450.000đ</td>
-              <td>hết hàng</td>
-              <td><a href="https://gearvn.com/products/ban-phim-asus-tuf-gaming-k3-gen-ii-1" target="_blank" rel="noopener">gearvn.com</a></td>
-              <td class="num">1.440.000đ</td>
+              <td class="num">1.199.000đ</td>
+              <td>còn hàng</td>
+              <td><a href="https://hacom.vn/ban-phim-co-asus-tuf-k3-gen-ii-black-usb-optical-red-switch-abs-rgb" target="_blank" rel="noopener">hacom.vn</a> <span class="muted">(3 nguồn)</span></td>
+              <td class="num">1.189.000đ</td>
               <td class="num">215.000đ</td>
               <td class="num">14.9%</td>
-              <td>⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực</td>
-              <td class="muted">OK (json-ld) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
+              <td>🔴 LỖ nếu bán đúng giá đề xuất theo đối thủ — giá đối thủ đang thấp hơn cả giá vốn; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 241.000đ — mất cạnh tranh</td>
+              <td class="muted">OK (json-ld) — thấp nhất trong 1/3 nguồn còn hàng</td>
             </tr><tr class="warn"
               data-sku="KB-ROG-AZOTH96HELITE-BLK" data-ten="Bàn Phím Cơ Gaming Không Dây Asus ROG Azoth 96 HE Lite"
               data-gianhap="7750000.0" data-giaban="8525000.0"
-              data-giadoithu="9590000" data-loinhuan="775000.0"
+              data-giadoithu="8999000" data-loinhuan="775000.0"
               data-bien="9.1"
               data-flag="warn">
               <td>KB-ROG-AZOTH96HELITE-BLK</td>
               <td>Bàn Phím Cơ Gaming Không Dây Asus ROG Azoth 96 HE Lite</td>
               <td class="num">7.750.000đ</td>
               <td class="num">8.525.000đ</td>
-              <td class="num">9.590.000đ</td>
-              <td>còn hàng</td>
-              <td><a href="https://gearvn.com/products/ban-phim-gaming-asus-m901-rog-azoth-96-he-black" target="_blank" rel="noopener">gearvn.com</a></td>
-              <td class="num">9.580.000đ</td>
+              <td class="num">8.999.000đ</td>
+              <td>hết hàng</td>
+              <td><a href="https://hacom.vn/ban-phim-asus-rog-azoth-96-he-lite-den-kbas0110" target="_blank" rel="noopener">hacom.vn</a> <span class="muted">(2 nguồn)</span></td>
+              <td class="num">8.989.000đ</td>
               <td class="num">775.000đ</td>
               <td class="num">9.1%</td>
-              <td>🟡 biên mỏng (<10%); 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
-              <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
+              <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td class="muted">OK (json-ld) — 2/2 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
             </tr><tr class="warn"
               data-sku="KB-ROG-AZOTH96HELITE-WHT" data-ten="Bàn Phím Cơ Gaming Không Dây Asus ROG Azoth 96 HE Lite"
               data-gianhap="7750000.0" data-giaban="8525000.0"
-              data-giadoithu="9590000" data-loinhuan="775000.0"
+              data-giadoithu="10490000" data-loinhuan="775000.0"
               data-bien="9.1"
               data-flag="warn">
               <td>KB-ROG-AZOTH96HELITE-WHT</td>
               <td>Bàn Phím Cơ Gaming Không Dây Asus ROG Azoth 96 HE Lite</td>
               <td class="num">7.750.000đ</td>
               <td class="num">8.525.000đ</td>
-              <td class="num">9.590.000đ</td>
-              <td>còn hàng</td>
-              <td><a href="https://gearvn.com/products/ban-phim-gaming-asus-m901-rog-azoth-96-he-white" target="_blank" rel="noopener">gearvn.com</a></td>
-              <td class="num">9.580.000đ</td>
+              <td class="num">10.490.000đ</td>
+              <td>không rõ</td>
+              <td><a href="https://techspace.vn/ban-phim-gaming-asus-rog-azoth-96-he-lite-den" target="_blank" rel="noopener">techspace.vn</a></td>
+              <td class="num">10.480.000đ</td>
               <td class="num">775.000đ</td>
               <td class="num">9.1%</td>
-              <td>🟡 biên mỏng (<10%); 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
-              <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
-            </tr><tr class="warn"
+              <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td class="muted">OK (meta-tag) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
+            </tr><tr class="danger"
               data-sku="KB-ROG-AZOTHX-WHT" data-ten="Bàn Phím Cơ Gaming Không Dây Asus ROG Azoth X"
               data-gianhap="6000000.0" data-giaban="6580000.0"
-              data-giadoithu="6590000" data-loinhuan="580000.0"
+              data-giadoithu="6499000" data-loinhuan="580000.0"
               data-bien="8.8"
-              data-flag="warn">
+              data-flag="danger">
               <td>KB-ROG-AZOTHX-WHT</td>
               <td>Bàn Phím Cơ Gaming Không Dây Asus ROG Azoth X</td>
               <td class="num">6.000.000đ</td>
               <td class="num">6.580.000đ</td>
-              <td class="num">6.590.000đ</td>
+              <td class="num">6.499.000đ</td>
               <td>còn hàng</td>
-              <td><a href="https://gearvn.com/products/ban-phim-asus-m704-rog-azoth-x-nx-snow-v2-switch" target="_blank" rel="noopener">gearvn.com</a></td>
-              <td class="num">6.580.000đ</td>
+              <td><a href="https://hacom.vn/ban-phim-co-gaming-khong-day-asus-rog-azoth-x-rog-nx-v2-snow-switch" target="_blank" rel="noopener">hacom.vn</a> <span class="muted">(3 nguồn)</span></td>
+              <td class="num">6.489.000đ</td>
               <td class="num">580.000đ</td>
               <td class="num">8.8%</td>
-              <td>🟡 biên mỏng (<10%)</td>
-              <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
+              <td>🟡 biên mỏng (<10%); 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 81.000đ — mất cạnh tranh</td>
+              <td class="muted">OK (json-ld) — thấp nhất trong 3/3 nguồn còn hàng</td>
             </tr><tr class="warn"
               data-sku="KB-ROG-FALCATAHFXV2-BLK" data-ten="Bàn Phím Cơ Gaming Không Dây Asus ROG Falcata HFX V2"
               data-gianhap="6500000.0" data-giaban="6980000.0"
-              data-giadoithu="6990000" data-loinhuan="480000.0"
+              data-giadoithu="7139000" data-loinhuan="480000.0"
               data-bien="6.9"
               data-flag="warn">
               <td>KB-ROG-FALCATAHFXV2-BLK</td>
               <td>Bàn Phím Cơ Gaming Không Dây Asus ROG Falcata HFX V2</td>
               <td class="num">6.500.000đ</td>
               <td class="num">6.980.000đ</td>
-              <td class="num">6.990.000đ</td>
-              <td>không rõ</td>
-              <td><a href="https://memoryzone.com.vn/ban-phim-co-khong-day-asus-rog-falcata-hfx-rog-hfx-v2-sw" target="_blank" rel="noopener">memoryzone.com.vn</a></td>
-              <td class="num">6.980.000đ</td>
+              <td class="num">7.139.000đ</td>
+              <td>còn hàng</td>
+              <td><a href="https://www.tncstore.vn/ban-phim-co-asus-rog-falcata-hfx-v2-magentic-switch.html" target="_blank" rel="noopener">www.tncstore.vn</a> <span class="muted">(3 nguồn)</span></td>
+              <td class="num">7.129.000đ</td>
               <td class="num">480.000đ</td>
               <td class="num">6.9%</td>
-              <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực</td>
-              <td class="muted">OK (meta-tag) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
+              <td>🟡 biên mỏng (<10%); 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td class="muted">OK (json-ld) — thấp nhất trong 1/3 nguồn còn hàng</td>
             </tr><tr class="warn"
               data-sku="KB-ROG-FALCHIONRXLP-WHT" data-ten="Bàn Phím Cơ Gaming Không Dây Asus ROG Falchion RX Low Profile"
               data-gianhap="3600000.0" data-giaban="3780000.0"
@@ -499,75 +499,75 @@
             </tr><tr class="warn"
               data-sku="KB-ROG-STRIXSCOPEII96WL-NXSW" data-ten="Bàn Phím Cơ Gaming Không Dây Asus ROG Strix Scope II 96 Wireless"
               data-gianhap="3600000.0" data-giaban="3880000.0"
-              data-giadoithu="3890000" data-loinhuan="280000.0"
+              data-giadoithu="4290000" data-loinhuan="280000.0"
               data-bien="7.2"
               data-flag="warn">
               <td>KB-ROG-STRIXSCOPEII96WL-NXSW</td>
               <td>Bàn Phím Cơ Gaming Không Dây Asus ROG Strix Scope II 96 Wireless</td>
               <td class="num">3.600.000đ</td>
               <td class="num">3.880.000đ</td>
-              <td class="num">3.890.000đ</td>
+              <td class="num">4.290.000đ</td>
               <td>còn hàng</td>
-              <td><a href="https://gearvn.com/products/ban-phim-asus-rog-strix-scope-ii-96-wireless-rog-nx-snow-switch" target="_blank" rel="noopener">gearvn.com</a></td>
-              <td class="num">3.880.000đ</td>
+              <td><a href="https://owlgaming.vn/ban-phim-co-asus-rog-strix-scope-ii-96-wireless/" target="_blank" rel="noopener">owlgaming.vn</a> <span class="muted">(3 nguồn)</span></td>
+              <td class="num">4.280.000đ</td>
               <td class="num">280.000đ</td>
               <td class="num">7.2%</td>
-              <td>🟡 biên mỏng (<10%)</td>
-              <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
-            </tr><tr class="warn"
+              <td>🟡 biên mỏng (<10%); 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td class="muted">OK (json-ld) — thấp nhất trong 1/3 nguồn còn hàng</td>
+            </tr><tr class="danger"
               data-sku="KB-ROG-STRIXSCOPEII96WL-NXSM" data-ten="Bàn Phím Cơ Gaming Không Dây Asus ROG Strix Scope II 96 Wireless"
               data-gianhap="3600000.0" data-giaban="3880000.0"
-              data-giadoithu="3890000" data-loinhuan="280000.0"
+              data-giadoithu="3790000" data-loinhuan="280000.0"
               data-bien="7.2"
-              data-flag="warn">
+              data-flag="danger">
               <td>KB-ROG-STRIXSCOPEII96WL-NXSM</td>
               <td>Bàn Phím Cơ Gaming Không Dây Asus ROG Strix Scope II 96 Wireless</td>
               <td class="num">3.600.000đ</td>
               <td class="num">3.880.000đ</td>
-              <td class="num">3.890.000đ</td>
-              <td>hết hàng</td>
-              <td><a href="https://gearvn.com/products/ban-phim-asus-rog-strix-scope-ii-96-wireless-rog-nx-storm-switch" target="_blank" rel="noopener">gearvn.com</a></td>
-              <td class="num">3.880.000đ</td>
+              <td class="num">3.790.000đ</td>
+              <td>còn hàng</td>
+              <td><a href="https://www.tncstore.vn/ban-phim-co-asus-rog-strix-scope-ii-96-wireless-white.html" target="_blank" rel="noopener">www.tncstore.vn</a> <span class="muted">(3 nguồn)</span></td>
+              <td class="num">3.780.000đ</td>
               <td class="num">280.000đ</td>
               <td class="num">7.2%</td>
-              <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực</td>
-              <td class="muted">OK (json-ld) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
-            </tr><tr class="ok"
+              <td>🟡 biên mỏng (<10%); 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 90.000đ — mất cạnh tranh</td>
+              <td class="muted">OK (json-ld) — thấp nhất trong 2/3 nguồn còn hàng</td>
+            </tr><tr class="danger"
               data-sku="MOU-ROG-STRIX-IMPACT-III-BLK" data-ten="Chuột Gaming Có Dây Asus ROG Strix Impact III"
               data-gianhap="710000.0" data-giaban="820000.0"
-              data-giadoithu="0" data-loinhuan="110000.0"
+              data-giadoithu="399000" data-loinhuan="110000.0"
               data-bien="13.4"
-              data-flag="ok">
+              data-flag="danger">
               <td>MOU-ROG-STRIX-IMPACT-III-BLK</td>
               <td>Chuột Gaming Có Dây Asus ROG Strix Impact III</td>
               <td class="num">710.000đ</td>
               <td class="num">820.000đ</td>
-              <td class="num">—</td>
-              <td>—</td>
-              <td>—</td>
-              <td class="num">—</td>
+              <td class="num">399.000đ</td>
+              <td>hết hàng</td>
+              <td><a href="https://hacom.vn/chuot-gaming-asus-rog-strix-impact-iii" target="_blank" rel="noopener">hacom.vn</a> <span class="muted">(3 nguồn)</span></td>
+              <td class="num">398.000đ</td>
               <td class="num">110.000đ</td>
               <td class="num">13.4%</td>
-              <td>⚠️ không lấy được giá tự động từ bất kỳ nguồn nào — cần Vũ kiểm tra tay</td>
-              <td class="muted">LỖI: cả 1 nguồn đều lỗi (gearvn.com: Lỗi tải trang: 404 Client Error: Not Found for url: https://gearvn.com/products/chuot-asus-rog-strix-impact-iii)</td>
+              <td>⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🔴 LỖ nếu bán đúng giá đề xuất theo đối thủ — giá đối thủ đang thấp hơn cả giá vốn; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 421.000đ — mất cạnh tranh</td>
+              <td class="muted">OK (json-ld) — 2/3 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
             </tr><tr class="danger"
               data-sku="MOU-ROG-HARPE-ACE-AIM-LAB-EDITION-BLK" data-ten="Chuột Gaming Không Dây Asus ROG Harpe Ace Aim Lab Edition"
               data-gianhap="2540000.0" data-giaban="2990000.0"
-              data-giadoithu="2490000" data-loinhuan="450000.0"
+              data-giadoithu="2350000" data-loinhuan="450000.0"
               data-bien="15.1"
               data-flag="danger">
               <td>MOU-ROG-HARPE-ACE-AIM-LAB-EDITION-BLK</td>
               <td>Chuột Gaming Không Dây Asus ROG Harpe Ace Aim Lab Edition</td>
               <td class="num">2.540.000đ</td>
               <td class="num">2.990.000đ</td>
-              <td class="num">2.490.000đ</td>
+              <td class="num">2.350.000đ</td>
               <td>còn hàng</td>
-              <td><a href="https://gearvn.com/products/chuot-asus-rog-harpe-ace-aim-lap-edition" target="_blank" rel="noopener">gearvn.com</a></td>
-              <td class="num">2.480.000đ</td>
+              <td><a href="https://owlgaming.vn/chuot-gaming-asus-rog-harpe-ace-aim-lab-edition-wireless/" target="_blank" rel="noopener">owlgaming.vn</a> <span class="muted">(3 nguồn)</span></td>
+              <td class="num">2.340.000đ</td>
               <td class="num">450.000đ</td>
               <td class="num">15.1%</td>
-              <td>🔴 LỖ nếu bán đúng giá đề xuất theo đối thủ — giá đối thủ đang thấp hơn cả giá vốn; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 500.000đ — mất cạnh tranh</td>
-              <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
+              <td>🔴 LỖ nếu bán đúng giá đề xuất theo đối thủ — giá đối thủ đang thấp hơn cả giá vốn; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 640.000đ — mất cạnh tranh</td>
+              <td class="muted">OK (json-ld) — thấp nhất trong 1/3 nguồn còn hàng</td>
             </tr><tr class="ok"
               data-sku="MOU-ROG-HARPE-II-ACE-BLK" data-ten="Chuột Gaming Không Dây Asus ROG Harpe II Ace"
               data-gianhap="2800000.0" data-giaban="3360000.0"
@@ -580,30 +580,30 @@
               <td class="num">3.360.000đ</td>
               <td class="num">3.360.000đ</td>
               <td>còn hàng</td>
-              <td><a href="https://gearvn.com/products/chuot-asus-rog-harpe-ii-ace-wireless-black" target="_blank" rel="noopener">gearvn.com</a></td>
+              <td><a href="https://owlgaming.vn/chuot-gaming-asus-rog-harpe-ii-ace/" target="_blank" rel="noopener">owlgaming.vn</a> <span class="muted">(3 nguồn)</span></td>
               <td class="num">3.350.000đ</td>
               <td class="num">560.000đ</td>
               <td class="num">16.7%</td>
               <td></td>
-              <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
-            </tr><tr class="ok"
+              <td class="muted">OK (json-ld) — thấp nhất trong 1/3 nguồn còn hàng</td>
+            </tr><tr class="danger"
               data-sku="HSE-ROG-PELTA-BLK" data-ten="Tai Nghe Gaming Không Dây Asus ROG Pelta"
               data-gianhap="2600000.0" data-giaban="3180000.0"
-              data-giadoithu="3190000" data-loinhuan="580000.0"
+              data-giadoithu="2990000" data-loinhuan="580000.0"
               data-bien="18.2"
-              data-flag="ok">
+              data-flag="danger">
               <td>HSE-ROG-PELTA-BLK</td>
               <td>Tai Nghe Gaming Không Dây Asus ROG Pelta</td>
               <td class="num">2.600.000đ</td>
               <td class="num">3.180.000đ</td>
-              <td class="num">3.190.000đ</td>
+              <td class="num">2.990.000đ</td>
               <td>còn hàng</td>
-              <td><a href="https://gearvn.com/products/tai-nghe-asus-rog-pelta-wl-rgb-black" target="_blank" rel="noopener">gearvn.com</a></td>
-              <td class="num">3.180.000đ</td>
+              <td><a href="https://cellphones.com.vn/tai-nghe-khong-day-asus-rog-pelta-wireless-headset.html" target="_blank" rel="noopener">cellphones.com.vn</a> <span class="muted">(3 nguồn)</span></td>
+              <td class="num">2.980.000đ</td>
               <td class="num">580.000đ</td>
               <td class="num">18.2%</td>
-              <td></td>
-              <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
+              <td>🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 190.000đ — mất cạnh tranh</td>
+              <td class="muted">OK (json-ld) — thấp nhất trong 3/3 nguồn còn hàng</td>
             </tr><tr class="danger"
               data-sku="LAP-ASU-X1404MA-EB027W" data-ten="Laptop Asus Vivobook 14 X1404MA Intel Core 3-304, 8GB RAM DDR5, 512GB SSD NVMe, 14" FHD, Fingerprint, Màu Bạc"
               data-gianhap="17935300.0" data-giaban="18490000.0"
@@ -850,12 +850,12 @@
               <td class="num">935.000đ</td>
               <td class="num">790.000đ</td>
               <td>còn hàng</td>
-              <td><a href="https://gearvn.com/products/tai-nghe-asus-rog-cetra-ii-core" target="_blank" rel="noopener">gearvn.com</a></td>
+              <td><a href="https://cellphones.com.vn/tai-nghe-rog-cetra-ii-core.html" target="_blank" rel="noopener">cellphones.com.vn</a> <span class="muted">(3 nguồn)</span></td>
               <td class="num">789.000đ</td>
               <td class="num">45.000đ</td>
               <td class="num">4.8%</td>
               <td>🟡 biên mỏng (<10%); 🔴 LỖ nếu bán đúng giá đề xuất theo đối thủ — giá đối thủ đang thấp hơn cả giá vốn; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 145.000đ — mất cạnh tranh</td>
-              <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
+              <td class="muted">OK (json-ld) — thấp nhất trong 1/3 nguồn còn hàng</td>
             </tr><tr class="warn"
               data-sku="HSE-ASU-ROG-KITHARA-BLK" data-ten="Tai Nghe Gaming Có Dây Asus ROG Kithara"
               data-gianhap="7190000.0" data-giaban="7550000.0"
@@ -913,21 +913,21 @@
             </tr><tr class="ok"
               data-sku="MOU-ATK-A9PLUS-BLK" data-ten="Chuột Gaming Không Dây ATK Dragonfly A9 Plus"
               data-gianhap="620000.0" data-giaban="790000.0"
-              data-giadoithu="790000" data-loinhuan="170000.0"
+              data-giadoithu="0" data-loinhuan="170000.0"
               data-bien="21.5"
               data-flag="ok">
               <td>MOU-ATK-A9PLUS-BLK</td>
               <td>Chuột Gaming Không Dây ATK Dragonfly A9 Plus</td>
               <td class="num">620.000đ</td>
               <td class="num">790.000đ</td>
-              <td class="num">790.000đ</td>
-              <td>không rõ</td>
-              <td><a href="https://memoryzone.com.vn/chuot-khong-day-atk-dragonfly-a9-plus-2-0-tri-mode-nearlink-wireless-pixart-3395-ultra" target="_blank" rel="noopener">memoryzone.com.vn</a></td>
-              <td class="num">789.000đ</td>
+              <td class="num">—</td>
+              <td>—</td>
+              <td>—</td>
+              <td class="num">—</td>
               <td class="num">170.000đ</td>
               <td class="num">21.5%</td>
-              <td>⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực</td>
-              <td class="muted">OK (meta-tag) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
+              <td>⚠️ không lấy được giá tự động từ bất kỳ nguồn nào — cần Vũ kiểm tra tay</td>
+              <td class="muted">LỖI: cả 1 nguồn đều lỗi (memoryzone.com.vn: Lỗi tải trang: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))</td>
             </tr><tr class="ok"
               data-sku="MOU-ATK-A9PLUS-WHT" data-ten="Chuột Gaming Không Dây ATK Dragonfly A9 Plus"
               data-gianhap="620000.0" data-giaban="790000.0"
@@ -2368,42 +2368,42 @@
               <td class="num">17.9%</td>
               <td></td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
-            </tr><tr class="danger"
+            </tr><tr class="warn"
               data-sku="KB-COR-K65-PLUS-75-LIN-SS-GRY" data-ten="Bàn Phím Cơ Gaming Không Dây Corsair K65 PLUS WIRELESS Switch Linear"
               data-gianhap="3630000.0" data-giaban="3815000.0"
-              data-giadoithu="3790000" data-loinhuan="185000.0"
+              data-giadoithu="0" data-loinhuan="185000.0"
               data-bien="4.8"
-              data-flag="danger">
+              data-flag="warn">
               <td>KB-COR-K65-PLUS-75-LIN-SS-GRY</td>
               <td>Bàn Phím Cơ Gaming Không Dây Corsair K65 PLUS WIRELESS Switch Linear</td>
               <td class="num">3.630.000đ</td>
               <td class="num">3.815.000đ</td>
-              <td class="num">3.790.000đ</td>
-              <td>không rõ</td>
-              <td><a href="https://memoryzone.com.vn/ban-phim-co-khong-day-corsair-k65-plus-wireless-75-rgb-ch-91d421l-na" target="_blank" rel="noopener">memoryzone.com.vn</a></td>
-              <td class="num">3.780.000đ</td>
+              <td class="num">—</td>
+              <td>—</td>
+              <td>—</td>
+              <td class="num">—</td>
               <td class="num">185.000đ</td>
               <td class="num">4.8%</td>
-              <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 25.000đ — mất cạnh tranh</td>
-              <td class="muted">OK (meta-tag) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
-            </tr><tr class="danger"
+              <td>🟡 biên mỏng (<10%); ⚠️ không lấy được giá tự động từ bất kỳ nguồn nào — cần Vũ kiểm tra tay</td>
+              <td class="muted">LỖI: cả 1 nguồn đều lỗi (memoryzone.com.vn: Lỗi tải trang: 502 Server Error: Bad Gateway for url: https://memoryzone.com.vn/ban-phim-co-khong-day-corsair-k65-plus-wireless-75-rgb-ch-91d421l-na)</td>
+            </tr><tr class="warn"
               data-sku="KB-COR-K70-CORE-TKL-MLX-RED-SS-BLK" data-ten="Bàn Phím Cơ Gaming Không Dây Corsair K70 CORE TKL RGB Switch MLX Red"
               data-gianhap="3255000.0" data-giaban="3420000.0"
-              data-giadoithu="2990000" data-loinhuan="165000.0"
+              data-giadoithu="0" data-loinhuan="165000.0"
               data-bien="4.8"
-              data-flag="danger">
+              data-flag="warn">
               <td>KB-COR-K70-CORE-TKL-MLX-RED-SS-BLK</td>
               <td>Bàn Phím Cơ Gaming Không Dây Corsair K70 CORE TKL RGB Switch MLX Red</td>
               <td class="num">3.255.000đ</td>
               <td class="num">3.420.000đ</td>
-              <td class="num">2.990.000đ</td>
-              <td>không rõ</td>
-              <td><a href="https://memoryzone.com.vn/ban-phim-co-khong-day-corsair-k70-core-tkl-rgb-corsair-mlx-sw-ch-914901e-na" target="_blank" rel="noopener">memoryzone.com.vn</a></td>
-              <td class="num">2.980.000đ</td>
+              <td class="num">—</td>
+              <td>—</td>
+              <td>—</td>
+              <td class="num">—</td>
               <td class="num">165.000đ</td>
               <td class="num">4.8%</td>
-              <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🔴 LỖ nếu bán đúng giá đề xuất theo đối thủ — giá đối thủ đang thấp hơn cả giá vốn; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 430.000đ — mất cạnh tranh</td>
-              <td class="muted">OK (meta-tag) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
+              <td>🟡 biên mỏng (<10%); ⚠️ không lấy được giá tự động từ bất kỳ nguồn nào — cần Vũ kiểm tra tay</td>
+              <td class="muted">LỖI: cả 1 nguồn đều lỗi (memoryzone.com.vn: Lỗi tải trang: 502 Server Error: Bad Gateway for url: https://memoryzone.com.vn/ban-phim-co-khong-day-corsair-k70-core-tkl-rgb-corsair-mlx-sw-ch-914901e-na)</td>
             </tr><tr class="ok"
               data-sku="KB-COR-K55-CORE-TKL-BLK" data-ten="Bàn Phím Gaming Có Dây Corsair K55 CORE TKL RGB"
               data-gianhap="810000.0" data-giaban="949000.0"
@@ -3415,21 +3415,21 @@
             </tr><tr class="ok"
               data-sku="ACC-ELG-USBHUB-STREAMDECKPLUS-BLK" data-ten="USB Hub Elgato Cho Stream Deck +"
               data-gianhap="1460000.0" data-giaban="1800000.0"
-              data-giadoithu="0" data-loinhuan="340000.0"
+              data-giadoithu="1810000" data-loinhuan="340000.0"
               data-bien="18.9"
               data-flag="ok">
               <td>ACC-ELG-USBHUB-STREAMDECKPLUS-BLK</td>
               <td>USB Hub Elgato Cho Stream Deck +</td>
               <td class="num">1.460.000đ</td>
               <td class="num">1.800.000đ</td>
-              <td class="num">—</td>
-              <td>—</td>
-              <td>—</td>
-              <td class="num">—</td>
+              <td class="num">1.810.000đ</td>
+              <td>còn hàng</td>
+              <td><a href="https://owlgaming.vn/thiet-bi-elgato-usb-hub-for-stream-deck/" target="_blank" rel="noopener">owlgaming.vn</a></td>
+              <td class="num">1.800.000đ</td>
               <td class="num">340.000đ</td>
               <td class="num">18.9%</td>
-              <td>⚠️ không lấy được giá tự động từ bất kỳ nguồn nào — cần Vũ kiểm tra tay</td>
-              <td class="muted">LỖI: cả 1 nguồn đều lỗi (owlgaming.vn: Lỗi tải trang: HTTPSConnectionPool(host='owlgaming.vn', port=443): Read timed out. (read timeout=15))</td>
+              <td></td>
+              <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
             </tr><tr class="ok"
               data-sku="CAM-ELG-FACECAM4K-BLK" data-ten="Webcam Elgato Facecam 4K"
               data-gianhap="4950000.0" data-giaban="5680000.0"
@@ -3772,24 +3772,24 @@
               <td class="num">21.8%</td>
               <td>⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 20.000đ — mất cạnh tranh</td>
               <td class="muted">OK (json-ld) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
-            </tr><tr class="ok"
+            </tr><tr class="danger"
               data-sku="GDL-HPW-LH01-BRN" data-ten="Giá Đỡ Laptop Hyperwork LH01"
               data-gianhap="409000.0" data-giaban="515000.0"
-              data-giadoithu="0" data-loinhuan="106000.0"
+              data-giadoithu="490000" data-loinhuan="106000.0"
               data-bien="20.6"
-              data-flag="ok">
+              data-flag="danger">
               <td>GDL-HPW-LH01-BRN</td>
               <td>Giá Đỡ Laptop Hyperwork LH01</td>
               <td class="num">409.000đ</td>
               <td class="num">515.000đ</td>
-              <td class="num">—</td>
-              <td>—</td>
-              <td>—</td>
-              <td class="num">—</td>
+              <td class="num">490.000đ</td>
+              <td>còn hàng</td>
+              <td><a href="https://owlgaming.vn/gia-do-laptop-hyperwork-lh01/" target="_blank" rel="noopener">owlgaming.vn</a></td>
+              <td class="num">489.000đ</td>
               <td class="num">106.000đ</td>
               <td class="num">20.6%</td>
-              <td>⚠️ không lấy được giá tự động từ bất kỳ nguồn nào — cần Vũ kiểm tra tay</td>
-              <td class="muted">LỖI: cả 1 nguồn đều lỗi (owlgaming.vn: Lỗi tải trang: HTTPSConnectionPool(host='owlgaming.vn', port=443): Read timed out. (read timeout=15))</td>
+              <td>🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 25.000đ — mất cạnh tranh</td>
+              <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
             </tr><tr class="danger"
               data-sku="GDL-HPW-LT03-BLK" data-ten="Giá Đỡ Laptop Hyperwork LT03"
               data-gianhap="209000.0" data-giaban="339000.0"
