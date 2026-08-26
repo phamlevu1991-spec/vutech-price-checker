@@ -32,17 +32,17 @@
 </style>
 </head><body>
 <h1>Vutech — Dashboard theo dõi giá đối thủ (Auto, 0 token)</h1>
-<div class="sub">Cập nhật lúc 26/08/2026 13:07 (giờ VN) · Nguồn: Google Sheet "Khởi nghiệp" / tab Website · Mỗi SKU có thể theo dõi nhiều đối thủ, dashboard hiển thị giá THẤP NHẤT trong số đối thủ còn hàng · Script chạy tự động, không dùng AI</div>
+<div class="sub">Cập nhật lúc 26/08/2026 14:26 (giờ VN) · Nguồn: Google Sheet "Khởi nghiệp" / tab Website · Mỗi SKU có thể theo dõi nhiều đối thủ, dashboard hiển thị giá THẤP NHẤT trong số đối thủ còn hàng · Script chạy tự động, không dùng AI</div>
 
 <div class="stats">
   <div class="stat"><div class="n">490</div><div class="l">Tổng SKU</div></div>
-  <div class="stat"><div class="n">280</div><div class="l">Có link đối thủ</div></div>
-  <div class="stat danger"><div class="n">107</div><div class="l">Cờ đỏ (lỗ / dưới vốn / mất cạnh tranh)</div></div>
+  <div class="stat"><div class="n">320</div><div class="l">Có link đối thủ</div></div>
+  <div class="stat danger"><div class="n">115</div><div class="l">Cờ đỏ (lỗ / dưới vốn / mất cạnh tranh)</div></div>
   <div class="stat warn"><div class="n">174</div><div class="l">Cờ vàng (biên mỏng / cần xác minh)</div></div>
-  <div class="stat"><div class="n">9</div><div class="l">Lỗi lấy giá tự động</div></div>
-  <div class="stat danger"><div class="n">23</div><div class="l">Lỗ nếu theo giá đối thủ</div></div>
+  <div class="stat"><div class="n">14</div><div class="l">Lỗi lấy giá tự động</div></div>
+  <div class="stat danger"><div class="n">25</div><div class="l">Lỗ nếu theo giá đối thủ</div></div>
   <div class="stat danger"><div class="n">24</div><div class="l">Dưới sàn markup 5% (giá vốn)</div></div>
-  <div class="stat warn"><div class="n">46</div><div class="l">Cần tăng giá hôm nay</div></div>
+  <div class="stat warn"><div class="n">59</div><div class="l">Cần tăng giá hôm nay</div></div>
 </div>
 
 <div class="controls">
@@ -67,57 +67,57 @@
 <tr class="danger"
               data-sku="LAP-ACE-AG14-72P-563L" data-ten="Laptop Acer Aspire Go 14 (Core 5-120U, 16GB RAM DDR4, 512GB SSD NVMe, 14" FHD (NX.JSBSV.002), Màu Bạc)"
               data-gianhap="17935300.0" data-giaban="18490000.0"
-              data-giadoithu="0" data-loinhuan="554700.0"
+              data-giadoithu="19490000" data-loinhuan="554700.0"
               data-bien="3.0"
               data-flag="danger">
               <td>LAP-ACE-AG14-72P-563L</td>
               <td>Laptop Acer Aspire Go 14 (Core 5-120U, 16GB RAM DDR4, 512GB SSD NVMe, 14" FHD (NX.JSBSV.002), Màu Bạc)</td>
               <td class="num">17.935.300đ</td>
               <td class="num">18.490.000đ</td>
-              <td class="num">—</td>
-              <td>—</td>
-              <td>—</td>
-              <td class="num">—</td>
+              <td class="num">19.490.000đ</td>
+              <td>còn hàng</td>
+              <td><a href="https://cellphones.com.vn/laptop-acer-aspire-go-14-ag14-72p-563l.html" target="_blank" rel="noopener">cellphones.com.vn</a> <span class="muted">(3 nguồn)</span></td>
+              <td class="num">19.480.000đ</td>
               <td class="num">554.700đ</td>
               <td class="num">3.0%</td>
-              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng</td>
-              <td class="muted">bỏ qua — chưa có link đối thủ trong cột M</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td class="muted">OK (json-ld) — thấp nhất trong 1/3 nguồn còn hàng</td>
             </tr><tr class="warn"
               data-sku="LAP-ACE-AG15-52P-52WT" data-ten="Laptop Acer Aspire Go 15 AI (Intel Ultra 5-115U, 16GB RAM DDR5, 512GB SSD NVMe, 15.6" FHD (NX.JWKSV.001), Màu Bạc)"
               data-gianhap="21233300.0" data-giaban="22774000.0"
-              data-giadoithu="0" data-loinhuan="1540700.0"
+              data-giadoithu="22990000" data-loinhuan="1540700.0"
               data-bien="6.8"
               data-flag="warn">
               <td>LAP-ACE-AG15-52P-52WT</td>
               <td>Laptop Acer Aspire Go 15 AI (Intel Ultra 5-115U, 16GB RAM DDR5, 512GB SSD NVMe, 15.6" FHD (NX.JWKSV.001), Màu Bạc)</td>
               <td class="num">21.233.300đ</td>
               <td class="num">22.774.000đ</td>
-              <td class="num">—</td>
-              <td>—</td>
-              <td>—</td>
-              <td class="num">—</td>
+              <td class="num">22.990.000đ</td>
+              <td>còn hàng</td>
+              <td><a href="https://cellphones.com.vn/laptop-acer-aspire-go-15-ai-ag15-52p-52wt.html" target="_blank" rel="noopener">cellphones.com.vn</a> <span class="muted">(3 nguồn)</span></td>
+              <td class="num">22.980.000đ</td>
               <td class="num">1.540.700đ</td>
               <td class="num">6.8%</td>
-              <td>🟡 biên mỏng (<10%)</td>
-              <td class="muted">bỏ qua — chưa có link đối thủ trong cột M</td>
+              <td>🟡 biên mỏng (<10%); 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td class="muted">OK (json-ld) — thấp nhất trong 1/3 nguồn còn hàng</td>
             </tr><tr class="danger"
               data-sku="LAP-ACE-AG15-72P-54GY" data-ten="Laptop Acer Aspire Go 15 (Core 5-120U, 16GB RAM DDR4, 512GB SSD NVMe, 15.6" FHD (NX.JRRSV.002), Màu Bạc)"
               data-gianhap="17935300.0" data-giaban="18490000.0"
-              data-giadoithu="0" data-loinhuan="554700.0"
+              data-giadoithu="18990000" data-loinhuan="554700.0"
               data-bien="3.0"
               data-flag="danger">
               <td>LAP-ACE-AG15-72P-54GY</td>
               <td>Laptop Acer Aspire Go 15 (Core 5-120U, 16GB RAM DDR4, 512GB SSD NVMe, 15.6" FHD (NX.JRRSV.002), Màu Bạc)</td>
               <td class="num">17.935.300đ</td>
               <td class="num">18.490.000đ</td>
-              <td class="num">—</td>
-              <td>—</td>
-              <td>—</td>
-              <td class="num">—</td>
+              <td class="num">18.990.000đ</td>
+              <td>còn hàng</td>
+              <td><a href="https://www.anphatpc.com.vn/laptop-acer-aspire-go-15-ag15-72p-54gy-nx.jrrsv.002.html" target="_blank" rel="noopener">www.anphatpc.com.vn</a> <span class="muted">(3 nguồn)</span></td>
+              <td class="num">18.980.000đ</td>
               <td class="num">554.700đ</td>
               <td class="num">3.0%</td>
-              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng</td>
-              <td class="muted">bỏ qua — chưa có link đối thủ trong cột M</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td class="muted">OK (json-ld) — thấp nhất trong 2/3 nguồn còn hàng</td>
             </tr><tr class="warn"
               data-sku="LAP-ACE-AL14-45P-R7Z3" data-ten="Laptop Acer Aspire Lite 14 (AMD Ryzen 3 5400U, 8GB RAM DDR4, 512GB SSD NVMe, 14" FHD+ (NX.DPESV.002), Màu Bạc)"
               data-gianhap="14540300.0" data-giaban="15424000.0"
@@ -130,12 +130,12 @@
               <td class="num">15.424.000đ</td>
               <td class="num">—</td>
               <td>—</td>
-              <td>—</td>
+              <td>— <span class="muted">(3 nguồn)</span></td>
               <td class="num">—</td>
               <td class="num">883.700đ</td>
               <td class="num">5.7%</td>
-              <td>🟡 biên mỏng (<10%)</td>
-              <td class="muted">bỏ qua — chưa có link đối thủ trong cột M</td>
+              <td>🟡 biên mỏng (<10%); ⚠️ không lấy được giá tự động từ bất kỳ nguồn nào — cần Vũ kiểm tra tay</td>
+              <td class="muted">LỖI: cả 3 nguồn đều lỗi (www.thegioididong.com: Lỗi tải trang: HTTPSConnectionPool(host='www.thegioididong.com', port=443): Max retries exceeded with url: /laptop/acer-aspire-lite-14-al14-45p-r7z3-r3-5400u-nx-dpesv-002 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.thegioididong.com', port=443) at 0x7facd4f3b390>, 'Connection to www.thegioididong.com timed out. (connect timeout=15)')); fptshop.com.vn: Lỗi tải trang: 403 Client Error: Forbidden for url: https://fptshop.com.vn/may-tinh-xach-tay/acer-aspire-lite-14-al14-45p-r7z3; cellphones.com.vn: Không tìm thấy giá bằng bất kỳ phương pháp nào đã thử)</td>
             </tr><tr class="warn"
               data-sku="LAP-ACE-AL15-49P-R6XX" data-ten="Laptop Acer Aspire Lite 15 (AMD Ryzen 5 7430U, 8GB RAM DDR4, 512GB SSD NVMe, 15.6" FHD, Màu Bạc)"
               data-gianhap="17838300.0" data-giaban="18890000.0"
@@ -148,66 +148,66 @@
               <td class="num">18.890.000đ</td>
               <td class="num">—</td>
               <td>—</td>
-              <td>—</td>
+              <td>— <span class="muted">(2 nguồn)</span></td>
               <td class="num">—</td>
               <td class="num">1.051.700đ</td>
               <td class="num">5.6%</td>
-              <td>🟡 biên mỏng (<10%)</td>
-              <td class="muted">bỏ qua — chưa có link đối thủ trong cột M</td>
+              <td>🟡 biên mỏng (<10%); ⚠️ không lấy được giá tự động từ bất kỳ nguồn nào — cần Vũ kiểm tra tay</td>
+              <td class="muted">LỖI: cả 2 nguồn đều lỗi (www.thegioididong.com: Lỗi tải trang: HTTPSConnectionPool(host='www.thegioididong.com', port=443): Max retries exceeded with url: /laptop/acer-aspire-lite-15-al15-49p-r6xx-r5-7430u-nx-drzsv-002 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.thegioididong.com', port=443) at 0x7facd4852890>, 'Connection to www.thegioididong.com timed out. (connect timeout=15)')); www.ankhang.vn: Lỗi tải trang: 403 Client Error: Forbidden for url: https://www.ankhang.vn/laptop-acer-aspire-lite-15-al15-49p-r6xx-nx-drzsv-002.html)</td>
             </tr><tr class="danger"
               data-sku="LAP-ACE-NL16-71G-71UJ" data-ten="Laptop Gaming Acer Nitro Lite 16 (Core i7-13620H, 16GB RAM DDR5, 512GB SSD NVMe, 16" FHD+ 165Hz, RTX 3050 6GB (NH.D59SV.002), Màu Trắng)"
               data-gianhap="25016300.0" data-giaban="25790000.0"
-              data-giadoithu="0" data-loinhuan="773700.0"
+              data-giadoithu="27990000" data-loinhuan="773700.0"
               data-bien="3.0"
               data-flag="danger">
               <td>LAP-ACE-NL16-71G-71UJ</td>
               <td>Laptop Gaming Acer Nitro Lite 16 (Core i7-13620H, 16GB RAM DDR5, 512GB SSD NVMe, 16" FHD+ 165Hz, RTX 3050 6GB (NH.D59SV.002), Màu Trắng)</td>
               <td class="num">25.016.300đ</td>
               <td class="num">25.790.000đ</td>
-              <td class="num">—</td>
-              <td>—</td>
-              <td>—</td>
-              <td class="num">—</td>
+              <td class="num">27.990.000đ</td>
+              <td>còn hàng</td>
+              <td><a href="https://cellphones.com.vn/laptop-acer-gaming-nitro-lite-16-nl16-71g-71uj.html" target="_blank" rel="noopener">cellphones.com.vn</a> <span class="muted">(3 nguồn)</span></td>
+              <td class="num">27.980.000đ</td>
               <td class="num">773.700đ</td>
               <td class="num">3.0%</td>
-              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng</td>
-              <td class="muted">bỏ qua — chưa có link đối thủ trong cột M</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td class="muted">OK (json-ld) — thấp nhất trong 1/3 nguồn còn hàng</td>
             </tr><tr class="warn"
               data-sku="LAP-ACE-NL16-71G-71FN" data-ten="Laptop Gaming Acer Nitro Lite 16 (Core i7-13620H, 16GB RAM DDR5, 512GB SSD NVMe, 16" FHD+ 180Hz, RTX 4050 6GB (NH.D5ASV.003), Màu Trắng)"
               data-gianhap="26762300.0" data-giaban="28875000.0"
-              data-giadoithu="0" data-loinhuan="2112700.0"
+              data-giadoithu="30990000" data-loinhuan="2112700.0"
               data-bien="7.3"
               data-flag="warn">
               <td>LAP-ACE-NL16-71G-71FN</td>
               <td>Laptop Gaming Acer Nitro Lite 16 (Core i7-13620H, 16GB RAM DDR5, 512GB SSD NVMe, 16" FHD+ 180Hz, RTX 4050 6GB (NH.D5ASV.003), Màu Trắng)</td>
               <td class="num">26.762.300đ</td>
               <td class="num">28.875.000đ</td>
-              <td class="num">—</td>
-              <td>—</td>
-              <td>—</td>
-              <td class="num">—</td>
+              <td class="num">30.990.000đ</td>
+              <td>còn hàng</td>
+              <td><a href="https://cellphones.com.vn/laptop-acer-gaming-nitro-lite-16-nl16-71g-71fn.html" target="_blank" rel="noopener">cellphones.com.vn</a> <span class="muted">(3 nguồn)</span></td>
+              <td class="num">30.980.000đ</td>
               <td class="num">2.112.700đ</td>
               <td class="num">7.3%</td>
-              <td>🟡 biên mỏng (<10%)</td>
-              <td class="muted">bỏ qua — chưa có link đối thủ trong cột M</td>
+              <td>🟡 biên mỏng (<10%); 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td class="muted">OK (json-ld) — thấp nhất trong 1/3 nguồn còn hàng</td>
             </tr><tr class="danger"
               data-sku="LAP-ACE-ANV15-52-72BM" data-ten="Laptop Gaming Acer Nitro V 15 Core i7-13620H, 16GB RAM DDR4, 512GB SSD NVMe, RTX 5050 8GB, 15.6" FHD 180Hz, Màu Đen"
               data-gianhap="31515300.0" data-giaban="32490000.0"
-              data-giadoithu="0" data-loinhuan="974700.0"
+              data-giadoithu="34989000" data-loinhuan="974700.0"
               data-bien="3.0"
               data-flag="danger">
               <td>LAP-ACE-ANV15-52-72BM</td>
               <td>Laptop Gaming Acer Nitro V 15 Core i7-13620H, 16GB RAM DDR4, 512GB SSD NVMe, RTX 5050 8GB, 15.6" FHD 180Hz, Màu Đen</td>
               <td class="num">31.515.300đ</td>
               <td class="num">32.490.000đ</td>
-              <td class="num">—</td>
-              <td>—</td>
-              <td>—</td>
-              <td class="num">—</td>
+              <td class="num">34.989.000đ</td>
+              <td>còn hàng</td>
+              <td><a href="https://hacom.vn/laptop-acer-gaming-nitro-v-15-propanel-anv15-52-72bm-nh.qz9sv.004" target="_blank" rel="noopener">hacom.vn</a> <span class="muted">(3 nguồn)</span></td>
+              <td class="num">34.979.000đ</td>
               <td class="num">974.700đ</td>
               <td class="num">3.0%</td>
-              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng</td>
-              <td class="muted">bỏ qua — chưa có link đối thủ trong cột M</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td class="muted">OK (json-ld) — thấp nhất trong 2/3 nguồn còn hàng</td>
             </tr><tr class="danger"
               data-sku="MOU-ASU-TUF-M3-GEN2-BLK" data-ten="Chuột Gaming Có Dây Asus TUF M3 Gen II"
               data-gianhap="345000.0" data-giaban="399000.0"
@@ -292,48 +292,48 @@
               <td class="num">5.040.000đ</td>
               <td class="num">6.490.000đ</td>
               <td>không rõ</td>
-              <td><a href="https://techspace.vn/ban-phim-asus-rog-falchion-ace-75-he-black-white" target="_blank" rel="noopener">techspace.vn</a></td>
+              <td><a href="https://techspace.vn/ban-phim-asus-rog-falchion-ace-75-he-black-white" target="_blank" rel="noopener">techspace.vn</a> <span class="muted">(2 nguồn)</span></td>
               <td class="num">6.480.000đ</td>
               <td class="num">240.000đ</td>
               <td class="num">4.8%</td>
               <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
-              <td class="muted">OK (meta-tag) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
+              <td class="muted">OK (meta-tag) — 1/2 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
             </tr><tr class="warn"
               data-sku="KB-ROG-FALCHIONACE75HEV2-WHT" data-ten="Bàn Phím Cơ Gaming Có Dây Asus ROG Falchion Ace 75HE V2"
               data-gianhap="4800000.0" data-giaban="5040000.0"
-              data-giadoithu="0" data-loinhuan="240000.0"
+              data-giadoithu="6490000" data-loinhuan="240000.0"
               data-bien="4.8"
               data-flag="warn">
               <td>KB-ROG-FALCHIONACE75HEV2-WHT</td>
               <td>Bàn Phím Cơ Gaming Có Dây Asus ROG Falchion Ace 75HE V2</td>
               <td class="num">4.800.000đ</td>
               <td class="num">5.040.000đ</td>
-              <td class="num">—</td>
-              <td>—</td>
-              <td>—</td>
-              <td class="num">—</td>
+              <td class="num">6.490.000đ</td>
+              <td>không rõ</td>
+              <td><a href="https://techspace.vn/ban-phim-asus-rog-falchion-ace-75-he-black-white" target="_blank" rel="noopener">techspace.vn</a> <span class="muted">(2 nguồn)</span></td>
+              <td class="num">6.480.000đ</td>
               <td class="num">240.000đ</td>
               <td class="num">4.8%</td>
-              <td>🟡 biên mỏng (<10%)</td>
-              <td class="muted">bỏ qua — chưa có link đối thủ trong cột M</td>
+              <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td class="muted">OK (meta-tag) — 1/2 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
             </tr><tr class="warn"
               data-sku="KB-ROG-FALCHIONACE75HEV2X-BLK" data-ten="Bàn Phím Cơ Gaming Có Dây Asus ROG Falchion Ace 75HE V2X"
               data-gianhap="4800000.0" data-giaban="5040000.0"
-              data-giadoithu="0" data-loinhuan="240000.0"
+              data-giadoithu="6490000" data-loinhuan="240000.0"
               data-bien="4.8"
               data-flag="warn">
               <td>KB-ROG-FALCHIONACE75HEV2X-BLK</td>
               <td>Bàn Phím Cơ Gaming Có Dây Asus ROG Falchion Ace 75HE V2X</td>
               <td class="num">4.800.000đ</td>
               <td class="num">5.040.000đ</td>
-              <td class="num">—</td>
-              <td>—</td>
-              <td>—</td>
-              <td class="num">—</td>
+              <td class="num">6.490.000đ</td>
+              <td>không rõ</td>
+              <td><a href="https://techspace.vn/ban-phim-asus-rog-falchion-ace-75-he-black-white" target="_blank" rel="noopener">techspace.vn</a> <span class="muted">(2 nguồn)</span></td>
+              <td class="num">6.480.000đ</td>
               <td class="num">240.000đ</td>
               <td class="num">4.8%</td>
-              <td>🟡 biên mỏng (<10%)</td>
-              <td class="muted">bỏ qua — chưa có link đối thủ trong cột M</td>
+              <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td class="muted">OK (meta-tag) — 1/2 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
             </tr><tr class="warn"
               data-sku="KB-ROG-FALCHIONACE75HEV2X-RED" data-ten="Bàn Phím Cơ Gaming Có Dây Asus ROG Falchion Ace 75HE V2X"
               data-gianhap="4800000.0" data-giaban="5040000.0"
@@ -355,21 +355,21 @@
             </tr><tr class="warn"
               data-sku="KB-ROG-FALCHIONACE75HEV2X-WHT" data-ten="Bàn Phím Cơ Gaming Có Dây Asus ROG Falchion Ace 75HE V2X"
               data-gianhap="4800000.0" data-giaban="5040000.0"
-              data-giadoithu="0" data-loinhuan="240000.0"
+              data-giadoithu="6490000" data-loinhuan="240000.0"
               data-bien="4.8"
               data-flag="warn">
               <td>KB-ROG-FALCHIONACE75HEV2X-WHT</td>
               <td>Bàn Phím Cơ Gaming Có Dây Asus ROG Falchion Ace 75HE V2X</td>
               <td class="num">4.800.000đ</td>
               <td class="num">5.040.000đ</td>
-              <td class="num">—</td>
-              <td>—</td>
-              <td>—</td>
-              <td class="num">—</td>
+              <td class="num">6.490.000đ</td>
+              <td>không rõ</td>
+              <td><a href="https://techspace.vn/ban-phim-asus-rog-falchion-ace-75-he-black-white" target="_blank" rel="noopener">techspace.vn</a> <span class="muted">(2 nguồn)</span></td>
+              <td class="num">6.480.000đ</td>
               <td class="num">240.000đ</td>
               <td class="num">4.8%</td>
-              <td>🟡 biên mỏng (<10%)</td>
-              <td class="muted">bỏ qua — chưa có link đối thủ trong cột M</td>
+              <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td class="muted">OK (meta-tag) — 1/2 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
             </tr><tr class="ok"
               data-sku="KB-ROG-TUFK3GENII-BLU" data-ten="Bàn Phím Cơ Gaming Có Dây Asus TUF Gaming K3 Gen II"
               data-gianhap="1225000.0" data-giaban="1440000.0"
@@ -459,7 +459,7 @@
               <td class="num">580.000đ</td>
               <td class="num">8.8%</td>
               <td>🟡 biên mỏng (<10%); 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 81.000đ — mất cạnh tranh</td>
-              <td class="muted">OK (json-ld) — thấp nhất trong 3/3 nguồn còn hàng</td>
+              <td class="muted">OK (json-ld) — thấp nhất trong 2/3 nguồn còn hàng</td>
             </tr><tr class="warn"
               data-sku="KB-ROG-FALCATAHFXV2-BLK" data-ten="Bàn Phím Cơ Gaming Không Dây Asus ROG Falcata HFX V2"
               data-gianhap="6500000.0" data-giaban="6980000.0"
@@ -481,21 +481,21 @@
             </tr><tr class="warn"
               data-sku="KB-ROG-FALCHIONRXLP-WHT" data-ten="Bàn Phím Cơ Gaming Không Dây Asus ROG Falchion RX Low Profile"
               data-gianhap="3600000.0" data-giaban="3780000.0"
-              data-giadoithu="0" data-loinhuan="180000.0"
+              data-giadoithu="3990000" data-loinhuan="180000.0"
               data-bien="4.8"
               data-flag="warn">
               <td>KB-ROG-FALCHIONRXLP-WHT</td>
               <td>Bàn Phím Cơ Gaming Không Dây Asus ROG Falchion RX Low Profile</td>
               <td class="num">3.600.000đ</td>
               <td class="num">3.780.000đ</td>
-              <td class="num">—</td>
-              <td>—</td>
-              <td>—</td>
-              <td class="num">—</td>
+              <td class="num">3.990.000đ</td>
+              <td>còn hàng</td>
+              <td><a href="https://www.tncstore.vn/ban-phim-co-asus-rog-falchion-rx-low-profile-bluetooth-white-red-switch.html" target="_blank" rel="noopener">www.tncstore.vn</a> <span class="muted">(3 nguồn)</span></td>
+              <td class="num">3.980.000đ</td>
               <td class="num">180.000đ</td>
               <td class="num">4.8%</td>
-              <td>🟡 biên mỏng (<10%)</td>
-              <td class="muted">bỏ qua — chưa có link đối thủ trong cột M</td>
+              <td>🟡 biên mỏng (<10%); 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td class="muted">OK (json-ld) — thấp nhất trong 1/3 nguồn còn hàng</td>
             </tr><tr class="warn"
               data-sku="KB-ROG-STRIXSCOPEII96WL-NXSW" data-ten="Bàn Phím Cơ Gaming Không Dây Asus ROG Strix Scope II 96 Wireless"
               data-gianhap="3600000.0" data-giaban="3880000.0"
@@ -625,39 +625,39 @@
             </tr><tr class="danger"
               data-sku="LAP-ASU-X1404MA-EB219W" data-ten="Laptop Asus Vivobook 14 X1404MA (Intel Core 5-320, 8GB RAM DDR5, 512GB SSD NVMe, 14" FHD, Fingerprint, Màu Bạc)"
               data-gianhap="19002300.0" data-giaban="19590000.0"
-              data-giadoithu="0" data-loinhuan="587700.0"
+              data-giadoithu="20390000" data-loinhuan="587700.0"
               data-bien="3.0"
               data-flag="danger">
               <td>LAP-ASU-X1404MA-EB219W</td>
               <td>Laptop Asus Vivobook 14 X1404MA (Intel Core 5-320, 8GB RAM DDR5, 512GB SSD NVMe, 14" FHD, Fingerprint, Màu Bạc)</td>
               <td class="num">19.002.300đ</td>
               <td class="num">19.590.000đ</td>
-              <td class="num">—</td>
-              <td>—</td>
-              <td>—</td>
-              <td class="num">—</td>
+              <td class="num">20.390.000đ</td>
+              <td>còn hàng</td>
+              <td><a href="https://cellphones.com.vn/laptop-asus-vivobook-14-x1404ma-eb219w.html" target="_blank" rel="noopener">cellphones.com.vn</a> <span class="muted">(3 nguồn)</span></td>
+              <td class="num">20.380.000đ</td>
               <td class="num">587.700đ</td>
               <td class="num">3.0%</td>
-              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng</td>
-              <td class="muted">bỏ qua — chưa có link đối thủ trong cột M</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td class="muted">OK (json-ld) — thấp nhất trong 1/3 nguồn còn hàng</td>
             </tr><tr class="danger"
               data-sku="LAP-ASU-X1404VAP-V14-C58256" data-ten="Laptop Asus Vivobook 14 X1404V Core 5-120U, 8GB RAM DDR4, 256GB SSD NVMe, 14" FHD, Intel Iris Xe, Màu Xanh"
               data-gianhap="15510300.0" data-giaban="15990000.0"
-              data-giadoithu="0" data-loinhuan="479700.0"
+              data-giadoithu="14990000" data-loinhuan="479700.0"
               data-bien="3.0"
               data-flag="danger">
               <td>LAP-ASU-X1404VAP-V14-C58256</td>
               <td>Laptop Asus Vivobook 14 X1404V Core 5-120U, 8GB RAM DDR4, 256GB SSD NVMe, 14" FHD, Intel Iris Xe, Màu Xanh</td>
               <td class="num">15.510.300đ</td>
               <td class="num">15.990.000đ</td>
-              <td class="num">—</td>
-              <td>—</td>
-              <td>—</td>
-              <td class="num">—</td>
+              <td class="num">14.990.000đ</td>
+              <td>còn hàng</td>
+              <td><a href="https://ttcenter.com.vn/asus-vivobook-x1404vap-core-5-120u" target="_blank" rel="noopener">ttcenter.com.vn</a> <span class="muted">(3 nguồn)</span></td>
+              <td class="num">14.980.000đ</td>
               <td class="num">479.700đ</td>
               <td class="num">3.0%</td>
-              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng</td>
-              <td class="muted">bỏ qua — chưa có link đối thủ trong cột M</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; 🔴 LỖ nếu bán đúng giá đề xuất theo đối thủ — giá đối thủ đang thấp hơn cả giá vốn; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 1.000.000đ — mất cạnh tranh</td>
+              <td class="muted">OK (json-ld) — thấp nhất trong 3/3 nguồn còn hàng</td>
             </tr><tr class="warn"
               data-sku="LAP-ASU-X1407AA-LY360W" data-ten="Laptop Asus VivoBook 14 X1407AA (Intel U5-325, 16GB RAM DDR5, 512GB SSD NVMe, 14" WUXGA, Màu Bạc)"
               data-gianhap="22688300.0" data-giaban="24244000.0"
@@ -670,174 +670,174 @@
               <td class="num">24.244.000đ</td>
               <td class="num">—</td>
               <td>—</td>
-              <td>—</td>
+              <td>— <span class="muted">(3 nguồn)</span></td>
               <td class="num">—</td>
               <td class="num">1.555.700đ</td>
               <td class="num">6.4%</td>
-              <td>🟡 biên mỏng (<10%)</td>
-              <td class="muted">bỏ qua — chưa có link đối thủ trong cột M</td>
+              <td>🟡 biên mỏng (<10%); ⚠️ không lấy được giá tự động từ bất kỳ nguồn nào — cần Vũ kiểm tra tay</td>
+              <td class="muted">LỖI: cả 3 nguồn đều lỗi (www.phucanh.vn: Lỗi tải trang: 403 Client Error: Forbidden for url: https://www.phucanh.vn/laptop-asus-vivobook-14-x1407aa-ly360w.html; www.thegioididong.com: Lỗi tải trang: HTTPSConnectionPool(host='www.thegioididong.com', port=443): Max retries exceeded with url: /laptop/asus-vivobook-14-x1407aa-ultra-5-325-ly360w (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.thegioididong.com', port=443) at 0x7facd4840910>, 'Connection to www.thegioididong.com timed out. (connect timeout=15)')); fptshop.com.vn: Lỗi tải trang: 403 Client Error: Forbidden for url: https://fptshop.com.vn/may-tinh-xach-tay/asus-vivobook-14-x1407aa-ly360w-ultra-5-325)</td>
             </tr><tr class="warn"
               data-sku="LAP-ASU-X1504MA-BQ632W" data-ten="Laptop Asus Vivobook 15 X1504MA (Intel Core 5-320, 8GB RAM DDR5, 512GB SSD NVMe, 15.6" FHD, Fingerprint, Màu Bạc)"
               data-gianhap="19099300.0" data-giaban="20464000.0"
-              data-giadoithu="0" data-loinhuan="1364700.0"
+              data-giadoithu="20590000" data-loinhuan="1364700.0"
               data-bien="6.7"
               data-flag="warn">
               <td>LAP-ASU-X1504MA-BQ632W</td>
               <td>Laptop Asus Vivobook 15 X1504MA (Intel Core 5-320, 8GB RAM DDR5, 512GB SSD NVMe, 15.6" FHD, Fingerprint, Màu Bạc)</td>
               <td class="num">19.099.300đ</td>
               <td class="num">20.464.000đ</td>
-              <td class="num">—</td>
-              <td>—</td>
-              <td>—</td>
-              <td class="num">—</td>
+              <td class="num">20.590.000đ</td>
+              <td>còn hàng</td>
+              <td><a href="https://cellphones.com.vn/laptop-asus-vivobook-15-x1504ma-bq632w.html" target="_blank" rel="noopener">cellphones.com.vn</a> <span class="muted">(3 nguồn)</span></td>
+              <td class="num">20.580.000đ</td>
               <td class="num">1.364.700đ</td>
               <td class="num">6.7%</td>
-              <td>🟡 biên mỏng (<10%)</td>
-              <td class="muted">bỏ qua — chưa có link đối thủ trong cột M</td>
+              <td>🟡 biên mỏng (<10%); 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td class="muted">OK (json-ld) — thấp nhất trong 1/3 nguồn còn hàng</td>
             </tr><tr class="warn"
               data-sku="LAP-ASU-X1504MA-BQ633W" data-ten="Laptop Asus Vivobook 15 X1504MA (Intel Core 7-350, 8GB RAM DDR5, 512GB SSD NVMe, 15.6" FHD, Fingerprint, Màu Bạc)"
               data-gianhap="22300300.0" data-giaban="23824000.0"
-              data-giadoithu="0" data-loinhuan="1523700.0"
+              data-giadoithu="24799000" data-loinhuan="1523700.0"
               data-bien="6.4"
               data-flag="warn">
               <td>LAP-ASU-X1504MA-BQ633W</td>
               <td>Laptop Asus Vivobook 15 X1504MA (Intel Core 7-350, 8GB RAM DDR5, 512GB SSD NVMe, 15.6" FHD, Fingerprint, Màu Bạc)</td>
               <td class="num">22.300.300đ</td>
               <td class="num">23.824.000đ</td>
-              <td class="num">—</td>
-              <td>—</td>
-              <td>—</td>
-              <td class="num">—</td>
+              <td class="num">24.799.000đ</td>
+              <td>còn hàng</td>
+              <td><a href="https://hacom.vn/laptop-asus-vivobook-x1504ma-bq633w-ltau1127" target="_blank" rel="noopener">hacom.vn</a> <span class="muted">(3 nguồn)</span></td>
+              <td class="num">24.789.000đ</td>
               <td class="num">1.523.700đ</td>
               <td class="num">6.4%</td>
-              <td>🟡 biên mỏng (<10%)</td>
-              <td class="muted">bỏ qua — chưa có link đối thủ trong cột M</td>
-            </tr><tr class="ok"
+              <td>🟡 biên mỏng (<10%); 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td class="muted">OK (json-ld) — thấp nhất trong 1/3 nguồn còn hàng</td>
+            </tr><tr class="danger"
               data-sku="LAP-ASU-E1404FA-EB935W" data-ten="Laptop Asus Vivobook Go 14 (AMD Ryzen 5-40, 16GB RAM DDR5, 512GB SSD NVMe, 14" FHD, Màu Bạc)"
               data-gianhap="17353300.0" data-giaban="19950000.0"
-              data-giadoithu="0" data-loinhuan="2596700.0"
+              data-giadoithu="19090000" data-loinhuan="2596700.0"
               data-bien="13.0"
-              data-flag="ok">
+              data-flag="danger">
               <td>LAP-ASU-E1404FA-EB935W</td>
               <td>Laptop Asus Vivobook Go 14 (AMD Ryzen 5-40, 16GB RAM DDR5, 512GB SSD NVMe, 14" FHD, Màu Bạc)</td>
               <td class="num">17.353.300đ</td>
               <td class="num">19.950.000đ</td>
-              <td class="num">—</td>
-              <td>—</td>
-              <td>—</td>
-              <td class="num">—</td>
+              <td class="num">19.090.000đ</td>
+              <td>còn hàng</td>
+              <td><a href="https://cellphones.com.vn/laptop-asus-vivobook-go-14-e1404fa-eb935w.html" target="_blank" rel="noopener">cellphones.com.vn</a> <span class="muted">(3 nguồn)</span></td>
+              <td class="num">19.080.000đ</td>
               <td class="num">2.596.700đ</td>
               <td class="num">13.0%</td>
-              <td></td>
-              <td class="muted">bỏ qua — chưa có link đối thủ trong cột M</td>
-            </tr><tr class="warn"
+              <td>🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 860.000đ — mất cạnh tranh</td>
+              <td class="muted">OK (json-ld) — thấp nhất trong 1/3 nguồn còn hàng</td>
+            </tr><tr class="danger"
               data-sku="LAP-ASU-UX3405CA-ST628W" data-ten="Laptop Asus Zenbook 14 UX3405CA (Intel U5-225H, 16GB RAM DDR5X, 512GB SSD NVMe, 14" 3K OLED 120Hz, Màu Xanh)"
               data-gianhap="28120300.0" data-giaban="30020000.0"
-              data-giadoithu="0" data-loinhuan="1899700.0"
+              data-giadoithu="29590000" data-loinhuan="1899700.0"
               data-bien="6.3"
-              data-flag="warn">
+              data-flag="danger">
               <td>LAP-ASU-UX3405CA-ST628W</td>
               <td>Laptop Asus Zenbook 14 UX3405CA (Intel U5-225H, 16GB RAM DDR5X, 512GB SSD NVMe, 14" 3K OLED 120Hz, Màu Xanh)</td>
               <td class="num">28.120.300đ</td>
               <td class="num">30.020.000đ</td>
-              <td class="num">—</td>
-              <td>—</td>
-              <td>—</td>
-              <td class="num">—</td>
+              <td class="num">29.590.000đ</td>
+              <td>còn hàng</td>
+              <td><a href="https://cellphones.com.vn/laptop-asus-zenbook-14-ux3405ca-st628w.html" target="_blank" rel="noopener">cellphones.com.vn</a> <span class="muted">(3 nguồn)</span></td>
+              <td class="num">29.580.000đ</td>
               <td class="num">1.899.700đ</td>
               <td class="num">6.3%</td>
-              <td>🟡 biên mỏng (<10%)</td>
-              <td class="muted">bỏ qua — chưa có link đối thủ trong cột M</td>
+              <td>🟡 biên mỏng (<10%); 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 430.000đ — mất cạnh tranh</td>
+              <td class="muted">OK (json-ld) — thấp nhất trong 1/3 nguồn còn hàng</td>
             </tr><tr class="danger"
               data-sku="LAP-ROG-G614PM-TS147W" data-ten="Laptop Gaming Asus ROG Strix G16 (2025) (Ryzen 9-8940HX, 16GB RAM DDR5, 512GB SSD NVMe, 16" WQXGA 300Hz, RTX 5060 8GB GDDR7, RGB, Màu Xám)"
               data-gianhap="47908300.0" data-giaban="49390000.0"
-              data-giadoithu="0" data-loinhuan="1481700.0"
+              data-giadoithu="49990000" data-loinhuan="1481700.0"
               data-bien="3.0"
               data-flag="danger">
               <td>LAP-ROG-G614PM-TS147W</td>
               <td>Laptop Gaming Asus ROG Strix G16 (2025) (Ryzen 9-8940HX, 16GB RAM DDR5, 512GB SSD NVMe, 16" WQXGA 300Hz, RTX 5060 8GB GDDR7, RGB, Màu Xám)</td>
               <td class="num">47.908.300đ</td>
               <td class="num">49.390.000đ</td>
-              <td class="num">—</td>
-              <td>—</td>
-              <td>—</td>
-              <td class="num">—</td>
+              <td class="num">49.990.000đ</td>
+              <td>còn hàng</td>
+              <td><a href="https://ttcenter.com.vn/asus-rog-strix-g16-g614pm-ts147w" target="_blank" rel="noopener">ttcenter.com.vn</a> <span class="muted">(3 nguồn)</span></td>
+              <td class="num">49.980.000đ</td>
               <td class="num">1.481.700đ</td>
               <td class="num">3.0%</td>
-              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng</td>
-              <td class="muted">bỏ qua — chưa có link đối thủ trong cột M</td>
-            </tr><tr class="warn"
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td class="muted">OK (json-ld) — thấp nhất trong 2/3 nguồn còn hàng</td>
+            </tr><tr class="danger"
               data-sku="LAP-ROG-G614PM-RV233W" data-ten="Laptop Gaming Asus ROG Strix G16 (2025) (Ryzen 9-8940HX, 16GB RAM DDR5, 512GB SSD NVMe, 16" WUXGA 165Hz, RTX 5060 8GB GDDR7, RGB, Màu Xám)"
               data-gianhap="45774300.0" data-giaban="49340000.0"
-              data-giadoithu="0" data-loinhuan="3565700.0"
+              data-giadoithu="46490000" data-loinhuan="3565700.0"
               data-bien="7.2"
-              data-flag="warn">
+              data-flag="danger">
               <td>LAP-ROG-G614PM-RV233W</td>
               <td>Laptop Gaming Asus ROG Strix G16 (2025) (Ryzen 9-8940HX, 16GB RAM DDR5, 512GB SSD NVMe, 16" WUXGA 165Hz, RTX 5060 8GB GDDR7, RGB, Màu Xám)</td>
               <td class="num">45.774.300đ</td>
               <td class="num">49.340.000đ</td>
-              <td class="num">—</td>
-              <td>—</td>
-              <td>—</td>
-              <td class="num">—</td>
+              <td class="num">46.490.000đ</td>
+              <td>không rõ</td>
+              <td><a href="https://hangchinhhieu.vn/products/laptop-asus-rog-strix-g16-g614pm-rv233w" target="_blank" rel="noopener">hangchinhhieu.vn</a> <span class="muted">(3 nguồn)</span></td>
+              <td class="num">46.480.000đ</td>
               <td class="num">3.565.700đ</td>
               <td class="num">7.2%</td>
-              <td>🟡 biên mỏng (<10%)</td>
-              <td class="muted">bỏ qua — chưa có link đối thủ trong cột M</td>
-            </tr><tr class="warn"
+              <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 2.850.000đ — mất cạnh tranh</td>
+              <td class="muted">OK (meta-tag) — 2/3 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
+            </tr><tr class="danger"
               data-sku="LAP-ASU-FA607NUQ-RL007W" data-ten="Laptop Gaming Asus TUF Gaming A16 (AMD Ryzen 7-170, 16GB RAM DDR5, 512GB SSD NVMe, 16" FHD 144Hz, RTX 4050, Màu Xám)"
               data-gianhap="35201300.0" data-giaban="38210000.0"
-              data-giadoithu="0" data-loinhuan="3008700.0"
+              data-giadoithu="36990000" data-loinhuan="3008700.0"
               data-bien="7.9"
-              data-flag="warn">
+              data-flag="danger">
               <td>LAP-ASU-FA607NUQ-RL007W</td>
               <td>Laptop Gaming Asus TUF Gaming A16 (AMD Ryzen 7-170, 16GB RAM DDR5, 512GB SSD NVMe, 16" FHD 144Hz, RTX 4050, Màu Xám)</td>
               <td class="num">35.201.300đ</td>
               <td class="num">38.210.000đ</td>
-              <td class="num">—</td>
-              <td>—</td>
-              <td>—</td>
-              <td class="num">—</td>
+              <td class="num">36.990.000đ</td>
+              <td>còn hàng</td>
+              <td><a href="https://cellphones.com.vn/laptop-asus-tuf-gaming-a16-fa607nuq-rl007w.html" target="_blank" rel="noopener">cellphones.com.vn</a> <span class="muted">(3 nguồn)</span></td>
+              <td class="num">36.980.000đ</td>
               <td class="num">3.008.700đ</td>
               <td class="num">7.9%</td>
-              <td>🟡 biên mỏng (<10%)</td>
-              <td class="muted">bỏ qua — chưa có link đối thủ trong cột M</td>
+              <td>🟡 biên mỏng (<10%); 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 1.220.000đ — mất cạnh tranh</td>
+              <td class="muted">OK (json-ld) — thấp nhất trong 1/3 nguồn còn hàng</td>
             </tr><tr class="warn"
               data-sku="LAP-ASU-V3607VJ-TK189W" data-ten="Laptop Gaming Asus V3607VJ (Core 5-210H, 16GB RAM DDR5, 512GB SSD NVMe, 16" WUXGA 144Hz, RTX 3050 6GB, Màu Đen)"
               data-gianhap="23949300.0" data-giaban="25590000.0"
-              data-giadoithu="0" data-loinhuan="1640700.0"
+              data-giadoithu="28590000" data-loinhuan="1640700.0"
               data-bien="6.4"
               data-flag="warn">
               <td>LAP-ASU-V3607VJ-TK189W</td>
               <td>Laptop Gaming Asus V3607VJ (Core 5-210H, 16GB RAM DDR5, 512GB SSD NVMe, 16" WUXGA 144Hz, RTX 3050 6GB, Màu Đen)</td>
               <td class="num">23.949.300đ</td>
               <td class="num">25.590.000đ</td>
-              <td class="num">—</td>
-              <td>—</td>
-              <td>—</td>
-              <td class="num">—</td>
+              <td class="num">28.590.000đ</td>
+              <td>còn hàng</td>
+              <td><a href="https://www.anphatpc.com.vn/laptop-asus-gaming-v16-v3607vj-tk189w.html" target="_blank" rel="noopener">www.anphatpc.com.vn</a> <span class="muted">(3 nguồn)</span></td>
+              <td class="num">28.580.000đ</td>
               <td class="num">1.640.700đ</td>
               <td class="num">6.4%</td>
-              <td>🟡 biên mỏng (<10%)</td>
-              <td class="muted">bỏ qua — chưa có link đối thủ trong cột M</td>
+              <td>🟡 biên mỏng (<10%); 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td class="muted">OK (json-ld) — thấp nhất trong 1/3 nguồn còn hàng</td>
             </tr><tr class="warn"
               data-sku="HSE-ASU-TUF-H1-GEN2-BLK" data-ten="Tai Nghe Gaming Có Dây Asus TUF Gaming H1 Gen II"
               data-gianhap="950000.0" data-giaban="998000.0"
-              data-giadoithu="0" data-loinhuan="48000.0"
+              data-giadoithu="999000" data-loinhuan="48000.0"
               data-bien="4.8"
               data-flag="warn">
               <td>HSE-ASU-TUF-H1-GEN2-BLK</td>
               <td>Tai Nghe Gaming Có Dây Asus TUF Gaming H1 Gen II</td>
               <td class="num">950.000đ</td>
               <td class="num">998.000đ</td>
-              <td class="num">—</td>
-              <td>—</td>
-              <td>—</td>
-              <td class="num">—</td>
+              <td class="num">999.000đ</td>
+              <td>còn hàng</td>
+              <td><a href="https://hacom.vn/tai-nghe-gaming-asus-tuf-gaming-h1-gen-ii" target="_blank" rel="noopener">hacom.vn</a> <span class="muted">(3 nguồn)</span></td>
+              <td class="num">998.000đ</td>
               <td class="num">48.000đ</td>
               <td class="num">4.8%</td>
               <td>🟡 biên mỏng (<10%)</td>
-              <td class="muted">bỏ qua — chưa có link đối thủ trong cột M</td>
+              <td class="muted">OK (json-ld) — thấp nhất trong 3/3 nguồn còn hàng</td>
             </tr><tr class="danger"
               data-sku="HSE-ASU-ROG-CETRA-II-CORE-BLK" data-ten="Tai Nghe Gaming Có Dây Asus ROG Cetra II Core"
               data-gianhap="890000.0" data-giaban="935000.0"
@@ -859,39 +859,39 @@
             </tr><tr class="warn"
               data-sku="HSE-ASU-ROG-KITHARA-BLK" data-ten="Tai Nghe Gaming Có Dây Asus ROG Kithara"
               data-gianhap="7190000.0" data-giaban="7550000.0"
-              data-giadoithu="0" data-loinhuan="360000.0"
+              data-giadoithu="8990000" data-loinhuan="360000.0"
               data-bien="4.8"
               data-flag="warn">
               <td>HSE-ASU-ROG-KITHARA-BLK</td>
               <td>Tai Nghe Gaming Có Dây Asus ROG Kithara</td>
               <td class="num">7.190.000đ</td>
               <td class="num">7.550.000đ</td>
-              <td class="num">—</td>
-              <td>—</td>
-              <td>—</td>
-              <td class="num">—</td>
+              <td class="num">8.990.000đ</td>
+              <td>không rõ</td>
+              <td><a href="https://playzone.vn/products/tai-nghe-asus-rog-kithara-gaming" target="_blank" rel="noopener">playzone.vn</a></td>
+              <td class="num">8.980.000đ</td>
               <td class="num">360.000đ</td>
               <td class="num">4.8%</td>
-              <td>🟡 biên mỏng (<10%)</td>
-              <td class="muted">bỏ qua — chưa có link đối thủ trong cột M</td>
+              <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td class="muted">OK (meta-tag) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
             </tr><tr class="warn"
               data-sku="HSE-ASU-ROG-DELTA-II-WHT" data-ten="Tai Nghe Gaming Không Dây Asus ROG Delta II Moonlight White"
               data-gianhap="4650000.0" data-giaban="4883000.0"
-              data-giadoithu="0" data-loinhuan="233000.0"
+              data-giadoithu="4999000" data-loinhuan="233000.0"
               data-bien="4.8"
               data-flag="warn">
               <td>HSE-ASU-ROG-DELTA-II-WHT</td>
               <td>Tai Nghe Gaming Không Dây Asus ROG Delta II Moonlight White</td>
               <td class="num">4.650.000đ</td>
               <td class="num">4.883.000đ</td>
-              <td class="num">—</td>
-              <td>—</td>
-              <td>—</td>
-              <td class="num">—</td>
+              <td class="num">4.999.000đ</td>
+              <td>còn hàng</td>
+              <td><a href="https://hacom.vn/tai-nghe-gaming-khong-day-asus-rog-delta-ii" target="_blank" rel="noopener">hacom.vn</a> <span class="muted">(3 nguồn)</span></td>
+              <td class="num">4.989.000đ</td>
               <td class="num">233.000đ</td>
               <td class="num">4.8%</td>
-              <td>🟡 biên mỏng (<10%)</td>
-              <td class="muted">bỏ qua — chưa có link đối thủ trong cột M</td>
+              <td>🟡 biên mỏng (<10%); 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td class="muted">OK (json-ld) — thấp nhất trong 3/3 nguồn còn hàng</td>
             </tr><tr class="warn"
               data-sku="MOU-ATK-A9-WHT" data-ten="Chuột Gaming Không Dây ATK Dragonfly A9"
               data-gianhap="470000.0" data-giaban="495000.0"
@@ -913,21 +913,21 @@
             </tr><tr class="ok"
               data-sku="MOU-ATK-A9PLUS-BLK" data-ten="Chuột Gaming Không Dây ATK Dragonfly A9 Plus"
               data-gianhap="620000.0" data-giaban="790000.0"
-              data-giadoithu="0" data-loinhuan="170000.0"
+              data-giadoithu="790000" data-loinhuan="170000.0"
               data-bien="21.5"
               data-flag="ok">
               <td>MOU-ATK-A9PLUS-BLK</td>
               <td>Chuột Gaming Không Dây ATK Dragonfly A9 Plus</td>
               <td class="num">620.000đ</td>
               <td class="num">790.000đ</td>
-              <td class="num">—</td>
-              <td>—</td>
-              <td>—</td>
-              <td class="num">—</td>
+              <td class="num">790.000đ</td>
+              <td>không rõ</td>
+              <td><a href="https://memoryzone.com.vn/chuot-khong-day-atk-dragonfly-a9-plus-2-0-tri-mode-nearlink-wireless-pixart-3395-ultra" target="_blank" rel="noopener">memoryzone.com.vn</a></td>
+              <td class="num">789.000đ</td>
               <td class="num">170.000đ</td>
               <td class="num">21.5%</td>
-              <td>⚠️ không lấy được giá tự động từ bất kỳ nguồn nào — cần Vũ kiểm tra tay</td>
-              <td class="muted">LỖI: cả 1 nguồn đều lỗi (memoryzone.com.vn: Lỗi tải trang: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))</td>
+              <td>⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực</td>
+              <td class="muted">OK (meta-tag) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
             </tr><tr class="ok"
               data-sku="MOU-ATK-A9PLUS-WHT" data-ten="Chuột Gaming Không Dây ATK Dragonfly A9 Plus"
               data-gianhap="620000.0" data-giaban="790000.0"
@@ -1666,42 +1666,42 @@
               <td class="num">15.5%</td>
               <td>⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 190.000đ — mất cạnh tranh</td>
               <td class="muted">OK (meta-tag) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
-            </tr><tr class="danger"
+            </tr><tr class="warn"
               data-sku="KB-AUL-F75-75-RED-BLK" data-ten="Bàn Phím Cơ Gaming Có Dây AULA F75"
               data-gianhap="673000.0" data-giaban="707000.0"
-              data-giadoithu="650000" data-loinhuan="34000.0"
+              data-giadoithu="0" data-loinhuan="34000.0"
               data-bien="4.8"
-              data-flag="danger">
+              data-flag="warn">
               <td>KB-AUL-F75-75-RED-BLK</td>
               <td>Bàn Phím Cơ Gaming Có Dây AULA F75</td>
               <td class="num">673.000đ</td>
               <td class="num">707.000đ</td>
-              <td class="num">650.000đ</td>
-              <td>còn hàng</td>
-              <td><a href="https://gearvn.com/products/ban-phim-aula-f75-co-day-den-red-switch" target="_blank" rel="noopener">gearvn.com</a></td>
-              <td class="num">649.000đ</td>
+              <td class="num">—</td>
+              <td>—</td>
+              <td>— <span class="muted">(3 nguồn)</span></td>
+              <td class="num">—</td>
               <td class="num">34.000đ</td>
               <td class="num">4.8%</td>
-              <td>🟡 biên mỏng (<10%); 🔴 LỖ nếu bán đúng giá đề xuất theo đối thủ — giá đối thủ đang thấp hơn cả giá vốn; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 57.000đ — mất cạnh tranh</td>
-              <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
+              <td>🟡 biên mỏng (<10%); ⚠️ không lấy được giá tự động từ bất kỳ nguồn nào — cần Vũ kiểm tra tay</td>
+              <td class="muted">LỖI: cả 3 nguồn đều lỗi (www.phucanh.vn: Lỗi tải trang: 403 Client Error: Forbidden for url: https://www.phucanh.vn/ban-phim-co-aula-f75-den-red-switch.html; thegioipc.vn: Không tìm thấy giá bằng bất kỳ phương pháp nào đã thử; mygear.com.vn: Không tìm thấy giá bằng bất kỳ phương pháp nào đã thử)</td>
             </tr><tr class="danger"
               data-sku="KB-AUL-F75-75-RED-WHT" data-ten="Bàn Phím Cơ Gaming Có Dây AULA F75"
               data-gianhap="673000.0" data-giaban="707000.0"
-              data-giadoithu="650000" data-loinhuan="34000.0"
+              data-giadoithu="699000" data-loinhuan="34000.0"
               data-bien="4.8"
               data-flag="danger">
               <td>KB-AUL-F75-75-RED-WHT</td>
               <td>Bàn Phím Cơ Gaming Có Dây AULA F75</td>
               <td class="num">673.000đ</td>
               <td class="num">707.000đ</td>
-              <td class="num">650.000đ</td>
-              <td>còn hàng</td>
-              <td><a href="https://gearvn.com/products/ban-phim-aula-f75-co-day-trang-red-switch" target="_blank" rel="noopener">gearvn.com</a></td>
-              <td class="num">649.000đ</td>
+              <td class="num">699.000đ</td>
+              <td>hết hàng</td>
+              <td><a href="https://hacom.vn/ban-phim-co-gaming-co-day-aula-f75-red-switch-mau-trang" target="_blank" rel="noopener">hacom.vn</a> <span class="muted">(3 nguồn)</span></td>
+              <td class="num">698.000đ</td>
               <td class="num">34.000đ</td>
               <td class="num">4.8%</td>
-              <td>🟡 biên mỏng (<10%); 🔴 LỖ nếu bán đúng giá đề xuất theo đối thủ — giá đối thủ đang thấp hơn cả giá vốn; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 57.000đ — mất cạnh tranh</td>
-              <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
+              <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 8.000đ — mất cạnh tranh</td>
+              <td class="muted">OK (json-ld) — 1/3 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
             </tr><tr class="ok"
               data-sku="KB-AUL-F2023-BLK" data-ten="Bàn Phím Giả Cơ Gaming Có Dây AULA F2023"
               data-gianhap="205000.0" data-giaban="248000.0"
@@ -1714,84 +1714,84 @@
               <td class="num">248.000đ</td>
               <td class="num">249.000đ</td>
               <td>hết hàng</td>
-              <td><a href="https://cellphones.com.vn/ban-phim-gaming-aula-f2023.html" target="_blank" rel="noopener">cellphones.com.vn</a></td>
+              <td><a href="https://hacom.vn/ban-phim-gia-co-gaming-aula-f2023-mau-den-usb-led-rgb" target="_blank" rel="noopener">hacom.vn</a> <span class="muted">(3 nguồn)</span></td>
               <td class="num">248.000đ</td>
               <td class="num">43.000đ</td>
               <td class="num">17.3%</td>
               <td>⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực</td>
-              <td class="muted">OK (json-ld) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
-            </tr><tr class="ok"
+              <td class="muted">OK (json-ld) — 2/3 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
+            </tr><tr class="danger"
               data-sku="KB-AUL-HERO84HE-75-LIN-WHTPNK" data-ten="Bàn Phím Cơ Gaming Có Dây AULA HERO 84 HE"
               data-gianhap="1154000.0" data-giaban="1380000.0"
-              data-giadoithu="1390000" data-loinhuan="226000.0"
+              data-giadoithu="1250000" data-loinhuan="226000.0"
               data-bien="16.4"
-              data-flag="ok">
+              data-flag="danger">
               <td>KB-AUL-HERO84HE-75-LIN-WHTPNK</td>
               <td>Bàn Phím Cơ Gaming Có Dây AULA HERO 84 HE</td>
               <td class="num">1.154.000đ</td>
               <td class="num">1.380.000đ</td>
-              <td class="num">1.390.000đ</td>
+              <td class="num">1.250.000đ</td>
               <td>còn hàng</td>
-              <td><a href="https://cellphones.com.vn/ban-phim-co-co-day-aula-hero84-hong-gradient.html" target="_blank" rel="noopener">cellphones.com.vn</a></td>
-              <td class="num">1.380.000đ</td>
+              <td><a href="https://owlgaming.vn/ban-phim-aula-hero-84-he-pink-gradient-contour/" target="_blank" rel="noopener">owlgaming.vn</a> <span class="muted">(3 nguồn)</span></td>
+              <td class="num">1.240.000đ</td>
               <td class="num">226.000đ</td>
               <td class="num">16.4%</td>
-              <td></td>
-              <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
-            </tr><tr class="ok"
+              <td>🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 130.000đ — mất cạnh tranh</td>
+              <td class="muted">OK (json-ld) — thấp nhất trong 2/3 nguồn còn hàng</td>
+            </tr><tr class="danger"
               data-sku="AULA-WIN60HEMAX-XTX" data-ten="Bàn Phím Cơ Gaming Có Dây AULA WIN60HE Max"
               data-gianhap="763000.0" data-giaban="909000.0"
-              data-giadoithu="910000" data-loinhuan="146000.0"
+              data-giadoithu="850000" data-loinhuan="146000.0"
               data-bien="16.1"
-              data-flag="ok">
+              data-flag="danger">
               <td>AULA-WIN60HEMAX-XTX</td>
               <td>Bàn Phím Cơ Gaming Có Dây AULA WIN60HE Max</td>
               <td class="num">763.000đ</td>
               <td class="num">909.000đ</td>
-              <td class="num">910.000đ</td>
-              <td>còn hàng</td>
-              <td><a href="https://gearvn.com/products/ban-phim-aula-win60he-max-co-day-xam-trang-xanh-duong-wing-chun-magnetic-switch-rapid-trigger-win60he03" target="_blank" rel="noopener">gearvn.com</a></td>
-              <td class="num">909.000đ</td>
+              <td class="num">850.000đ</td>
+              <td>không rõ</td>
+              <td><a href="https://thegioigear.vn/products/ban-phim-co-co-day-aula-win60he-max-xam-trang-xanh-duong-rapid-trigger" target="_blank" rel="noopener">thegioigear.vn</a></td>
+              <td class="num">849.000đ</td>
               <td class="num">146.000đ</td>
               <td class="num">16.1%</td>
-              <td></td>
-              <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
+              <td>⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 59.000đ — mất cạnh tranh</td>
+              <td class="muted">OK (meta-tag) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
             </tr><tr class="ok"
               data-sku="AULA-WIN60HEMAX-DXV" data-ten="Bàn Phím Cơ Gaming Có Dây AULA WIN60HE Max"
               data-gianhap="763000.0" data-giaban="909000.0"
-              data-giadoithu="910000" data-loinhuan="146000.0"
+              data-giadoithu="919000" data-loinhuan="146000.0"
               data-bien="16.1"
               data-flag="ok">
               <td>AULA-WIN60HEMAX-DXV</td>
               <td>Bàn Phím Cơ Gaming Có Dây AULA WIN60HE Max</td>
               <td class="num">763.000đ</td>
               <td class="num">909.000đ</td>
-              <td class="num">910.000đ</td>
+              <td class="num">919.000đ</td>
               <td>còn hàng</td>
-              <td><a href="https://gearvn.com/products/ban-phim-aula-win60he-max-co-day-den-xam-vang-wing-chun-magnetic-switch-rapid-trigger-win60he05" target="_blank" rel="noopener">gearvn.com</a></td>
-              <td class="num">909.000đ</td>
+              <td><a href="https://www.tnc.com.vn/ban-phim-co-gaming-aula-win60he-max-den---xam---vang--wing-chun-magnetic-switch---rapid-trigger.html" target="_blank" rel="noopener">www.tnc.com.vn</a> <span class="muted">(2 nguồn)</span></td>
+              <td class="num">918.000đ</td>
               <td class="num">146.000đ</td>
               <td class="num">16.1%</td>
               <td></td>
-              <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
-            </tr><tr class="warn"
+              <td class="muted">OK (json-ld) — thấp nhất trong 1/2 nguồn còn hàng</td>
+            </tr><tr class="danger"
               data-sku="AULA-WIN60HEMAX-DD" data-ten="Bàn Phím Cơ Gaming Có Dây AULA WIN60HE Max"
               data-gianhap="928000.0" data-giaban="975000.0"
-              data-giadoithu="0" data-loinhuan="47000.0"
+              data-giadoithu="890000" data-loinhuan="47000.0"
               data-bien="4.8"
-              data-flag="warn">
+              data-flag="danger">
               <td>AULA-WIN60HEMAX-DD</td>
               <td>Bàn Phím Cơ Gaming Có Dây AULA WIN60HE Max</td>
               <td class="num">928.000đ</td>
               <td class="num">975.000đ</td>
-              <td class="num">—</td>
-              <td>—</td>
-              <td>—</td>
-              <td class="num">—</td>
+              <td class="num">890.000đ</td>
+              <td>còn hàng</td>
+              <td><a href="https://owlgaming.vn/ban-phim-aula-win60-he-max-black-red/" target="_blank" rel="noopener">owlgaming.vn</a> <span class="muted">(2 nguồn)</span></td>
+              <td class="num">889.000đ</td>
               <td class="num">47.000đ</td>
               <td class="num">4.8%</td>
-              <td>🟡 biên mỏng (<10%); ⚠️ không lấy được giá tự động từ bất kỳ nguồn nào — cần Vũ kiểm tra tay</td>
-              <td class="muted">LỖI: cả 1 nguồn đều lỗi (phongvu.vn: Lỗi tải trang: 403 Client Error: Forbidden for url: https://phongvu.vn/ban-phim-co-gaming-aula-win60he-max-den-do-wing-chun-magnetic-switch-rapid-trigger--s250512288)</td>
+              <td>🟡 biên mỏng (<10%); 🔴 LỖ nếu bán đúng giá đề xuất theo đối thủ — giá đối thủ đang thấp hơn cả giá vốn; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 85.000đ — mất cạnh tranh</td>
+              <td class="muted">OK (json-ld) — thấp nhất trong 2/2 nguồn còn hàng</td>
             </tr><tr class="warn"
               data-sku="MOU-AUL-SC800-WHT" data-ten="Chuột Gaming Không Dây AULA SC800"
               data-gianhap="976000.0" data-giaban="1080000.0"
@@ -1804,12 +1804,12 @@
               <td class="num">1.080.000đ</td>
               <td class="num">1.090.000đ</td>
               <td>còn hàng</td>
-              <td><a href="https://cellphones.com.vn/chuot-gaming-khong-day-aula-sc800.html" target="_blank" rel="noopener">cellphones.com.vn</a></td>
+              <td><a href="https://maytinhdaiviet.com/chuot-gaming-aula-sc800/" target="_blank" rel="noopener">maytinhdaiviet.com</a> <span class="muted">(3 nguồn)</span></td>
               <td class="num">1.080.000đ</td>
               <td class="num">104.000đ</td>
               <td class="num">9.6%</td>
               <td>🟡 biên mỏng (<10%)</td>
-              <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
+              <td class="muted">OK (json-ld) — thấp nhất trong 3/3 nguồn còn hàng</td>
             </tr><tr class="warn"
               data-sku="MOU-AUL-SC800-BLK" data-ten="Chuột Gaming Không Dây AULA SC800"
               data-gianhap="976000.0" data-giaban="1080000.0"
@@ -1822,12 +1822,12 @@
               <td class="num">1.080.000đ</td>
               <td class="num">1.090.000đ</td>
               <td>còn hàng</td>
-              <td><a href="https://cellphones.com.vn/chuot-gaming-khong-day-aula-sc800.html" target="_blank" rel="noopener">cellphones.com.vn</a></td>
+              <td><a href="https://maytinhdaiviet.com/chuot-gaming-aula-sc800/" target="_blank" rel="noopener">maytinhdaiviet.com</a> <span class="muted">(3 nguồn)</span></td>
               <td class="num">1.080.000đ</td>
               <td class="num">104.000đ</td>
               <td class="num">9.6%</td>
               <td>🟡 biên mỏng (<10%)</td>
-              <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
+              <td class="muted">OK (json-ld) — thấp nhất trong 2/3 nguồn còn hàng</td>
             </tr><tr class="warn"
               data-sku="MOU-AUL-SC580X-WHT" data-ten="Chuột Gaming Không Dây AULA SC580X"
               data-gianhap="512000.0" data-giaban="538000.0"
@@ -1840,12 +1840,12 @@
               <td class="num">538.000đ</td>
               <td class="num">—</td>
               <td>—</td>
-              <td>—</td>
+              <td>— <span class="muted">(2 nguồn)</span></td>
               <td class="num">—</td>
               <td class="num">26.000đ</td>
               <td class="num">4.8%</td>
               <td>🟡 biên mỏng (<10%); ⚠️ không lấy được giá tự động từ bất kỳ nguồn nào — cần Vũ kiểm tra tay</td>
-              <td class="muted">LỖI: cả 1 nguồn đều lỗi (phongvu.vn: Lỗi tải trang: 403 Client Error: Forbidden for url: https://phongvu.vn/chuot-gaming-khong-day-aula-sc580x--p561842)</td>
+              <td class="muted">LỖI: cả 2 nguồn đều lỗi (nguyenvu.store: Lỗi tải trang: 403 Client Error: Forbidden for url: https://nguyenvu.store/san-pham/chuot-gaming-aula-sc580x-3-mode/; www.phucanh.vn: Lỗi tải trang: 403 Client Error: Forbidden for url: https://www.phucanh.vn/chuot-gaming-aula-khong-day-sc580x-trang.html)</td>
             </tr><tr class="warn"
               data-sku="MOU-AUL-SC580X-BLK" data-ten="Chuột Gaming Không Dây AULA SC580X"
               data-gianhap="512000.0" data-giaban="538000.0"
@@ -1858,12 +1858,12 @@
               <td class="num">538.000đ</td>
               <td class="num">—</td>
               <td>—</td>
-              <td>—</td>
+              <td>— <span class="muted">(2 nguồn)</span></td>
               <td class="num">—</td>
               <td class="num">26.000đ</td>
               <td class="num">4.8%</td>
               <td>🟡 biên mỏng (<10%); ⚠️ không lấy được giá tự động từ bất kỳ nguồn nào — cần Vũ kiểm tra tay</td>
-              <td class="muted">LỖI: cả 1 nguồn đều lỗi (phongvu.vn: Lỗi tải trang: 403 Client Error: Forbidden for url: https://phongvu.vn/chuot-gaming-khong-day-aula-sc580x--s240603287)</td>
+              <td class="muted">LỖI: cả 2 nguồn đều lỗi (nguyenvu.store: Lỗi tải trang: 403 Client Error: Forbidden for url: https://nguyenvu.store/san-pham/chuot-gaming-aula-sc580x-3-mode/; www.phucanh.vn: Lỗi tải trang: 403 Client Error: Forbidden for url: https://www.phucanh.vn/chuot-gaming-aula-khong-day-sc580x-den.html)</td>
             </tr><tr class="ok"
               data-sku="KB-AUL-S102PRO-GRY" data-ten="Bàn Phím Giả Cơ Gaming Không Dây AULA S102 PRO"
               data-gianhap="605000.0" data-giaban="789000.0"
@@ -1876,12 +1876,12 @@
               <td class="num">789.000đ</td>
               <td class="num">790.000đ</td>
               <td>còn hàng</td>
-              <td><a href="https://cellphones.com.vn/ban-phim-gaming-khong-day-aula-s102-pro.html" target="_blank" rel="noopener">cellphones.com.vn</a></td>
+              <td><a href="https://cellphones.com.vn/ban-phim-gaming-khong-day-aula-s102-pro.html" target="_blank" rel="noopener">cellphones.com.vn</a> <span class="muted">(2 nguồn)</span></td>
               <td class="num">789.000đ</td>
               <td class="num">184.000đ</td>
               <td class="num">23.3%</td>
               <td></td>
-              <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
+              <td class="muted">OK (json-ld) — thấp nhất trong 1/2 nguồn còn hàng</td>
             </tr><tr class="ok"
               data-sku="KB-AUL-S102PRO-PNK" data-ten="Bàn Phím Giả Cơ Gaming Không Dây AULA S102 PRO"
               data-gianhap="605000.0" data-giaban="789000.0"
@@ -1894,12 +1894,12 @@
               <td class="num">789.000đ</td>
               <td class="num">790.000đ</td>
               <td>còn hàng</td>
-              <td><a href="https://cellphones.com.vn/ban-phim-gaming-khong-day-aula-s102-pro.html" target="_blank" rel="noopener">cellphones.com.vn</a></td>
+              <td><a href="https://cellphones.com.vn/ban-phim-gaming-khong-day-aula-s102-pro.html" target="_blank" rel="noopener">cellphones.com.vn</a> <span class="muted">(3 nguồn)</span></td>
               <td class="num">789.000đ</td>
               <td class="num">184.000đ</td>
               <td class="num">23.3%</td>
               <td></td>
-              <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
+              <td class="muted">OK (json-ld) — thấp nhất trong 1/3 nguồn còn hàng</td>
             </tr><tr class="ok"
               data-sku="KB-AUL-S102PRO-GRN" data-ten="Bàn Phím Giả Cơ Gaming Không Dây AULA S102 PRO"
               data-gianhap="605000.0" data-giaban="789000.0"
@@ -1912,12 +1912,12 @@
               <td class="num">789.000đ</td>
               <td class="num">790.000đ</td>
               <td>còn hàng</td>
-              <td><a href="https://cellphones.com.vn/ban-phim-gaming-khong-day-aula-s102-pro.html" target="_blank" rel="noopener">cellphones.com.vn</a></td>
+              <td><a href="https://cellphones.com.vn/ban-phim-gaming-khong-day-aula-s102-pro.html" target="_blank" rel="noopener">cellphones.com.vn</a> <span class="muted">(2 nguồn)</span></td>
               <td class="num">789.000đ</td>
               <td class="num">184.000đ</td>
               <td class="num">23.3%</td>
               <td></td>
-              <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
+              <td class="muted">OK (json-ld) — thấp nhất trong 1/2 nguồn còn hàng</td>
             </tr><tr class="ok"
               data-sku="MOU-COR-SABRE-V2PRO-BLK" data-ten="Chuột Gaming Không Dây Corsair SABRE v2 PRO UltraLight"
               data-gianhap="2295000.0" data-giaban="2790000.0"
@@ -2368,42 +2368,42 @@
               <td class="num">17.9%</td>
               <td></td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
-            </tr><tr class="warn"
+            </tr><tr class="danger"
               data-sku="KB-COR-K65-PLUS-75-LIN-SS-GRY" data-ten="Bàn Phím Cơ Gaming Không Dây Corsair K65 PLUS WIRELESS Switch Linear"
               data-gianhap="3630000.0" data-giaban="3815000.0"
-              data-giadoithu="0" data-loinhuan="185000.0"
+              data-giadoithu="3790000" data-loinhuan="185000.0"
               data-bien="4.8"
-              data-flag="warn">
+              data-flag="danger">
               <td>KB-COR-K65-PLUS-75-LIN-SS-GRY</td>
               <td>Bàn Phím Cơ Gaming Không Dây Corsair K65 PLUS WIRELESS Switch Linear</td>
               <td class="num">3.630.000đ</td>
               <td class="num">3.815.000đ</td>
-              <td class="num">—</td>
-              <td>—</td>
-              <td>—</td>
-              <td class="num">—</td>
+              <td class="num">3.790.000đ</td>
+              <td>không rõ</td>
+              <td><a href="https://memoryzone.com.vn/ban-phim-co-khong-day-corsair-k65-plus-wireless-75-rgb-ch-91d421l-na" target="_blank" rel="noopener">memoryzone.com.vn</a></td>
+              <td class="num">3.780.000đ</td>
               <td class="num">185.000đ</td>
               <td class="num">4.8%</td>
-              <td>🟡 biên mỏng (<10%); ⚠️ không lấy được giá tự động từ bất kỳ nguồn nào — cần Vũ kiểm tra tay</td>
-              <td class="muted">LỖI: cả 1 nguồn đều lỗi (memoryzone.com.vn: Lỗi tải trang: 502 Server Error: Bad Gateway for url: https://memoryzone.com.vn/ban-phim-co-khong-day-corsair-k65-plus-wireless-75-rgb-ch-91d421l-na)</td>
-            </tr><tr class="warn"
+              <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 25.000đ — mất cạnh tranh</td>
+              <td class="muted">OK (meta-tag) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
+            </tr><tr class="danger"
               data-sku="KB-COR-K70-CORE-TKL-MLX-RED-SS-BLK" data-ten="Bàn Phím Cơ Gaming Không Dây Corsair K70 CORE TKL RGB Switch MLX Red"
               data-gianhap="3255000.0" data-giaban="3420000.0"
-              data-giadoithu="0" data-loinhuan="165000.0"
+              data-giadoithu="2990000" data-loinhuan="165000.0"
               data-bien="4.8"
-              data-flag="warn">
+              data-flag="danger">
               <td>KB-COR-K70-CORE-TKL-MLX-RED-SS-BLK</td>
               <td>Bàn Phím Cơ Gaming Không Dây Corsair K70 CORE TKL RGB Switch MLX Red</td>
               <td class="num">3.255.000đ</td>
               <td class="num">3.420.000đ</td>
-              <td class="num">—</td>
-              <td>—</td>
-              <td>—</td>
-              <td class="num">—</td>
+              <td class="num">2.990.000đ</td>
+              <td>không rõ</td>
+              <td><a href="https://memoryzone.com.vn/ban-phim-co-khong-day-corsair-k70-core-tkl-rgb-corsair-mlx-sw-ch-914901e-na" target="_blank" rel="noopener">memoryzone.com.vn</a></td>
+              <td class="num">2.980.000đ</td>
               <td class="num">165.000đ</td>
               <td class="num">4.8%</td>
-              <td>🟡 biên mỏng (<10%); ⚠️ không lấy được giá tự động từ bất kỳ nguồn nào — cần Vũ kiểm tra tay</td>
-              <td class="muted">LỖI: cả 1 nguồn đều lỗi (memoryzone.com.vn: Lỗi tải trang: 502 Server Error: Bad Gateway for url: https://memoryzone.com.vn/ban-phim-co-khong-day-corsair-k70-core-tkl-rgb-corsair-mlx-sw-ch-914901e-na)</td>
+              <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🔴 LỖ nếu bán đúng giá đề xuất theo đối thủ — giá đối thủ đang thấp hơn cả giá vốn; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 430.000đ — mất cạnh tranh</td>
+              <td class="muted">OK (meta-tag) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
             </tr><tr class="ok"
               data-sku="KB-COR-K55-CORE-TKL-BLK" data-ten="Bàn Phím Gaming Có Dây Corsair K55 CORE TKL RGB"
               data-gianhap="810000.0" data-giaban="949000.0"
@@ -2749,93 +2749,93 @@
             </tr><tr class="danger"
               data-sku="LAP-DEL-DC14250-F0FTK5" data-ten="Laptop Dell 14 DC14250 (Core i5-120U, 16GB RAM DDR5, 1TB SSD NVMe, 14" FHD+ IPS 120Hz, kèm Office, Màu Bạc)"
               data-gianhap="23076300.0" data-giaban="23790000.0"
-              data-giadoithu="0" data-loinhuan="713700.0"
+              data-giadoithu="23790000" data-loinhuan="713700.0"
               data-bien="3.0"
               data-flag="danger">
               <td>LAP-DEL-DC14250-F0FTK5</td>
               <td>Laptop Dell 14 DC14250 (Core i5-120U, 16GB RAM DDR5, 1TB SSD NVMe, 14" FHD+ IPS 120Hz, kèm Office, Màu Bạc)</td>
               <td class="num">23.076.300đ</td>
               <td class="num">23.790.000đ</td>
-              <td class="num">—</td>
-              <td>—</td>
-              <td>—</td>
-              <td class="num">—</td>
+              <td class="num">23.790.000đ</td>
+              <td>còn hàng</td>
+              <td><a href="https://tinhocngoisao.com/products/laptop-dell-14-dc14250-f0ftk5-i5-120u-16gb-ddr5-ssd-1tb-nvme-14-wuxga-wva-120hz-windows-11-sl-office-bac" target="_blank" rel="noopener">tinhocngoisao.com</a> <span class="muted">(3 nguồn)</span></td>
+              <td class="num">23.780.000đ</td>
               <td class="num">713.700đ</td>
               <td class="num">3.0%</td>
               <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng</td>
-              <td class="muted">bỏ qua — chưa có link đối thủ trong cột M</td>
+              <td class="muted">OK (json-ld) — thấp nhất trong 1/3 nguồn còn hàng</td>
             </tr><tr class="danger"
               data-sku="LAP-DEL-DC15250-H5YXJ" data-ten="Laptop Dell 15 DC15250 (Core i7-1355U, 16GB RAM DDR4, 1TB SSD NVMe, 15.6" FHD Touch (7982BLK), Màu Đen)"
               data-gianhap="20748300.0" data-giaban="21390000.0"
-              data-giadoithu="0" data-loinhuan="641700.0"
+              data-giadoithu="26299000" data-loinhuan="641700.0"
               data-bien="3.0"
               data-flag="danger">
               <td>LAP-DEL-DC15250-H5YXJ</td>
               <td>Laptop Dell 15 DC15250 (Core i7-1355U, 16GB RAM DDR4, 1TB SSD NVMe, 15.6" FHD Touch (7982BLK), Màu Đen)</td>
               <td class="num">20.748.300đ</td>
               <td class="num">21.390.000đ</td>
-              <td class="num">—</td>
-              <td>—</td>
-              <td>—</td>
-              <td class="num">—</td>
+              <td class="num">26.299.000đ</td>
+              <td>hết hàng</td>
+              <td><a href="https://hacom.vn/laptop-dell-15-dc15250-cph997-ltdl0634" target="_blank" rel="noopener">hacom.vn</a> <span class="muted">(2 nguồn)</span></td>
+              <td class="num">26.289.000đ</td>
               <td class="num">641.700đ</td>
               <td class="num">3.0%</td>
-              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng</td>
-              <td class="muted">bỏ qua — chưa có link đối thủ trong cột M</td>
-            </tr><tr class="warn"
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td class="muted">OK (json-ld) — 1/2 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
+            </tr><tr class="danger"
               data-sku="LAP-DEL-DC15250-71092480" data-ten="Laptop Dell 15 DC15250 (Core i7-1355U, 16GB RAM DDR5, 512GB SSD NVMe, 15.6" FHD, kèm Office Home 2024+365, McAfee LS, Màu Bạc)"
               data-gianhap="22882300.0" data-giaban="24990000.0"
-              data-giadoithu="0" data-loinhuan="2107700.0"
+              data-giadoithu="12990000" data-loinhuan="2107700.0"
               data-bien="8.4"
-              data-flag="warn">
+              data-flag="danger">
               <td>LAP-DEL-DC15250-71092480</td>
               <td>Laptop Dell 15 DC15250 (Core i7-1355U, 16GB RAM DDR5, 512GB SSD NVMe, 15.6" FHD, kèm Office Home 2024+365, McAfee LS, Màu Bạc)</td>
               <td class="num">22.882.300đ</td>
               <td class="num">24.990.000đ</td>
-              <td class="num">—</td>
-              <td>—</td>
-              <td>—</td>
-              <td class="num">—</td>
+              <td class="num">12.990.000đ</td>
+              <td>còn hàng</td>
+              <td><a href="https://tinhocngoisao.com/products/laptop-dell-15-pro-essential-pv-15250-vkvkd-intel-core-3-100u-8gb-ddr5-ssd-512gb-nvme-15-6-fhd-ips-120hz-intel-graphics-dos-ubuntu-den" target="_blank" rel="noopener">tinhocngoisao.com</a> <span class="muted">(3 nguồn)</span></td>
+              <td class="num">12.980.000đ</td>
               <td class="num">2.107.700đ</td>
               <td class="num">8.4%</td>
-              <td>🟡 biên mỏng (<10%)</td>
-              <td class="muted">bỏ qua — chưa có link đối thủ trong cột M</td>
+              <td>🟡 biên mỏng (<10%); 🔴 LỖ nếu bán đúng giá đề xuất theo đối thủ — giá đối thủ đang thấp hơn cả giá vốn; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 12.000.000đ — mất cạnh tranh</td>
+              <td class="muted">OK (json-ld) — thấp nhất trong 2/3 nguồn còn hàng</td>
             </tr><tr class="danger"
               data-sku="LAP-DEL-PV15250-VKVKD-I3" data-ten="Laptop Dell 15 Pro Essential PV15250 (Core i3-100U, 8GB RAM, 512GB SSD NVMe, 15.6" FHD 120Hz, Màu Đen)"
               data-gianhap="12600300.0" data-giaban="12990000.0"
-              data-giadoithu="0" data-loinhuan="389700.0"
+              data-giadoithu="14990000" data-loinhuan="389700.0"
               data-bien="3.0"
               data-flag="danger">
               <td>LAP-DEL-PV15250-VKVKD-I3</td>
               <td>Laptop Dell 15 Pro Essential PV15250 (Core i3-100U, 8GB RAM, 512GB SSD NVMe, 15.6" FHD 120Hz, Màu Đen)</td>
               <td class="num">12.600.300đ</td>
               <td class="num">12.990.000đ</td>
-              <td class="num">—</td>
-              <td>—</td>
-              <td>—</td>
-              <td class="num">—</td>
+              <td class="num">14.990.000đ</td>
+              <td>còn hàng</td>
+              <td><a href="https://tinhocngoisao.com/products/laptop-dell-pro-15-essential-pv-15250-i5-1334u-8gb-ddr5-ssd-512gb-nvme-15-6-fhd-ips-120hz" target="_blank" rel="noopener">tinhocngoisao.com</a></td>
+              <td class="num">14.980.000đ</td>
               <td class="num">389.700đ</td>
               <td class="num">3.0%</td>
-              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng</td>
-              <td class="muted">bỏ qua — chưa có link đối thủ trong cột M</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
             </tr><tr class="danger"
               data-sku="LAP-DEL-PV15250-VKVKD-I5" data-ten="Laptop Dell 15 Pro Essential PV15250 (Core i5-1334U, 8GB RAM DDR5, 512GB SSD NVMe, 15.6" FHD IPS 120Hz, Màu Đen)"
               data-gianhap="14443300.0" data-giaban="14690000.0"
-              data-giadoithu="0" data-loinhuan="246700.0"
+              data-giadoithu="17290000" data-loinhuan="246700.0"
               data-bien="1.7"
               data-flag="danger">
               <td>LAP-DEL-PV15250-VKVKD-I5</td>
               <td>Laptop Dell 15 Pro Essential PV15250 (Core i5-1334U, 8GB RAM DDR5, 512GB SSD NVMe, 15.6" FHD IPS 120Hz, Màu Đen)</td>
               <td class="num">14.443.300đ</td>
               <td class="num">14.690.000đ</td>
-              <td class="num">—</td>
-              <td>—</td>
-              <td>—</td>
-              <td class="num">—</td>
+              <td class="num">17.290.000đ</td>
+              <td>còn hàng</td>
+              <td><a href="https://tinhocngoisao.com/products/laptop-dell-16-dc16251-i5-120u-8gb-ddr5-ssd-512gb-nvme-16-fhd-touch-win-11-silver" target="_blank" rel="noopener">tinhocngoisao.com</a></td>
+              <td class="num">17.280.000đ</td>
               <td class="num">246.700đ</td>
               <td class="num">1.7%</td>
-              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng</td>
-              <td class="muted">bỏ qua — chưa có link đối thủ trong cột M</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
             </tr><tr class="danger"
               data-sku="LAP-DEL-DC16251-5506SLV-PUS" data-ten="Laptop Dell 16 DC16251 (Core i5-120U, 8GB RAM DDR5, 512GB SSD NVMe, 16" FHD+ Touch, Màu Bạc)"
               data-gianhap="16480300.0" data-giaban="16990000.0"
@@ -3577,21 +3577,21 @@
             </tr><tr class="danger"
               data-sku="LAP-GIG-A16-CMHH2MY893SH" data-ten="Laptop Gaming Gigabyte A16 Core i5-13420H, 16GB RAM DDR5, 512GB SSD NVMe, 16" FHD+ 165Hz, RTX 4050, LED Keyboard (GA6H), Màu Đen"
               data-gianhap="24531300.0" data-giaban="25290000.0"
-              data-giadoithu="0" data-loinhuan="758700.0"
+              data-giadoithu="26499000" data-loinhuan="758700.0"
               data-bien="3.0"
               data-flag="danger">
               <td>LAP-GIG-A16-CMHH2MY893SH</td>
               <td>Laptop Gaming Gigabyte A16 Core i5-13420H, 16GB RAM DDR5, 512GB SSD NVMe, 16" FHD+ 165Hz, RTX 4050, LED Keyboard (GA6H), Màu Đen</td>
               <td class="num">24.531.300đ</td>
               <td class="num">25.290.000đ</td>
-              <td class="num">—</td>
-              <td>—</td>
-              <td>—</td>
-              <td class="num">—</td>
+              <td class="num">26.499.000đ</td>
+              <td>còn hàng</td>
+              <td><a href="https://hacom.vn/laptop-gigabyte-gaming-a16-cmh-h2vn893sh" target="_blank" rel="noopener">hacom.vn</a> <span class="muted">(3 nguồn)</span></td>
+              <td class="num">26.489.000đ</td>
               <td class="num">758.700đ</td>
               <td class="num">3.0%</td>
-              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng</td>
-              <td class="muted">bỏ qua — chưa có link đối thủ trong cột M</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td class="muted">OK (json-ld) — thấp nhất trong 1/3 nguồn còn hàng</td>
             </tr><tr class="danger"
               data-sku="LAP-GIG-A16-CMHI2VN893SH" data-ten="Laptop Gaming Gigabyte A16 Core i7-13620H, 16GB RAM DDR5, 512GB SSD NVMe, 16" FHD+ 165Hz, RTX 4050, LED Keyboard (GA6H), Màu Đen"
               data-gianhap="28120300.0" data-giaban="28990000.0"
@@ -3604,66 +3604,66 @@
               <td class="num">28.990.000đ</td>
               <td class="num">—</td>
               <td>—</td>
-              <td>—</td>
+              <td>— <span class="muted">(3 nguồn)</span></td>
               <td class="num">—</td>
               <td class="num">869.700đ</td>
               <td class="num">3.0%</td>
-              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng</td>
-              <td class="muted">bỏ qua — chưa có link đối thủ trong cột M</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; ⚠️ không lấy được giá tự động từ bất kỳ nguồn nào — cần Vũ kiểm tra tay</td>
+              <td class="muted">LỖI: cả 3 nguồn đều lỗi (www.thegioididong.com: Lỗi tải trang: HTTPSConnectionPool(host='www.thegioididong.com', port=443): Max retries exceeded with url: /laptop/gigabyte-a16-ga6h-i7-gaming-a16-cmhi2vn893sh (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.thegioididong.com', port=443) at 0x7facd4ba3950>, 'Connection to www.thegioididong.com timed out. (connect timeout=15)')); fptshop.com.vn: Lỗi tải trang: 403 Client Error: Forbidden for url: https://fptshop.com.vn/may-tinh-xach-tay/gigabyte-gaming-a16-cmhi2vn893sh-i7-13620h; www.phucanh.vn: Lỗi tải trang: 403 Client Error: Forbidden for url: https://www.phucanh.vn/laptop-gigabyte-gaming-a16-cmhi2vn893sh.html)</td>
             </tr><tr class="danger"
               data-sku="LAP-GIG-AEROX16-1VH93MY894AH" data-ten="Laptop Gaming Gigabyte Aero X16 Ryzen AI 7-350, 16GB RAM DDR5, 1TB SSD NVMe, 16" FHD+ 165Hz, RTX 5060, RGB (EG61H), Màu Xám"
               data-gianhap="35492300.0" data-giaban="36590000.0"
-              data-giadoithu="0" data-loinhuan="1097700.0"
+              data-giadoithu="37590000" data-loinhuan="1097700.0"
               data-bien="3.0"
               data-flag="danger">
               <td>LAP-GIG-AEROX16-1VH93MY894AH</td>
               <td>Laptop Gaming Gigabyte Aero X16 Ryzen AI 7-350, 16GB RAM DDR5, 1TB SSD NVMe, 16" FHD+ 165Hz, RTX 5060, RGB (EG61H), Màu Xám</td>
               <td class="num">35.492.300đ</td>
               <td class="num">36.590.000đ</td>
-              <td class="num">—</td>
-              <td>—</td>
-              <td>—</td>
-              <td class="num">—</td>
+              <td class="num">37.590.000đ</td>
+              <td>còn hàng</td>
+              <td><a href="https://tinhocngoisao.com/products/laptop-gaming-gigabyte-aero-x16-1vh93my894ah-eg61h-ryzen-ai-7-350-16gb-ddr5-ssd-1tb-nvme-16-fhd-165hz-rtx-5060-8gb-w11sl-xam" target="_blank" rel="noopener">tinhocngoisao.com</a> <span class="muted">(3 nguồn)</span></td>
+              <td class="num">37.580.000đ</td>
               <td class="num">1.097.700đ</td>
               <td class="num">3.0%</td>
-              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng</td>
-              <td class="muted">bỏ qua — chưa có link đối thủ trong cột M</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td class="muted">OK (json-ld) — thấp nhất trong 2/3 nguồn còn hàng</td>
             </tr><tr class="danger"
               data-sku="LAP-GIG-AEROX16-1VH93VNC94AH" data-ten="Laptop Gaming Gigabyte Aero X16 (Ryzen AI 7-350, 16GB RAM DDR5, 1TB SSD NVMe, 16" QHD+ 165Hz, RTX 5060, RGB (EG61H), Màu Xám)"
               data-gianhap="37820300.0" data-giaban="38990000.0"
-              data-giadoithu="0" data-loinhuan="1169700.0"
+              data-giadoithu="39490000" data-loinhuan="1169700.0"
               data-bien="3.0"
               data-flag="danger">
               <td>LAP-GIG-AEROX16-1VH93VNC94AH</td>
               <td>Laptop Gaming Gigabyte Aero X16 (Ryzen AI 7-350, 16GB RAM DDR5, 1TB SSD NVMe, 16" QHD+ 165Hz, RTX 5060, RGB (EG61H), Màu Xám)</td>
               <td class="num">37.820.300đ</td>
               <td class="num">38.990.000đ</td>
-              <td class="num">—</td>
-              <td>—</td>
-              <td>—</td>
-              <td class="num">—</td>
+              <td class="num">39.490.000đ</td>
+              <td>còn hàng</td>
+              <td><a href="https://tinhocngoisao.com/products/laptop-gaming-gigabyte-aero-x16-1vh93vnc94ah-eg61h-ryzen-ai-7-350-16gb-ddr5-ssd-1tb-nvme-16-qhd-165hz-rtx-5060-8gb-xam" target="_blank" rel="noopener">tinhocngoisao.com</a></td>
+              <td class="num">39.480.000đ</td>
               <td class="num">1.169.700đ</td>
               <td class="num">3.0%</td>
-              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng</td>
-              <td class="muted">bỏ qua — chưa có link đối thủ trong cột M</td>
-            </tr><tr class="warn"
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
+            </tr><tr class="danger"
               data-sku="LAP-HP-15FD1289TU-C2CV8PA" data-ten="Laptop HP 15 fd1289TU (Core Ultra 7-155H, 16GB RAM DDR5, 512GB SSD NVMe, 15.6" FHD, Webcam, Màu Bạc)"
               data-gianhap="23755300.0" data-giaban="25515000.0"
-              data-giadoithu="0" data-loinhuan="1759700.0"
+              data-giadoithu="24890000" data-loinhuan="1759700.0"
               data-bien="6.9"
-              data-flag="warn">
+              data-flag="danger">
               <td>LAP-HP-15FD1289TU-C2CV8PA</td>
               <td>Laptop HP 15 fd1289TU (Core Ultra 7-155H, 16GB RAM DDR5, 512GB SSD NVMe, 15.6" FHD, Webcam, Màu Bạc)</td>
               <td class="num">23.755.300đ</td>
               <td class="num">25.515.000đ</td>
-              <td class="num">—</td>
-              <td>—</td>
-              <td>—</td>
-              <td class="num">—</td>
+              <td class="num">24.890.000đ</td>
+              <td>còn hàng</td>
+              <td><a href="https://cellphones.com.vn/laptop-hp-15-fd1289tu-c2cv8pa.html" target="_blank" rel="noopener">cellphones.com.vn</a> <span class="muted">(3 nguồn)</span></td>
+              <td class="num">24.880.000đ</td>
               <td class="num">1.759.700đ</td>
               <td class="num">6.9%</td>
-              <td>🟡 biên mỏng (<10%)</td>
-              <td class="muted">bỏ qua — chưa có link đối thủ trong cột M</td>
+              <td>🟡 biên mỏng (<10%); 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 625.000đ — mất cạnh tranh</td>
+              <td class="muted">OK (json-ld) — thấp nhất trong 1/3 nguồn còn hàng</td>
             </tr><tr class="danger"
               data-sku="LAP-HP-250G10-B3WA8AT" data-ten="Laptop HP 250 G10 (Core i5-1334U, 16GB RAM DDR4, 512GB SSD NVMe, 15.6" FHD, WiFi+BT, Màu Bạc)"
               data-gianhap="18420300.0" data-giaban="18990000.0"
@@ -3676,12 +3676,12 @@
               <td class="num">18.990.000đ</td>
               <td class="num">—</td>
               <td>—</td>
-              <td>—</td>
+              <td>— <span class="muted">(2 nguồn)</span></td>
               <td class="num">—</td>
               <td class="num">569.700đ</td>
               <td class="num">3.0%</td>
-              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng</td>
-              <td class="muted">bỏ qua — chưa có link đối thủ trong cột M</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; ⚠️ không lấy được giá tự động từ bất kỳ nguồn nào — cần Vũ kiểm tra tay</td>
+              <td class="muted">LỖI: cả 2 nguồn đều lỗi (fptshop.com.vn: Lỗi tải trang: 403 Client Error: Forbidden for url: https://fptshop.com.vn/may-tinh-xach-tay/hp-250-g10-i5-1334u-b3wa8at; www.ankhang.vn: Lỗi tải trang: 403 Client Error: Forbidden for url: https://www.ankhang.vn/laptop-hp-250-g10-b3wa8at.html)</td>
             </tr><tr class="danger"
               data-sku="LAP-HP-250G10-A06FDPT" data-ten="Laptop HP 250 G10 (Core i7-1355U, 8GB RAM DDR4, 512GB SSD NVMe, 15.6" FHD, Màu Bạc)"
               data-gianhap="21815300.0" data-giaban="22490000.0"
@@ -3694,12 +3694,12 @@
               <td class="num">22.490.000đ</td>
               <td class="num">—</td>
               <td>—</td>
-              <td>—</td>
+              <td>— <span class="muted">(2 nguồn)</span></td>
               <td class="num">—</td>
               <td class="num">674.700đ</td>
               <td class="num">3.0%</td>
-              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng</td>
-              <td class="muted">bỏ qua — chưa có link đối thủ trong cột M</td>
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; ⚠️ không lấy được giá tự động từ bất kỳ nguồn nào — cần Vũ kiểm tra tay</td>
+              <td class="muted">LỖI: cả 2 nguồn đều lỗi (www.phucanh.vn: Lỗi tải trang: 403 Client Error: Forbidden for url: https://www.phucanh.vn/laptop-hp-250-g10-a06fdpt.html; www.ankhang.vn: Lỗi tải trang: 403 Client Error: Forbidden for url: https://www.ankhang.vn/laptop-hp-250-g10-a06fdpt.html)</td>
             </tr><tr class="danger"
               data-sku="LAP-HP-PROBOOK450G10-B73TPAT" data-ten="Laptop HP ProBook 450 G10 (Core i5-1334U, 16GB RAM DDR4, 512GB SSD NVMe, 15.6" FHD, LED Keyboard, Màu Bạc)"
               data-gianhap="22795000.0" data-giaban="23500000.0"
@@ -3712,66 +3712,66 @@
               <td class="num">23.500.000đ</td>
               <td class="num">—</td>
               <td>—</td>
-              <td>—</td>
+              <td>— <span class="muted">(2 nguồn)</span></td>
               <td class="num">—</td>
               <td class="num">705.000đ</td>
               <td class="num">3.0%</td>
-              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng</td>
-              <td class="muted">bỏ qua — chưa có link đối thủ trong cột M</td>
-            </tr><tr class="danger"
+              <td>🟡 biên mỏng (<10%); 🔴 DƯỚI SÀN MARKUP 5% trên giá vốn — bắt buộc tăng giá bán theo quy tắc tối thượng; ⚠️ không lấy được giá tự động từ bất kỳ nguồn nào — cần Vũ kiểm tra tay</td>
+              <td class="muted">LỖI: cả 2 nguồn đều lỗi (www.phucanh.vn: Lỗi tải trang: 403 Client Error: Forbidden for url: https://www.phucanh.vn/laptop-hp-probook-450-g10-b73tpat.html; www.ankhang.vn: Lỗi tải trang: 403 Client Error: Forbidden for url: https://www.ankhang.vn/laptop-hp-probook-450-g10-b73tpat.html)</td>
+            </tr><tr class="ok"
               data-sku="GDM-HUM-T9PROIIDUAL-GRY" data-ten="Giá Đỡ Màn Hình Đôi HumanMotion T9 Pro II Dual"
               data-gianhap="1818182.0" data-giaban="2520000.0"
-              data-giadoithu="2500000" data-loinhuan="701818.0"
+              data-giadoithu="2520000" data-loinhuan="701818.0"
               data-bien="27.8"
-              data-flag="danger">
+              data-flag="ok">
               <td>GDM-HUM-T9PROIIDUAL-GRY</td>
               <td>Giá Đỡ Màn Hình Đôi HumanMotion T9 Pro II Dual</td>
               <td class="num">1.818.182đ</td>
               <td class="num">2.520.000đ</td>
-              <td class="num">2.500.000đ</td>
+              <td class="num">2.520.000đ</td>
               <td>còn hàng</td>
-              <td><a href="https://gearvn.com/products/gia-treo-man-hinh-human-motion-t9-pro-ii-dual-xam" target="_blank" rel="noopener">gearvn.com</a></td>
-              <td class="num">2.490.000đ</td>
+              <td><a href="https://www.tncstore.vn/gia-do-man-hinh-human-motion-t9-pro-ii-dual-xam.html" target="_blank" rel="noopener">www.tncstore.vn</a> <span class="muted">(3 nguồn)</span></td>
+              <td class="num">2.510.000đ</td>
               <td class="num">701.818đ</td>
               <td class="num">27.8%</td>
-              <td>🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 20.000đ — mất cạnh tranh</td>
-              <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
-            </tr><tr class="danger"
+              <td></td>
+              <td class="muted">OK (json-ld) — thấp nhất trong 2/3 nguồn còn hàng</td>
+            </tr><tr class="ok"
               data-sku="GDM-HUM-T9PROIIDUAL-WHT" data-ten="Giá Đỡ Màn Hình Đôi HumanMotion T9 Pro II Dual"
               data-gianhap="1818182.0" data-giaban="2520000.0"
-              data-giadoithu="2500000" data-loinhuan="701818.0"
+              data-giadoithu="2559000" data-loinhuan="701818.0"
               data-bien="27.8"
-              data-flag="danger">
+              data-flag="ok">
               <td>GDM-HUM-T9PROIIDUAL-WHT</td>
               <td>Giá Đỡ Màn Hình Đôi HumanMotion T9 Pro II Dual</td>
               <td class="num">1.818.182đ</td>
               <td class="num">2.520.000đ</td>
-              <td class="num">2.500.000đ</td>
+              <td class="num">2.559.000đ</td>
               <td>còn hàng</td>
-              <td><a href="https://gearvn.com/products/gia-treo-man-hinh-human-motion-t9-pro-ii-dual-trang" target="_blank" rel="noopener">gearvn.com</a></td>
-              <td class="num">2.490.000đ</td>
+              <td><a href="https://hacom.vn/gia-do-2-man-hinh-humanmotion-t9-pro-ii-dual-mau-trang-23-43-inch" target="_blank" rel="noopener">hacom.vn</a> <span class="muted">(3 nguồn)</span></td>
+              <td class="num">2.549.000đ</td>
               <td class="num">701.818đ</td>
               <td class="num">27.8%</td>
-              <td>🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 20.000đ — mất cạnh tranh</td>
-              <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
+              <td>🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td class="muted">OK (json-ld) — thấp nhất trong 1/3 nguồn còn hàng</td>
             </tr><tr class="danger"
               data-sku="GDM-HUM-T9PROIILED-GRY" data-ten="Giá Đỡ Màn Hình HumanMotion T9 Pro II Led"
               data-gianhap="1892945.0" data-giaban="2420000.0"
-              data-giadoithu="2400000" data-loinhuan="527055.0"
+              data-giadoithu="2099000" data-loinhuan="527055.0"
               data-bien="21.8"
               data-flag="danger">
               <td>GDM-HUM-T9PROIILED-GRY</td>
               <td>Giá Đỡ Màn Hình HumanMotion T9 Pro II Led</td>
               <td class="num">1.892.945đ</td>
               <td class="num">2.420.000đ</td>
-              <td class="num">2.400.000đ</td>
+              <td class="num">2.099.000đ</td>
               <td>hết hàng</td>
-              <td><a href="https://gearvn.com/products/gia-treo-man-hinh-human-motion-t9-pro-ii-led-rgb-xam" target="_blank" rel="noopener">gearvn.com</a></td>
-              <td class="num">2.390.000đ</td>
+              <td><a href="https://hacom.vn/gia-do-man-hinh-humanmotion-t9-pro-ii-led-rgb-mau-xam-23-43-inch" target="_blank" rel="noopener">hacom.vn</a> <span class="muted">(3 nguồn)</span></td>
+              <td class="num">2.089.000đ</td>
               <td class="num">527.055đ</td>
               <td class="num">21.8%</td>
-              <td>⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 20.000đ — mất cạnh tranh</td>
-              <td class="muted">OK (json-ld) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
+              <td>⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 321.000đ — mất cạnh tranh</td>
+              <td class="muted">OK (json-ld) — 2/3 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
             </tr><tr class="danger"
               data-sku="GDL-HPW-LH01-BRN" data-ten="Giá Đỡ Laptop Hyperwork LH01"
               data-gianhap="409000.0" data-giaban="515000.0"
@@ -8878,12 +8878,12 @@
               <td class="num">2.980.000đ</td>
               <td class="num">—</td>
               <td>—</td>
-              <td>—</td>
+              <td>— <span class="muted">(3 nguồn)</span></td>
               <td class="num">—</td>
               <td class="num">150.000đ</td>
               <td class="num">5.0%</td>
-              <td>🟡 biên mỏng (<10%)</td>
-              <td class="muted">bỏ qua — chưa có link đối thủ trong cột M</td>
+              <td>🟡 biên mỏng (<10%); ⚠️ không lấy được giá tự động từ bất kỳ nguồn nào — cần Vũ kiểm tra tay</td>
+              <td class="muted">LỖI: cả 3 nguồn đều lỗi (trungbac247.vn: Lỗi tải trang: HTTPSConnectionPool(host='trungbac247.vn', port=443): Read timed out. (read timeout=15); fptshop.com.vn: Lỗi tải trang: 403 Client Error: Forbidden for url: https://fptshop.com.vn/man-hinh/vsp-ip3205s-32-inch-fhd-1920-x-1080-ips-75hz; maytinhtsc.com: Không tìm thấy giá bằng bất kỳ phương pháp nào đã thử)</td>
             </tr>
 </tbody>
 </table>
