@@ -60,12 +60,16 @@ SHEET_ID = os.environ.get("SHEET_ID", "1nbSgLMnXfVAftlmU1MCYiAH0B1LPFPuPy5kXtFcP
 SOURCE_TAB = "Website"
 OUTPUT_TAB = "Theo dõi giá đối thủ (Auto)"
 
-# Vùng đọc trên tab Website — khớp với header thật đã xác nhận 11/08/2026:
-# B=STT C=Mã sản phẩm D=Tên sản phẩm E=Ngành hàng F=Hãng G=ID hãng
-# H=Tên SP NPP I=Giá nhập J=Giá bán K=Lợi nhuận(formula) L=Biên(formula)
-# M=Link tham khảo giá N=Số ảnh O=SEO số từ P=Link sản phẩm R=Khối lượng S=Trạng thái
-SOURCE_RANGE = "C3:M5000"  # KHÔNG thêm tên sheet — ws.get() đã tự gắn tên sheet của chính nó
+# Vùng đọc trên tab Website — khớp với header thật đã xác nhận lại 26/08/2026
+# (Website đã đổi thành Table + Vũ thêm cột "Giá so sánh"/"Giá đối thủ rẻ nhất",
+# không còn cột STT ở B — cấu trúc B=STT cũ ĐÃ LỖI THỜI, đừng tin lại lần nữa
+# mà không kiểm tra header thật trước):
+# B=Mã phiên bản sản phẩm (SKU) C=Tên D=Loại sản phẩm E=Hãng F=ID hãng
+# G=Tên SP NPP H=Giá vốn I=Giá J=Giá so sánh K=Lợi nhuận(formula)
+# L=Biên lợi nhuận(formula) M=Link tham khảo N=Giá đối thủ rẻ nhất O=Barcode
+SOURCE_RANGE = "B3:M5000"  # KHÔNG thêm tên sheet — ws.get() đã tự gắn tên sheet của chính nó
 DATA_START_ROW = 3
+SOURCE_COLS = 12  # số cột B..M
 
 SHIP_FEE = 0  # anh không còn chịu phí ship từ 22/08/2026 (cập nhật theo yêu cầu Vũ)
 
@@ -339,13 +343,23 @@ def get_gspread_client():
 
 def read_source_rows(sh):
     ws = sh.worksheet(SOURCE_TAB)
-    # FORMULA render option: ô có công thức (=HYPERLINK, =J-I...) trả về chuỗi
-    # công thức thô; ô thường trả về giá trị thô — khớp đúng cách mình đã
-    # kiểm tra thật trên file Sheet trước khi viết script này.
-    values = ws.get(SOURCE_RANGE, value_render_option="FORMULA")
+    # Giá vốn (H) và Giá (I) trên Website giờ là CÔNG THỨC SỐNG (XLOOKUP sang
+    # tab "Giá vốn, giá bán Haravan"), không còn là số tĩnh như trước
+    # 26/08/2026. Với value_render_option=FORMULA, 2 ô này trả về CHUỖI CÔNG
+    # THỨC thô (vd "=XLOOKUP(B3,...)"), không phải giá trị đã tính — nếu lấy
+    # số bằng cách bóc digit trong chuỗi đó (to_number) sẽ ra số rác nối các
+    # số dòng tham chiếu trong công thức lại với nhau (từng gây lỗi Giá nhập
+    # nhảy lên hàng tỷ, phát hiện + sửa 26/08/2026, xem lich-su-su-co.md).
+    # Vì vậy đọc SONG SONG 2 lần: FORMULA (để bóc URL trong cột Link, có thể
+    # là =HYPERLINK(...)) và UNFORMATTED_VALUE (để lấy đúng giá trị ĐÃ TÍNH
+    # của Giá vốn/Giá, bất kể ô đó là công thức hay số tĩnh).
+    values_formula = ws.get(SOURCE_RANGE, value_render_option="FORMULA")
+    values_unformatted = ws.get(SOURCE_RANGE, value_render_option="UNFORMATTED_VALUE")
     rows = []
-    for i, row in enumerate(values):
-        row = row + [""] * (11 - len(row))  # pad cho đủ 11 cột C..M
+    for i, row in enumerate(values_formula):
+        row = row + [""] * (SOURCE_COLS - len(row))  # pad cho đủ 12 cột B..M
+        row_u = values_unformatted[i] if i < len(values_unformatted) else []
+        row_u = row_u + [""] * (SOURCE_COLS - len(row_u))
         sku = row[0]
         if not sku:
             continue
@@ -354,9 +368,9 @@ def read_source_rows(sh):
                 "sheet_row": DATA_START_ROW + i,
                 "sku": sku,
                 "ten": row[1],
-                "gia_nhap": to_number(row[6]),
-                "gia_ban": to_number(row[7]),
-                "link_raw": row[10],
+                "gia_nhap": to_number(row_u[6]),
+                "gia_ban": to_number(row_u[7]),
+                "link_raw": row[11],
             }
         )
     return rows
