@@ -32,17 +32,17 @@
 </style>
 </head><body>
 <h1>Vutech — Dashboard theo dõi giá đối thủ (Auto, 0 token)</h1>
-<div class="sub">Cập nhật lúc 15/09/2026 13:39 (giờ VN) · Nguồn: Google Sheet "Khởi nghiệp" / tab Website · Mỗi SKU có thể theo dõi nhiều đối thủ, dashboard hiển thị giá THẤP NHẤT trong số đối thủ còn hàng · Script chạy tự động, không dùng AI</div>
+<div class="sub">Cập nhật lúc 16/09/2026 13:30 (giờ VN) · Nguồn: Google Sheet "Khởi nghiệp" / tab Website · Mỗi SKU có thể theo dõi nhiều đối thủ, dashboard hiển thị giá THẤP NHẤT trong số đối thủ còn hàng · Script chạy tự động, không dùng AI</div>
 
 <div class="stats">
   <div class="stat"><div class="n">490</div><div class="l">Tổng SKU</div></div>
   <div class="stat"><div class="n">484</div><div class="l">Có link đối thủ</div></div>
-  <div class="stat danger"><div class="n">119</div><div class="l">Cờ đỏ (lỗ / dưới vốn / mất cạnh tranh)</div></div>
+  <div class="stat danger"><div class="n">120</div><div class="l">Cờ đỏ (lỗ / dưới vốn / mất cạnh tranh)</div></div>
   <div class="stat warn"><div class="n">197</div><div class="l">Cờ vàng (biên mỏng / cần xác minh)</div></div>
   <div class="stat"><div class="n">54</div><div class="l">Lỗi lấy giá tự động</div></div>
-  <div class="stat danger"><div class="n">31</div><div class="l">Lỗ nếu theo giá đối thủ</div></div>
+  <div class="stat danger"><div class="n">30</div><div class="l">Lỗ nếu theo giá đối thủ</div></div>
   <div class="stat danger"><div class="n">5</div><div class="l">Dưới sàn markup 5% (giá vốn)</div></div>
-  <div class="stat warn"><div class="n">77</div><div class="l">Cần tăng giá hôm nay</div></div>
+  <div class="stat warn"><div class="n">78</div><div class="l">Cần tăng giá hôm nay</div></div>
 </div>
 
 <div class="controls">
@@ -153,7 +153,7 @@
               <td class="num">60.000đ</td>
               <td class="num">20.1%</td>
               <td>⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực</td>
-              <td class="muted">OK (json-ld) — 2/2 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
+              <td class="muted">OK (json-ld) — 1/2 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
             </tr><tr class="ok"
               data-sku="GDT-HPW-HS01-BLK" data-ten="Giá Đỡ Tai Nghe Hyperwork HS01"
               data-gianhap="289000.0" data-giaban="349000.0"
@@ -370,24 +370,24 @@
               <td class="num">4.8%</td>
               <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 11.000đ — mất cạnh tranh</td>
               <td class="muted">OK (meta-tag) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
-            </tr><tr class="warn"
+            </tr><tr class="danger"
               data-sku="MOU-ATK-A9SE-BLK" data-ten="Chuột Gaming Không Dây ATK Dragonfly A9 SE"
               data-gianhap="430000.0" data-giaban="452000.0"
-              data-giadoithu="0" data-loinhuan="22000.0"
+              data-giadoithu="450000" data-loinhuan="22000.0"
               data-bien="4.9"
-              data-flag="warn">
+              data-flag="danger">
               <td>MOU-ATK-A9SE-BLK</td>
               <td>Chuột Gaming Không Dây ATK Dragonfly A9 SE</td>
               <td class="num">430.000đ</td>
               <td class="num">452.000đ</td>
-              <td class="num">—</td>
-              <td>—</td>
-              <td>—</td>
-              <td class="num">—</td>
+              <td class="num">450.000đ</td>
+              <td>không rõ</td>
+              <td><a href="https://titekvn.com/products/chuot-atk-dragonfly-a9-se-trang" target="_blank" rel="noopener">titekvn.com</a></td>
+              <td class="num">449.000đ</td>
               <td class="num">22.000đ</td>
               <td class="num">4.9%</td>
-              <td>🟡 biên mỏng (<10%); ⚠️ không lấy được giá tự động từ bất kỳ nguồn nào — cần Vũ kiểm tra tay</td>
-              <td class="muted">LỖI: cả 1 nguồn đều lỗi (titekvn.com: Lỗi tải trang: HTTPSConnectionPool(host='titekvn.com', port=443): Max retries exceeded with url: /products/chuot-atk-dragonfly-a9-se-trang (Caused by NameResolutionError("HTTPSConnection(host='titekvn.com', port=443): Failed to resolve 'titekvn.com' ([Errno -3] Temporary failure in name resolution)")))</td>
+              <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 2.000đ — mất cạnh tranh</td>
+              <td class="muted">OK (meta-tag) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
             </tr><tr class="ok"
               data-sku="GDM-HPW-T6-BLK" data-ten="Giá Đỡ Màn Hình Hyperwork T6"
               data-gianhap="319000.0" data-giaban="478000.0"
@@ -1809,7 +1809,7 @@
               <td class="num">279.000đ</td>
               <td class="num">23.5%</td>
               <td>⚠️ không lấy được giá tự động từ bất kỳ nguồn nào — cần Vũ kiểm tra tay</td>
-              <td class="muted">LỖI: cả 1 nguồn đều lỗi (hyperwork.vn: Lỗi tải trang: 503 Server Error: Service Unavailable for url: https://hyperwork.vn/products/gia-do-man-hinh-doi-hyperwork-t6-pro-dual-2025)</td>
+              <td class="muted">LỖI: cả 1 nguồn đều lỗi (hyperwork.vn: Không tìm thấy giá bằng bất kỳ phương pháp nào đã thử)</td>
             </tr><tr class="danger"
               data-sku="PAD-RAZ-FIREFLY-V2-BLK" data-ten="Lót Chuột Razer Firefly V2"
               data-gianhap="1272000.0" data-giaban="1336000.0"
@@ -3070,24 +3070,24 @@
               <td class="num">10.3%</td>
               <td>⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực</td>
               <td class="muted">OK (meta-tag) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
-            </tr><tr class="danger"
+            </tr><tr class="warn"
               data-sku="CHG-LOG-PP2-BLK" data-ten="Bộ Sạc Không Dây Logitech PowerPlay 2 Wireless Charging System"
               data-gianhap="2420000.0" data-giaban="2541000.0"
-              data-giadoithu="2160000" data-loinhuan="121000.0"
+              data-giadoithu="0" data-loinhuan="121000.0"
               data-bien="4.8"
-              data-flag="danger">
+              data-flag="warn">
               <td>CHG-LOG-PP2-BLK</td>
               <td>Bộ Sạc Không Dây Logitech PowerPlay 2 Wireless Charging System</td>
               <td class="num">2.420.000đ</td>
               <td class="num">2.541.000đ</td>
-              <td class="num">2.160.000đ</td>
-              <td>không rõ</td>
-              <td><a href="https://dtex.vn/logitech/linh-phu-kien/ban-di-chuot-sac-khong-day-logitech-powerplay-2-947-000004--wireless-charging-system-mau-den-chinh-hang-logitech-g-9824.html" target="_blank" rel="noopener">dtex.vn</a></td>
-              <td class="num">2.150.000đ</td>
+              <td class="num">—</td>
+              <td>—</td>
+              <td>—</td>
+              <td class="num">—</td>
               <td class="num">121.000đ</td>
               <td class="num">4.8%</td>
-              <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🔴 LỖ nếu bán đúng giá đề xuất theo đối thủ — giá đối thủ đang thấp hơn cả giá vốn; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 381.000đ — mất cạnh tranh</td>
-              <td class="muted">OK (microdata) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
+              <td>🟡 biên mỏng (<10%); ⚠️ không lấy được giá tự động từ bất kỳ nguồn nào — cần Vũ kiểm tra tay</td>
+              <td class="muted">LỖI: cả 1 nguồn đều lỗi (dtex.vn: Lỗi tải trang: HTTPSConnectionPool(host='dtex.vn', port=443): Read timed out. (read timeout=15))</td>
             </tr><tr class="ok"
               data-sku="MOU-COR-IRONCLAW-WLSE-BLK" data-ten="Chuột Gaming Không Dây Corsair Ironclaw Wireless SE"
               data-gianhap="1865000.0" data-giaban="2180000.0"
@@ -3189,13 +3189,13 @@
               <td class="num">2.130.000đ</td>
               <td class="num">2.237.000đ</td>
               <td class="num">2.190.000đ</td>
-              <td>còn hàng</td>
+              <td>hết hàng</td>
               <td><a href="https://tinhocngoisao.com/products/tai-nghe-logitech-g733-lightspeed-wireless-gaming-den-981-000867" target="_blank" rel="noopener">tinhocngoisao.com</a></td>
               <td class="num">2.180.000đ</td>
               <td class="num">107.000đ</td>
               <td class="num">4.8%</td>
-              <td>🟡 biên mỏng (<10%); 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 47.000đ — mất cạnh tranh</td>
-              <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
+              <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 47.000đ — mất cạnh tranh</td>
+              <td class="muted">OK (json-ld) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
             </tr><tr class="ok"
               data-sku="MOU-LOG-G705LS-WHT" data-ten="Chuột Gaming Không Dây Logitech G705 Lightspeed"
               data-gianhap="1890000.0" data-giaban="2180000.0"
@@ -6147,7 +6147,7 @@
               <td class="num">787.000đ</td>
               <td class="num">16.8%</td>
               <td>⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 281.000đ — mất cạnh tranh</td>
-              <td class="muted">OK (json-ld) — 1/2 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
+              <td class="muted">OK (json-ld) — 2/2 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
             </tr><tr class="danger"
               data-sku="SDK-ELG-STREAMDECKPLUS-WHT" data-ten="Bộ Điều Khiển Livestream Elgato Stream Deck +"
               data-gianhap="3990000.0" data-giaban="4689000.0"
@@ -6346,41 +6346,41 @@
               <td class="num">21.2%</td>
               <td></td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
-            </tr><tr class="ok"
+            </tr><tr class="danger"
               data-sku="KB-LOG-G512X-75-TAC-BLK" data-ten="Bàn Phím Cơ Gaming Có Dây Logitech G512 X 75 Tactile"
               data-gianhap="3900000.0" data-giaban="5480000.0"
-              data-giadoithu="5490000" data-loinhuan="1580000.0"
+              data-giadoithu="4890000" data-loinhuan="1580000.0"
               data-bien="28.8"
-              data-flag="ok">
+              data-flag="danger">
               <td>KB-LOG-G512X-75-TAC-BLK</td>
               <td>Bàn Phím Cơ Gaming Có Dây Logitech G512 X 75 Tactile</td>
               <td class="num">3.900.000đ</td>
               <td class="num">5.480.000đ</td>
-              <td class="num">5.490.000đ</td>
+              <td class="num">4.890.000đ</td>
               <td>không rõ</td>
               <td><a href="https://playzone.vn/products/ban-phim-gaming-logitech-g512-x-75-dual-swap-tmr-analog-toc-do-8k-rgb" target="_blank" rel="noopener">playzone.vn</a></td>
-              <td class="num">5.480.000đ</td>
+              <td class="num">4.880.000đ</td>
               <td class="num">1.580.000đ</td>
               <td class="num">28.8%</td>
-              <td>⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực</td>
+              <td>⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 590.000đ — mất cạnh tranh</td>
               <td class="muted">OK (meta-tag) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
-            </tr><tr class="ok"
+            </tr><tr class="danger"
               data-sku="KB-LOG-G512X-75-TAC-WHT" data-ten="Bàn Phím Cơ Gaming Có Dây Logitech G512 X 75 Tactile"
               data-gianhap="3900000.0" data-giaban="5480000.0"
-              data-giadoithu="5490000" data-loinhuan="1580000.0"
+              data-giadoithu="4890000" data-loinhuan="1580000.0"
               data-bien="28.8"
-              data-flag="ok">
+              data-flag="danger">
               <td>KB-LOG-G512X-75-TAC-WHT</td>
               <td>Bàn Phím Cơ Gaming Có Dây Logitech G512 X 75 Tactile</td>
               <td class="num">3.900.000đ</td>
               <td class="num">5.480.000đ</td>
-              <td class="num">5.490.000đ</td>
+              <td class="num">4.890.000đ</td>
               <td>không rõ</td>
               <td><a href="https://playzone.vn/products/ban-phim-gaming-logitech-g512-x-75-dual-swap-tmr-analog-toc-do-8k-rgb" target="_blank" rel="noopener">playzone.vn</a></td>
-              <td class="num">5.480.000đ</td>
+              <td class="num">4.880.000đ</td>
               <td class="num">1.580.000đ</td>
               <td class="num">28.8%</td>
-              <td>⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực</td>
+              <td>⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 590.000đ — mất cạnh tranh</td>
               <td class="muted">OK (meta-tag) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
             </tr><tr class="ok"
               data-sku="AIF-ELG-WAVEXLRMK2-BLK" data-ten="Audio Interface Elgato Wave XLR MK.2"
@@ -7119,7 +7119,7 @@
               <td class="num">1.439.700đ</td>
               <td class="num">9.0%</td>
               <td>🟡 biên mỏng (<10%); ⚠️ không lấy được giá tự động từ bất kỳ nguồn nào — cần Vũ kiểm tra tay</td>
-              <td class="muted">LỖI: cả 3 nguồn đều lỗi (www.thegioididong.com: Lỗi tải trang: HTTPSConnectionPool(host='www.thegioididong.com', port=443): Max retries exceeded with url: /laptop/acer-aspire-lite-14-al14-45p-r7z3-r3-5400u-nx-dpesv-002 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.thegioididong.com', port=443) at 0x7f0ba2e65190>, 'Connection to www.thegioididong.com timed out. (connect timeout=15)')); fptshop.com.vn: Lỗi tải trang: 403 Client Error: Forbidden for url: https://fptshop.com.vn/may-tinh-xach-tay/acer-aspire-lite-14-al14-45p-r7z3; cellphones.com.vn: Không tìm thấy giá bằng bất kỳ phương pháp nào đã thử)</td>
+              <td class="muted">LỖI: cả 3 nguồn đều lỗi (www.thegioididong.com: Lỗi tải trang: HTTPSConnectionPool(host='www.thegioididong.com', port=443): Max retries exceeded with url: /laptop/acer-aspire-lite-14-al14-45p-r7z3-r3-5400u-nx-dpesv-002 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.thegioididong.com', port=443) at 0x7f8d7166f990>, 'Connection to www.thegioididong.com timed out. (connect timeout=15)')); fptshop.com.vn: Lỗi tải trang: 403 Client Error: Forbidden for url: https://fptshop.com.vn/may-tinh-xach-tay/acer-aspire-lite-14-al14-45p-r7z3; cellphones.com.vn: Không tìm thấy giá bằng bất kỳ phương pháp nào đã thử)</td>
             </tr><tr class="ok"
               data-sku="LAP-DEL-PV15250-VKVKD-I5" data-ten="Laptop Dell 15 Pro Essential PV15250 (Core i5-1334U, 8GB RAM DDR5, 512GB SSD NVMe, 15.6" FHD IPS 120Hz, Màu Đen)"
               data-gianhap="14443300.0" data-giaban="17280000.0"
@@ -7173,7 +7173,7 @@
               <td class="num">1.341.700đ</td>
               <td class="num">7.0%</td>
               <td>🟡 biên mỏng (<10%); ⚠️ không lấy được giá tự động từ bất kỳ nguồn nào — cần Vũ kiểm tra tay</td>
-              <td class="muted">LỖI: cả 2 nguồn đều lỗi (www.thegioididong.com: Lỗi tải trang: HTTPSConnectionPool(host='www.thegioididong.com', port=443): Max retries exceeded with url: /laptop/acer-aspire-lite-15-al15-49p-r6xx-r5-7430u-nx-drzsv-002 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.thegioididong.com', port=443) at 0x7f0ba18bb410>, 'Connection to www.thegioididong.com timed out. (connect timeout=15)')); www.ankhang.vn: Lỗi tải trang: 403 Client Error: Forbidden for url: https://www.ankhang.vn/laptop-acer-aspire-lite-15-al15-49p-r6xx-nx-drzsv-002.html)</td>
+              <td class="muted">LỖI: cả 2 nguồn đều lỗi (www.thegioididong.com: Lỗi tải trang: HTTPSConnectionPool(host='www.thegioididong.com', port=443): Max retries exceeded with url: /laptop/acer-aspire-lite-15-al15-49p-r6xx-r5-7430u-nx-drzsv-002 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.thegioididong.com', port=443) at 0x7f8d7166d110>, 'Connection to www.thegioididong.com timed out. (connect timeout=15)')); www.ankhang.vn: Lỗi tải trang: 403 Client Error: Forbidden for url: https://www.ankhang.vn/laptop-acer-aspire-lite-15-al15-49p-r6xx-nx-drzsv-002.html)</td>
             </tr><tr class="warn"
               data-sku="LAP-ACE-AG14-72P-563L" data-ten="Laptop Acer Aspire Go 14 (Core 5-120U, 16GB RAM DDR4, 512GB SSD NVMe, 14" FHD (NX.JSBSV.002), Màu Bạc)"
               data-gianhap="17935300.0" data-giaban="19380000.0"
@@ -7293,13 +7293,13 @@
               <td class="num">20.748.300đ</td>
               <td class="num">21.786.000đ</td>
               <td class="num">21.390.000đ</td>
-              <td>còn hàng</td>
+              <td>hết hàng</td>
               <td><a href="https://tinhocngoisao.com/products/laptop-dell-dc15250-7982blk-h5yxj-i7-1355u-16gb-ddr4-ssd-1tb-nvme-15-6-fhd-touch-win-11-den" target="_blank" rel="noopener">tinhocngoisao.com</a></td>
               <td class="num">21.380.000đ</td>
               <td class="num">1.037.700đ</td>
               <td class="num">4.8%</td>
-              <td>🟡 biên mỏng (<10%); 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 396.000đ — mất cạnh tranh</td>
-              <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
+              <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 396.000đ — mất cạnh tranh</td>
+              <td class="muted">OK (json-ld) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
             </tr><tr class="warn"
               data-sku="LAP-ACE-AG15-52P-52WT" data-ten="Laptop Acer Aspire Go 15 AI (Intel Ultra 5-115U, 16GB RAM DDR5, 512GB SSD NVMe, 15.6" FHD (NX.JWKSV.001), Màu Bạc)"
               data-gianhap="21233300.0" data-giaban="22480000.0"
@@ -7335,7 +7335,7 @@
               <td class="num">1.134.700đ</td>
               <td class="num">4.8%</td>
               <td>🟡 biên mỏng (<10%); ⚠️ không lấy được giá tự động từ bất kỳ nguồn nào — cần Vũ kiểm tra tay</td>
-              <td class="muted">LỖI: cả 3 nguồn đều lỗi (www.phucanh.vn: Lỗi tải trang: 403 Client Error: Forbidden for url: https://www.phucanh.vn/laptop-asus-vivobook-14-x1407aa-ly360w.html; www.thegioididong.com: Lỗi tải trang: HTTPSConnectionPool(host='www.thegioididong.com', port=443): Max retries exceeded with url: /laptop/asus-vivobook-14-x1407aa-ultra-5-325-ly360w (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.thegioididong.com', port=443) at 0x7f0ba2906990>, 'Connection to www.thegioididong.com timed out. (connect timeout=15)')); fptshop.com.vn: Lỗi tải trang: 403 Client Error: Forbidden for url: https://fptshop.com.vn/may-tinh-xach-tay/asus-vivobook-14-x1407aa-ly360w-ultra-5-325)</td>
+              <td class="muted">LỖI: cả 3 nguồn đều lỗi (www.phucanh.vn: Lỗi tải trang: 403 Client Error: Forbidden for url: https://www.phucanh.vn/laptop-asus-vivobook-14-x1407aa-ly360w.html; www.thegioididong.com: Lỗi tải trang: HTTPSConnectionPool(host='www.thegioididong.com', port=443): Max retries exceeded with url: /laptop/asus-vivobook-14-x1407aa-ultra-5-325-ly360w (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.thegioididong.com', port=443) at 0x7f8d72541050>, 'Connection to www.thegioididong.com timed out. (connect timeout=15)')); fptshop.com.vn: Lỗi tải trang: 403 Client Error: Forbidden for url: https://fptshop.com.vn/may-tinh-xach-tay/asus-vivobook-14-x1407aa-ly360w-ultra-5-325)</td>
             </tr><tr class="danger"
               data-sku="LAP-ASU-X1504MA-BQ633W" data-ten="Laptop Asus Vivobook 15 X1504MA (Intel Core 7-350, 8GB RAM DDR5, 512GB SSD NVMe, 15.6" FHD, Fingerprint, Màu Bạc)"
               data-gianhap="22300300.0" data-giaban="23980000.0"
@@ -7443,7 +7443,7 @@
               <td class="num">1.406.700đ</td>
               <td class="num">4.8%</td>
               <td>🟡 biên mỏng (<10%); ⚠️ không lấy được giá tự động từ bất kỳ nguồn nào — cần Vũ kiểm tra tay</td>
-              <td class="muted">LỖI: cả 3 nguồn đều lỗi (www.thegioididong.com: Lỗi tải trang: HTTPSConnectionPool(host='www.thegioididong.com', port=443): Max retries exceeded with url: /laptop/gigabyte-a16-ga6h-i7-gaming-a16-cmhi2vn893sh (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.thegioididong.com', port=443) at 0x7f0ba2bd7450>, 'Connection to www.thegioididong.com timed out. (connect timeout=15)')); fptshop.com.vn: Lỗi tải trang: 403 Client Error: Forbidden for url: https://fptshop.com.vn/may-tinh-xach-tay/gigabyte-gaming-a16-cmhi2vn893sh-i7-13620h; www.phucanh.vn: Lỗi tải trang: 403 Client Error: Forbidden for url: https://www.phucanh.vn/laptop-gigabyte-gaming-a16-cmhi2vn893sh.html)</td>
+              <td class="muted">LỖI: cả 3 nguồn đều lỗi (www.thegioididong.com: Lỗi tải trang: HTTPSConnectionPool(host='www.thegioididong.com', port=443): Max retries exceeded with url: /laptop/gigabyte-a16-ga6h-i7-gaming-a16-cmhi2vn893sh (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.thegioididong.com', port=443) at 0x7f8d71cab7d0>, 'Connection to www.thegioididong.com timed out. (connect timeout=15)')); fptshop.com.vn: Lỗi tải trang: 403 Client Error: Forbidden for url: https://fptshop.com.vn/may-tinh-xach-tay/gigabyte-gaming-a16-cmhi2vn893sh-i7-13620h; www.phucanh.vn: Lỗi tải trang: 403 Client Error: Forbidden for url: https://www.phucanh.vn/laptop-gigabyte-gaming-a16-cmhi2vn893sh.html)</td>
             </tr><tr class="danger"
               data-sku="LAP-ACE-NL16-71G-71UJ" data-ten="Laptop Gaming Acer Nitro Lite 16 (Core i7-13620H, 16GB RAM DDR5, 512GB SSD NVMe, 16" FHD+ 165Hz, RTX 3050 6GB (NH.D59SV.002), Màu Trắng)"
               data-gianhap="25016300.0" data-giaban="29380000.0"
@@ -7534,24 +7534,24 @@
               <td class="num">4.8%</td>
               <td>🟡 biên mỏng (<10%); 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 972.000đ — mất cạnh tranh</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/3 nguồn còn hàng</td>
-            </tr><tr class="danger"
+            </tr><tr class="warn"
               data-sku="LAP-GIG-AEROX16-1VH93MY894AH" data-ten="Laptop Gaming Gigabyte Aero X16 Ryzen AI 7-350, 16GB RAM DDR5, 1TB SSD NVMe, 16" FHD+ 165Hz, RTX 5060, RGB (EG61H), Màu Xám"
               data-gianhap="35492300.0" data-giaban="37980000.0"
-              data-giadoithu="37590000" data-loinhuan="2487700.0"
+              data-giadoithu="38990000" data-loinhuan="2487700.0"
               data-bien="6.6"
-              data-flag="danger">
+              data-flag="warn">
               <td>LAP-GIG-AEROX16-1VH93MY894AH</td>
               <td>Laptop Gaming Gigabyte Aero X16 Ryzen AI 7-350, 16GB RAM DDR5, 1TB SSD NVMe, 16" FHD+ 165Hz, RTX 5060, RGB (EG61H), Màu Xám</td>
               <td class="num">35.492.300đ</td>
               <td class="num">37.980.000đ</td>
-              <td class="num">37.590.000đ</td>
+              <td class="num">38.990.000đ</td>
               <td>còn hàng</td>
-              <td><a href="https://tinhocngoisao.com/products/laptop-gaming-gigabyte-aero-x16-1vh93my894ah-eg61h-ryzen-ai-7-350-16gb-ddr5-ssd-1tb-nvme-16-fhd-165hz-rtx-5060-8gb-w11sl-xam" target="_blank" rel="noopener">tinhocngoisao.com</a> <span class="muted">(3 nguồn)</span></td>
-              <td class="num">37.580.000đ</td>
+              <td><a href="https://xgear.net/products/laptop-gigabyte-aero-x16-eg61h-1vh93my894ah" target="_blank" rel="noopener">xgear.net</a> <span class="muted">(3 nguồn)</span></td>
+              <td class="num">38.980.000đ</td>
               <td class="num">2.487.700đ</td>
               <td class="num">6.6%</td>
-              <td>🟡 biên mỏng (<10%); 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 390.000đ — mất cạnh tranh</td>
-              <td class="muted">OK (json-ld) — thấp nhất trong 2/3 nguồn còn hàng</td>
+              <td>🟡 biên mỏng (<10%); 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td class="muted">OK (json-ld) — thấp nhất trong 1/3 nguồn còn hàng</td>
             </tr><tr class="danger"
               data-sku="LAP-GIG-AEROX16-1VH93VNC94AH" data-ten="Laptop Gaming Gigabyte Aero X16 (Ryzen AI 7-350, 16GB RAM DDR5, 1TB SSD NVMe, 16" QHD+ 165Hz, RTX 5060, RGB (EG61H), Màu Xám)"
               data-gianhap="37820300.0" data-giaban="39712000.0"
@@ -7744,12 +7744,12 @@
               <td class="num">7.380.000đ</td>
               <td class="num">7.290.000đ</td>
               <td>còn hàng</td>
-              <td><a href="https://gearvn.com/products/thiet-bi-stream-elgato-gaming-video-capture-4k-pro-10gbk9901" target="_blank" rel="noopener">gearvn.com</a> <span class="muted">(3 nguồn)</span></td>
+              <td><a href="https://www.tncstore.vn/thiet-bi-stream-elgato-gaming-video-capture-4k-pro-10gbk9901.html" target="_blank" rel="noopener">www.tncstore.vn</a> <span class="muted">(3 nguồn)</span></td>
               <td class="num">7.280.000đ</td>
               <td class="num">625.000đ</td>
               <td class="num">8.5%</td>
               <td>🟡 biên mỏng (<10%); 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 90.000đ — mất cạnh tranh</td>
-              <td class="muted">OK (json-ld) — thấp nhất trong 3/3 nguồn còn hàng</td>
+              <td class="muted">OK (json-ld) — thấp nhất trong 2/3 nguồn còn hàng</td>
             </tr><tr class="warn"
               data-sku="CAP-ELG-4KS-BLK" data-ten="Thiết Bị Ghi Hình Elgato Game Capture 4K S"
               data-gianhap="3930000.0" data-giaban="4280000.0"
@@ -8685,7 +8685,7 @@
               <td class="num">160.000đ</td>
               <td class="num">20.0%</td>
               <td>⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực</td>
-              <td class="muted">OK (json-ld) — 2/3 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
+              <td class="muted">OK (json-ld) — 1/3 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
             </tr><tr class="danger"
               data-sku="GPD-RAZ-KITSUNE-AP-BLK" data-ten="Tay Cầm Chơi Game Có Dây Razer Kitsune AP"
               data-gianhap="6280000.0" data-giaban="6990000.0"
