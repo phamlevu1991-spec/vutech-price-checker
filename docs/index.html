@@ -32,17 +32,17 @@
 </style>
 </head><body>
 <h1>Vutech — Dashboard theo dõi giá đối thủ (Auto, 0 token)</h1>
-<div class="sub">Cập nhật lúc 20/10/2026 13:25 (giờ VN) · Nguồn: Google Sheet "Khởi nghiệp" / tab Website · Mỗi SKU có thể theo dõi nhiều đối thủ, dashboard hiển thị giá THẤP NHẤT trong số đối thủ còn hàng · Script chạy tự động, không dùng AI</div>
+<div class="sub">Cập nhật lúc 21/10/2026 13:28 (giờ VN) · Nguồn: Google Sheet "Khởi nghiệp" / tab Website · Mỗi SKU có thể theo dõi nhiều đối thủ, dashboard hiển thị giá THẤP NHẤT trong số đối thủ còn hàng · Script chạy tự động, không dùng AI</div>
 
 <div class="stats">
   <div class="stat"><div class="n">490</div><div class="l">Tổng SKU</div></div>
   <div class="stat"><div class="n">484</div><div class="l">Có link đối thủ</div></div>
-  <div class="stat danger"><div class="n">115</div><div class="l">Cờ đỏ (lỗ / dưới vốn / mất cạnh tranh)</div></div>
+  <div class="stat danger"><div class="n">114</div><div class="l">Cờ đỏ (lỗ / dưới vốn / mất cạnh tranh)</div></div>
   <div class="stat warn"><div class="n">197</div><div class="l">Cờ vàng (biên mỏng / cần xác minh)</div></div>
   <div class="stat"><div class="n">50</div><div class="l">Lỗi lấy giá tự động</div></div>
-  <div class="stat danger"><div class="n">29</div><div class="l">Lỗ nếu theo giá đối thủ</div></div>
+  <div class="stat danger"><div class="n">30</div><div class="l">Lỗ nếu theo giá đối thủ</div></div>
   <div class="stat danger"><div class="n">5</div><div class="l">Dưới sàn markup 5% (giá vốn)</div></div>
-  <div class="stat warn"><div class="n">96</div><div class="l">Cần tăng giá hôm nay</div></div>
+  <div class="stat warn"><div class="n">97</div><div class="l">Cần tăng giá hôm nay</div></div>
 </div>
 
 <div class="controls">
@@ -118,23 +118,23 @@
               <td class="num">13.9%</td>
               <td>⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực</td>
               <td class="muted">OK (json-ld) — 2/3 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
-            </tr><tr class="danger"
+            </tr><tr class="warn"
               data-sku="PAD-RAZ-SPHEX-V3-LARGE-BLK" data-ten="Lót Chuột Razer Sphex V3 - Large"
               data-gianhap="559000.0" data-giaban="587000.0"
-              data-giadoithu="290000" data-loinhuan="28000.0"
+              data-giadoithu="690000" data-loinhuan="28000.0"
               data-bien="4.8"
-              data-flag="danger">
+              data-flag="warn">
               <td>PAD-RAZ-SPHEX-V3-LARGE-BLK</td>
               <td>Lót Chuột Razer Sphex V3 - Large</td>
               <td class="num">559.000đ</td>
               <td class="num">587.000đ</td>
-              <td class="num">290.000đ</td>
+              <td class="num">690.000đ</td>
               <td>còn hàng</td>
               <td><a href="https://gearvn.com/products/lot-chuot-razer-sphex-v3-ultra-thin-large" target="_blank" rel="noopener">gearvn.com</a> <span class="muted">(2 nguồn)</span></td>
-              <td class="num">289.000đ</td>
+              <td class="num">689.000đ</td>
               <td class="num">28.000đ</td>
               <td class="num">4.8%</td>
-              <td>🟡 biên mỏng (<10%); 🔴 LỖ nếu bán đúng giá đề xuất theo đối thủ — giá đối thủ đang thấp hơn cả giá vốn; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 297.000đ — mất cạnh tranh</td>
+              <td>🟡 biên mỏng (<10%); 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/2 nguồn còn hàng</td>
             </tr><tr class="ok"
               data-sku="PAD-RAZ-PRO-GLIDE-MOUSE-MAT-GRY" data-ten="Lót Chuột Razer Pro Glide Mouse Mat"
@@ -1666,23 +1666,23 @@
               <td class="num">13.1%</td>
               <td></td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/2 nguồn còn hàng</td>
-            </tr><tr class="danger"
+            </tr><tr class="ok"
               data-sku="KB-MCH-G75PRO-MATCHA-GRNMTC" data-ten="Bàn Phím Cơ Gaming Không Dây MCHOSE G75 Pro"
               data-gianhap="978000.0" data-giaban="1140000.0"
-              data-giadoithu="1090000" data-loinhuan="162000.0"
+              data-giadoithu="1150000" data-loinhuan="162000.0"
               data-bien="14.2"
-              data-flag="danger">
+              data-flag="ok">
               <td>KB-MCH-G75PRO-MATCHA-GRNMTC</td>
               <td>Bàn Phím Cơ Gaming Không Dây MCHOSE G75 Pro</td>
               <td class="num">978.000đ</td>
               <td class="num">1.140.000đ</td>
-              <td class="num">1.090.000đ</td>
+              <td class="num">1.150.000đ</td>
               <td>còn hàng</td>
-              <td><a href="https://cellphones.com.vn/ban-phim-co-khong-day-mchose-g75-pro-tri-mode-green.html" target="_blank" rel="noopener">cellphones.com.vn</a> <span class="muted">(2 nguồn)</span></td>
-              <td class="num">1.080.000đ</td>
+              <td><a href="https://owlgaming.vn/ban-phim-co-mchose-g75-pro-green/" target="_blank" rel="noopener">owlgaming.vn</a> <span class="muted">(2 nguồn)</span></td>
+              <td class="num">1.140.000đ</td>
               <td class="num">162.000đ</td>
               <td class="num">14.2%</td>
-              <td>🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 50.000đ — mất cạnh tranh</td>
+              <td></td>
               <td class="muted">OK (json-ld) — thấp nhất trong 2/2 nguồn còn hàng</td>
             </tr><tr class="ok"
               data-sku="GDMC-HPW-MA02-BLK" data-ten="Giá Đỡ Microphone Hyperwork MA02"
@@ -2191,17 +2191,17 @@
             </tr><tr class="warn"
               data-sku="MOU-RAZ-BASILISK-V3-X-HYPERSPEED-BLK" data-ten="Chuột Gaming Không Dây Razer Basilisk V3 X HyperSpeed"
               data-gianhap="1330000.0" data-giaban="1397000.0"
-              data-giadoithu="1490000" data-loinhuan="67000.0"
+              data-giadoithu="2390000" data-loinhuan="67000.0"
               data-bien="4.8"
               data-flag="warn">
               <td>MOU-RAZ-BASILISK-V3-X-HYPERSPEED-BLK</td>
               <td>Chuột Gaming Không Dây Razer Basilisk V3 X HyperSpeed</td>
               <td class="num">1.330.000đ</td>
               <td class="num">1.397.000đ</td>
-              <td class="num">1.490.000đ</td>
+              <td class="num">2.390.000đ</td>
               <td>còn hàng</td>
               <td><a href="https://gearvn.com/products/chuot-razer-basilisk-v3-x-hyperspeed" target="_blank" rel="noopener">gearvn.com</a> <span class="muted">(2 nguồn)</span></td>
-              <td class="num">1.480.000đ</td>
+              <td class="num">2.380.000đ</td>
               <td class="num">67.000đ</td>
               <td class="num">4.8%</td>
               <td>🟡 biên mỏng (<10%); 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
@@ -3019,20 +3019,20 @@
             </tr><tr class="danger"
               data-sku="MOU-RAZ-DEATHADDER-V3-HYPERSPEED-BLK" data-ten="Chuột Gaming Không Dây Razer DeathAdder V3 HyperSpeed"
               data-gianhap="2030000.0" data-giaban="2132000.0"
-              data-giadoithu="2130000" data-loinhuan="102000.0"
+              data-giadoithu="2090000" data-loinhuan="102000.0"
               data-bien="4.8"
               data-flag="danger">
               <td>MOU-RAZ-DEATHADDER-V3-HYPERSPEED-BLK</td>
               <td>Chuột Gaming Không Dây Razer DeathAdder V3 HyperSpeed</td>
               <td class="num">2.030.000đ</td>
               <td class="num">2.132.000đ</td>
-              <td class="num">2.130.000đ</td>
+              <td class="num">2.090.000đ</td>
               <td>còn hàng</td>
               <td><a href="https://gearvn.com/products/chuot-razer-deathadder-v3-hyperspeed-wireless" target="_blank" rel="noopener">gearvn.com</a> <span class="muted">(2 nguồn)</span></td>
-              <td class="num">2.120.000đ</td>
+              <td class="num">2.080.000đ</td>
               <td class="num">102.000đ</td>
               <td class="num">4.8%</td>
-              <td>🟡 biên mỏng (<10%); 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 2.000đ — mất cạnh tranh</td>
+              <td>🟡 biên mỏng (<10%); 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 42.000đ — mất cạnh tranh</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/2 nguồn còn hàng</td>
             </tr><tr class="ok"
               data-sku="KB-RAZ-BLACKWIDOW-V3-GREEN-SWITCH-BLK" data-ten="Bàn Phím Cơ Gaming Có Dây Razer BlackWidow V3 - Green Switch"
@@ -4186,23 +4186,23 @@
               <td class="num">19.4%</td>
               <td></td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
-            </tr><tr class="ok"
+            </tr><tr class="danger"
               data-sku="PAD-RAZ-FIREFLY-V2-PRO-WHT" data-ten="Lót Chuột Razer Firefly V2 Pro"
               data-gianhap="2392000.0" data-giaban="2800000.0"
-              data-giadoithu="2810000" data-loinhuan="408000.0"
+              data-giadoithu="2690000" data-loinhuan="408000.0"
               data-bien="14.6"
-              data-flag="ok">
+              data-flag="danger">
               <td>PAD-RAZ-FIREFLY-V2-PRO-WHT</td>
               <td>Lót Chuột Razer Firefly V2 Pro</td>
               <td class="num">2.392.000đ</td>
               <td class="num">2.800.000đ</td>
-              <td class="num">2.810.000đ</td>
+              <td class="num">2.690.000đ</td>
               <td>còn hàng</td>
               <td><a href="https://gearvn.com/products/tam-lot-chuot-razer-firefly-v2-pro-white" target="_blank" rel="noopener">gearvn.com</a></td>
-              <td class="num">2.800.000đ</td>
+              <td class="num">2.680.000đ</td>
               <td class="num">408.000đ</td>
               <td class="num">14.6%</td>
-              <td></td>
+              <td>🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 110.000đ — mất cạnh tranh</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
             </tr><tr class="warn"
               data-sku="HSE-LOG-G522-WHT" data-ten="Tai Nghe Gaming Không Dây Logitech G522 Lightspeed RGB"
@@ -4222,23 +4222,23 @@
               <td class="num">4.8%</td>
               <td>🟡 biên mỏng (<10%); 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/3 nguồn còn hàng</td>
-            </tr><tr class="danger"
+            </tr><tr class="ok"
               data-sku="PAD-RAZ-FIREFLY-V2-PRO-PHW" data-ten="Lót Chuột Razer Firefly V2 Pro"
               data-gianhap="2520000.0" data-giaban="2870000.0"
-              data-giadoithu="2690000" data-loinhuan="350000.0"
+              data-giadoithu="2890000" data-loinhuan="350000.0"
               data-bien="12.2"
-              data-flag="danger">
+              data-flag="ok">
               <td>PAD-RAZ-FIREFLY-V2-PRO-PHW</td>
               <td>Lót Chuột Razer Firefly V2 Pro</td>
               <td class="num">2.520.000đ</td>
               <td class="num">2.870.000đ</td>
-              <td class="num">2.690.000đ</td>
+              <td class="num">2.890.000đ</td>
               <td>còn hàng</td>
               <td><a href="https://gearvn.com/products/lot-chuot-razer-firefly-v2-pro-phantom-white-edition" target="_blank" rel="noopener">gearvn.com</a></td>
-              <td class="num">2.680.000đ</td>
+              <td class="num">2.880.000đ</td>
               <td class="num">350.000đ</td>
               <td class="num">12.2%</td>
-              <td>🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 180.000đ — mất cạnh tranh</td>
+              <td></td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/1 nguồn còn hàng</td>
             </tr><tr class="ok"
               data-sku="HSE-RAZ-KRAKEN-KITTY-V2-BLK" data-ten="Tai Nghe Gaming Có Dây Razer Kraken Kitty V2"
@@ -4387,38 +4387,38 @@
             </tr><tr class="danger"
               data-sku="MIC-RAZ-SEIREN-V3-CHROMA-BLK" data-ten="Micro Thu Âm Có Dây Razer Seiren V3 Chroma"
               data-gianhap="2900000.0" data-giaban="3045000.0"
-              data-giadoithu="2990000" data-loinhuan="145000.0"
+              data-giadoithu="2790000" data-loinhuan="145000.0"
               data-bien="4.8"
               data-flag="danger">
               <td>MIC-RAZ-SEIREN-V3-CHROMA-BLK</td>
               <td>Micro Thu Âm Có Dây Razer Seiren V3 Chroma</td>
               <td class="num">2.900.000đ</td>
               <td class="num">3.045.000đ</td>
-              <td class="num">2.990.000đ</td>
-              <td>không rõ</td>
-              <td><a href="https://memoryzone.com.vn/thiet-bi-stream-microphone-razer-seiren-v3-chroma" target="_blank" rel="noopener">memoryzone.com.vn</a> <span class="muted">(2 nguồn)</span></td>
-              <td class="num">2.980.000đ</td>
+              <td class="num">2.790.000đ</td>
+              <td>còn hàng</td>
+              <td><a href="https://gearvn.com/products/microphone-razer-seiren-v3-chroma-black" target="_blank" rel="noopener">gearvn.com</a> <span class="muted">(2 nguồn)</span></td>
+              <td class="num">2.780.000đ</td>
               <td class="num">145.000đ</td>
               <td class="num">4.8%</td>
-              <td>🟡 biên mỏng (<10%); ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 55.000đ — mất cạnh tranh</td>
-              <td class="muted">OK (meta-tag) — 2/2 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
-            </tr><tr class="warn"
+              <td>🟡 biên mỏng (<10%); 🔴 LỖ nếu bán đúng giá đề xuất theo đối thủ — giá đối thủ đang thấp hơn cả giá vốn; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 255.000đ — mất cạnh tranh</td>
+              <td class="muted">OK (json-ld) — thấp nhất trong 1/2 nguồn còn hàng</td>
+            </tr><tr class="danger"
               data-sku="MIC-RAZ-SEIREN-V3-CHROMA-WHT" data-ten="Micro Thu Âm Có Dây Razer Seiren V3 Chroma"
               data-gianhap="3130000.0" data-giaban="3287000.0"
-              data-giadoithu="3580000" data-loinhuan="157000.0"
+              data-giadoithu="3090000" data-loinhuan="157000.0"
               data-bien="4.8"
-              data-flag="warn">
+              data-flag="danger">
               <td>MIC-RAZ-SEIREN-V3-CHROMA-WHT</td>
               <td>Micro Thu Âm Có Dây Razer Seiren V3 Chroma</td>
               <td class="num">3.130.000đ</td>
               <td class="num">3.287.000đ</td>
-              <td class="num">3.580.000đ</td>
+              <td class="num">3.090.000đ</td>
               <td>còn hàng</td>
               <td><a href="https://gearvn.com/products/microphone-razer-seiren-v3-chroma-white" target="_blank" rel="noopener">gearvn.com</a> <span class="muted">(2 nguồn)</span></td>
-              <td class="num">3.570.000đ</td>
+              <td class="num">3.080.000đ</td>
               <td class="num">157.000đ</td>
               <td class="num">4.8%</td>
-              <td>🟡 biên mỏng (<10%); 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
+              <td>🟡 biên mỏng (<10%); 🔴 LỖ nếu bán đúng giá đề xuất theo đối thủ — giá đối thủ đang thấp hơn cả giá vốn; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 197.000đ — mất cạnh tranh</td>
               <td class="muted">OK (json-ld) — thấp nhất trong 1/2 nguồn còn hàng</td>
             </tr><tr class="danger"
               data-sku="MIC-RAZ-SEIREN-V3-CHROMA-PNK" data-ten="Micro Thu Âm Có Dây Razer Seiren V3 Chroma"
@@ -5971,17 +5971,17 @@
             </tr><tr class="warn"
               data-sku="KEY-RAZ-HUNTSMAN-V3PRO-TKL-BLK" data-ten="Bàn Phím Cơ Có Dây Razer Huntsman V3 Pro Tenkeyless"
               data-gianhap="4480000.0" data-giaban="4704000.0"
-              data-giadoithu="4799000" data-loinhuan="224000.0"
+              data-giadoithu="4790000" data-loinhuan="224000.0"
               data-bien="4.8"
               data-flag="warn">
               <td>KEY-RAZ-HUNTSMAN-V3PRO-TKL-BLK</td>
               <td>Bàn Phím Cơ Có Dây Razer Huntsman V3 Pro Tenkeyless</td>
               <td class="num">4.480.000đ</td>
               <td class="num">4.704.000đ</td>
-              <td class="num">4.799.000đ</td>
+              <td class="num">4.790.000đ</td>
               <td>còn hàng</td>
-              <td><a href="https://hacom.vn/ban-phim-co-razer-huntsman-v3-pro-tenkeyless-tenkeyless-analog-optical-esports-keyboard-us-layout-frml-_-rz03-04980100-r3m1" target="_blank" rel="noopener">hacom.vn</a> <span class="muted">(3 nguồn)</span></td>
-              <td class="num">4.789.000đ</td>
+              <td><a href="https://gearvn.com/products/ban-phim-razer-huntsman-v3-pro-tkl" target="_blank" rel="noopener">gearvn.com</a> <span class="muted">(3 nguồn)</span></td>
+              <td class="num">4.780.000đ</td>
               <td class="num">224.000đ</td>
               <td class="num">4.8%</td>
               <td>🟡 biên mỏng (<10%); 🟢 đối thủ đã tăng giá — Vutech có thể tăng giá bán theo công thức để tăng lợi nhuận</td>
@@ -8149,21 +8149,21 @@
             </tr><tr class="danger"
               data-sku="HSE-LOG-G435-BLK" data-ten="Tai Nghe Gaming Không Dây Logitech G435 Lightspeed"
               data-gianhap="1250000.0" data-giaban="1390000.0"
-              data-giadoithu="1299000" data-loinhuan="140000.0"
+              data-giadoithu="1349000" data-loinhuan="140000.0"
               data-bien="10.1"
               data-flag="danger">
               <td>HSE-LOG-G435-BLK</td>
               <td>Tai Nghe Gaming Không Dây Logitech G435 Lightspeed</td>
               <td class="num">1.250.000đ</td>
               <td class="num">1.390.000đ</td>
-              <td class="num">1.299.000đ</td>
+              <td class="num">1.349.000đ</td>
               <td>hết hàng</td>
-              <td><a href="https://tinhocngoisao.com/products/tai-nghe-gaming-logitech-lightspeed-g435-black-981-001051" target="_blank" rel="noopener">tinhocngoisao.com</a> <span class="muted">(3 nguồn)</span></td>
-              <td class="num">1.289.000đ</td>
+              <td><a href="https://hacom.vn/tai-nghe-logitech-g435-lightspeed-wireless-black" target="_blank" rel="noopener">hacom.vn</a> <span class="muted">(3 nguồn)</span></td>
+              <td class="num">1.339.000đ</td>
               <td class="num">140.000đ</td>
               <td class="num">10.1%</td>
-              <td>⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 91.000đ — mất cạnh tranh</td>
-              <td class="muted">OK (json-ld) — 3/3 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
+              <td>⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 41.000đ — mất cạnh tranh</td>
+              <td class="muted">OK (json-ld) — 2/3 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
             </tr><tr class="danger"
               data-sku="HSE-LOG-G435-BLU" data-ten="Tai Nghe Gaming Không Dây Logitech G435 Lightspeed"
               data-gianhap="1250000.0" data-giaban="1440000.0"
@@ -8851,39 +8851,39 @@
             </tr><tr class="danger"
               data-sku="HSE-RAZ-BLACKSHARK-V2-X-WHT" data-ten="Tai Nghe Gaming Có Dây Razer BlackShark V2 X"
               data-gianhap="980000.0" data-giaban="1180000.0"
-              data-giadoithu="999000" data-loinhuan="200000.0"
+              data-giadoithu="1090000" data-loinhuan="200000.0"
               data-bien="16.9"
               data-flag="danger">
               <td>HSE-RAZ-BLACKSHARK-V2-X-WHT</td>
               <td>Tai Nghe Gaming Có Dây Razer BlackShark V2 X</td>
               <td class="num">980.000đ</td>
               <td class="num">1.180.000đ</td>
-              <td class="num">999.000đ</td>
-              <td>đặt trước</td>
-              <td><a href="https://hacom.vn/tai-nghe-razer-blackshark-v2-x-wired-gaming-headset-trang_rz04-03240700-r3m1" target="_blank" rel="noopener">hacom.vn</a> <span class="muted">(4 nguồn)</span></td>
-              <td class="num">998.000đ</td>
+              <td class="num">1.090.000đ</td>
+              <td>còn hàng</td>
+              <td><a href="https://gearvn.com/products/tai-nghe-razer-blackshark-v2-x-white" target="_blank" rel="noopener">gearvn.com</a> <span class="muted">(4 nguồn)</span></td>
+              <td class="num">1.080.000đ</td>
               <td class="num">200.000đ</td>
               <td class="num">16.9%</td>
-              <td>⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 181.000đ — mất cạnh tranh</td>
-              <td class="muted">OK (json-ld) — 3/4 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
+              <td>🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 90.000đ — mất cạnh tranh</td>
+              <td class="muted">OK (json-ld) — thấp nhất trong 1/4 nguồn còn hàng</td>
             </tr><tr class="danger"
               data-sku="HSE-RAZ-BLACKSHARK-V2-X-PNK" data-ten="Tai Nghe Gaming Có Dây Razer BlackShark V2 X"
               data-gianhap="1020000.0" data-giaban="1180000.0"
-              data-giadoithu="1099000" data-loinhuan="160000.0"
+              data-giadoithu="1090000" data-loinhuan="160000.0"
               data-bien="13.6"
               data-flag="danger">
               <td>HSE-RAZ-BLACKSHARK-V2-X-PNK</td>
               <td>Tai Nghe Gaming Có Dây Razer BlackShark V2 X</td>
               <td class="num">1.020.000đ</td>
               <td class="num">1.180.000đ</td>
-              <td class="num">1.099.000đ</td>
+              <td class="num">1.090.000đ</td>
               <td>hết hàng</td>
-              <td><a href="https://hacom.vn/tai-nghe-gaming-co-day-razer-blackshark-v2-x-wired-quartz-edition-_-rz04-03240800-r3m1" target="_blank" rel="noopener">hacom.vn</a> <span class="muted">(4 nguồn)</span></td>
-              <td class="num">1.089.000đ</td>
+              <td><a href="https://tinhocngoisao.com/products/tai-nghe-razer-blackshark-v2-x-pink-3-5mm-rz04-03240800-r3m1" target="_blank" rel="noopener">tinhocngoisao.com</a> <span class="muted">(4 nguồn)</span></td>
+              <td class="num">1.080.000đ</td>
               <td class="num">160.000đ</td>
               <td class="num">13.6%</td>
-              <td>⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 81.000đ — mất cạnh tranh</td>
-              <td class="muted">OK (json-ld) — 2/4 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
+              <td>⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực; 🔴 Vutech đang CAO HƠN đối thủ rẻ nhất 90.000đ — mất cạnh tranh</td>
+              <td class="muted">OK (json-ld) — 3/4 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
             </tr>
 </tbody>
 </table>
