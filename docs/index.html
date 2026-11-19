@@ -32,14 +32,14 @@
 </style>
 </head><body>
 <h1>Vutech — Dashboard theo dõi giá đối thủ (Auto, 0 token)</h1>
-<div class="sub">Cập nhật lúc 18/11/2026 16:01 (giờ VN) · Nguồn: Google Sheet "Khởi nghiệp" / tab Website · Mỗi SKU có thể theo dõi nhiều đối thủ, dashboard hiển thị giá THẤP NHẤT trong số đối thủ còn hàng · Script chạy tự động, không dùng AI</div>
+<div class="sub">Cập nhật lúc 19/11/2026 16:10 (giờ VN) · Nguồn: Google Sheet "Khởi nghiệp" / tab Website · Mỗi SKU có thể theo dõi nhiều đối thủ, dashboard hiển thị giá THẤP NHẤT trong số đối thủ còn hàng · Script chạy tự động, không dùng AI</div>
 
 <div class="stats">
   <div class="stat"><div class="n">490</div><div class="l">Tổng SKU</div></div>
   <div class="stat"><div class="n">484</div><div class="l">Có link đối thủ</div></div>
   <div class="stat danger"><div class="n">0</div><div class="l">Cờ đỏ (lỗ / dưới vốn / mất cạnh tranh)</div></div>
   <div class="stat warn"><div class="n">7</div><div class="l">Cờ vàng (biên mỏng / cần xác minh)</div></div>
-  <div class="stat"><div class="n">51</div><div class="l">Lỗi lấy giá tự động</div></div>
+  <div class="stat"><div class="n">50</div><div class="l">Lỗi lấy giá tự động</div></div>
   <div class="stat danger"><div class="n">0</div><div class="l">Lỗ nếu theo giá đối thủ</div></div>
   <div class="stat danger"><div class="n">0</div><div class="l">Dưới sàn markup 5% (giá vốn)</div></div>
   <div class="stat warn"><div class="n">0</div><div class="l">Cần tăng giá hôm nay</div></div>
@@ -837,7 +837,7 @@
               <td class="num">—</td>
               <td class="num">—%</td>
               <td>⚪ thiếu Giá nhập/Giá bán, chưa tính được; ⚠️ không lấy được giá tự động từ bất kỳ nguồn nào — cần Vũ kiểm tra tay</td>
-              <td class="muted">LỖI: cả 3 nguồn đều lỗi (www.phucanh.vn: Lỗi tải trang: 403 Client Error: Forbidden for url: https://www.phucanh.vn/ban-phim-co-aula-f75-den-red-switch.html; thegioipc.vn: Lỗi tải trang: HTTPSConnectionPool(host='thegioipc.vn', port=443): Max retries exceeded with url: /product/ban-phim-aula-f75-co-day-den-red-switch (Caused by NameResolutionError("HTTPSConnection(host='thegioipc.vn', port=443): Failed to resolve 'thegioipc.vn' ([Errno -3] Temporary failure in name resolution)")); mygear.com.vn: Không tìm thấy giá bằng bất kỳ phương pháp nào đã thử)</td>
+              <td class="muted">LỖI: cả 3 nguồn đều lỗi (www.phucanh.vn: Lỗi tải trang: 403 Client Error: Forbidden for url: https://www.phucanh.vn/ban-phim-co-aula-f75-den-red-switch.html; thegioipc.vn: Không tìm thấy giá bằng bất kỳ phương pháp nào đã thử; mygear.com.vn: Không tìm thấy giá bằng bất kỳ phương pháp nào đã thử)</td>
             </tr><tr class="ok"
               data-sku="KB-AUL-F75-75-RED-WHT" data-ten="Bàn Phím Cơ Gaming Có Dây AULA F75"
               data-gianhap="0" data-giaban="0"
@@ -3073,21 +3073,21 @@
             </tr><tr class="ok"
               data-sku="CHG-LOG-PP2-BLK" data-ten="Bộ Sạc Không Dây Logitech PowerPlay 2 Wireless Charging System"
               data-gianhap="0" data-giaban="0"
-              data-giadoithu="0" data-loinhuan="0"
+              data-giadoithu="2160000" data-loinhuan="0"
               data-bien="0"
               data-flag="ok">
               <td>CHG-LOG-PP2-BLK</td>
               <td>Bộ Sạc Không Dây Logitech PowerPlay 2 Wireless Charging System</td>
               <td class="num">—</td>
               <td class="num">—</td>
-              <td class="num">—</td>
-              <td>—</td>
-              <td>—</td>
-              <td class="num">—</td>
+              <td class="num">2.160.000đ</td>
+              <td>không rõ</td>
+              <td><a href="https://dtex.vn/logitech/linh-phu-kien/ban-di-chuot-sac-khong-day-logitech-powerplay-2-947-000004--wireless-charging-system-mau-den-chinh-hang-logitech-g-9824.html" target="_blank" rel="noopener">dtex.vn</a></td>
+              <td class="num">2.150.000đ</td>
               <td class="num">—</td>
               <td class="num">—%</td>
-              <td>⚪ thiếu Giá nhập/Giá bán, chưa tính được; ⚠️ không lấy được giá tự động từ bất kỳ nguồn nào — cần Vũ kiểm tra tay</td>
-              <td class="muted">LỖI: cả 1 nguồn đều lỗi (dtex.vn: Lỗi tải trang: HTTPSConnectionPool(host='dtex.vn', port=443): Read timed out. (read timeout=15))</td>
+              <td>⚪ thiếu Giá nhập/Giá bán, chưa tính được; ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực</td>
+              <td class="muted">OK (microdata) — 1/1 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
             </tr><tr class="ok"
               data-sku="MOU-COR-IRONCLAW-WLSE-BLK" data-ten="Chuột Gaming Không Dây Corsair Ironclaw Wireless SE"
               data-gianhap="0" data-giaban="0"
@@ -4437,7 +4437,7 @@
               <td class="num">—</td>
               <td class="num">—%</td>
               <td>⚪ thiếu Giá nhập/Giá bán, chưa tính được; ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực</td>
-              <td class="muted">OK (meta-tag) — 2/2 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
+              <td class="muted">OK (meta-tag) — 1/2 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
             </tr><tr class="ok"
               data-sku="MOU-COR-SCIMITAR-ELITESE-WHT" data-ten="Chuột Gaming Không Dây Corsair Scimitar Elite Wireless SE"
               data-gianhap="0" data-giaban="0"
@@ -4747,21 +4747,21 @@
             </tr><tr class="ok"
               data-sku="SDK-ELG-STREAMDECK-MK2-WHT" data-ten="Bộ Điều Khiển Livestream Elgato Stream Deck MK.2"
               data-gianhap="0" data-giaban="0"
-              data-giadoithu="3399000" data-loinhuan="0"
+              data-giadoithu="3290000" data-loinhuan="0"
               data-bien="0"
               data-flag="ok">
               <td>SDK-ELG-STREAMDECK-MK2-WHT</td>
               <td>Bộ Điều Khiển Livestream Elgato Stream Deck MK.2</td>
               <td class="num">—</td>
               <td class="num">—</td>
-              <td class="num">3.399.000đ</td>
-              <td>còn hàng</td>
-              <td><a href="https://hacom.vn/ban-phim-elgato-streamdeck-mk.2-white" target="_blank" rel="noopener">hacom.vn</a> <span class="muted">(2 nguồn)</span></td>
-              <td class="num">3.389.000đ</td>
+              <td class="num">3.290.000đ</td>
+              <td>không rõ</td>
+              <td><a href="https://memoryzone.com.vn/thiet-bi-stream-elgato-gaming-streamdeck-mk-2-white-15-phim-lap-trinh-10gba9911" target="_blank" rel="noopener">memoryzone.com.vn</a> <span class="muted">(2 nguồn)</span></td>
+              <td class="num">3.280.000đ</td>
               <td class="num">—</td>
               <td class="num">—%</td>
-              <td>⚪ thiếu Giá nhập/Giá bán, chưa tính được</td>
-              <td class="muted">OK (json-ld) — thấp nhất trong 1/2 nguồn còn hàng</td>
+              <td>⚪ thiếu Giá nhập/Giá bán, chưa tính được; ⚪ tất cả đối thủ đang theo dõi đều HẾT HÀNG — giá lấy được có thể không phản ánh thị trường thực</td>
+              <td class="muted">OK (meta-tag) — 2/2 nguồn lấy được giá nhưng TẤT CẢ đều hết hàng</td>
             </tr><tr class="ok"
               data-sku="HSE-RAZ-BARRACUDA-X-2022-PNK" data-ten="Tai Nghe Gaming Không Dây Razer Barracuda X (2022)"
               data-gianhap="0" data-giaban="0"
@@ -7357,17 +7357,17 @@
             </tr><tr class="ok"
               data-sku="LAP-HP-15FD1289TU-C2CV8PA" data-ten="Laptop HP 15 fd1289TU (Core Ultra 7-155H, 16GB RAM DDR5, 512GB SSD NVMe, 15.6" FHD, Webcam, Màu Bạc)"
               data-gianhap="0" data-giaban="0"
-              data-giadoithu="22990000" data-loinhuan="0"
+              data-giadoithu="25990000" data-loinhuan="0"
               data-bien="0"
               data-flag="ok">
               <td>LAP-HP-15FD1289TU-C2CV8PA</td>
               <td>Laptop HP 15 fd1289TU (Core Ultra 7-155H, 16GB RAM DDR5, 512GB SSD NVMe, 15.6" FHD, Webcam, Màu Bạc)</td>
               <td class="num">—</td>
               <td class="num">—</td>
-              <td class="num">22.990.000đ</td>
+              <td class="num">25.990.000đ</td>
               <td>còn hàng</td>
               <td><a href="https://cellphones.com.vn/laptop-hp-15-fd1289tu-c2cv8pa.html" target="_blank" rel="noopener">cellphones.com.vn</a> <span class="muted">(3 nguồn)</span></td>
-              <td class="num">22.980.000đ</td>
+              <td class="num">25.980.000đ</td>
               <td class="num">—</td>
               <td class="num">—%</td>
               <td>⚪ thiếu Giá nhập/Giá bán, chưa tính được</td>
@@ -8703,7 +8703,7 @@
               <td class="num">—</td>
               <td class="num">—%</td>
               <td>⚪ thiếu Giá nhập/Giá bán, chưa tính được</td>
-              <td class="muted">OK (json-ld) — thấp nhất trong 3/4 nguồn còn hàng</td>
+              <td class="muted">OK (json-ld) — thấp nhất trong 2/4 nguồn còn hàng</td>
             </tr><tr class="ok"
               data-sku="GPD-RAZ-WOLVERINE-V3-TOURNAMENT-8K-PC-BLK" data-ten="Tay Cầm Chơi Game Có Dây Razer Wolverine V3 Tournament 8K PC"
               data-gianhap="0" data-giaban="0"
